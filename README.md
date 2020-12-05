@@ -4,7 +4,7 @@ One of my biggest interests outside of coding is real estate and house flipping.
 # Getting Started
 
 # Using the App
-You're an employee of a real estate company that purchases properties to repair and then resells those properties for profit. Every day you collect a list of potential homes that are worth consideration for flipping. It is your job to assess the house's condition given a list of details and determine if it is worth repairing. If it is worth repairing, you also need to determine which items are worth updating or changing. Some items do no add value to the home. Some items add a lot of value to the home. Choosing which items to repair is important in maintaining a high profit margin.
+You're an employee of a real estate company that purchases properties to repair and then resells those properties for profit. Every day you collect a list of potential homes that are worth consideration for flipping. It is your job to assess the house's condition given a list of details and determine if it is worth repairing. If it is worth repairing, you also need to determine which items are worth updating. Some items do not add value to the property. Some items add a lot of value to the property. Choosing which items to repair is important in maintaining a high profit margin.
 
 After completing your assessment of the property and the list of items to update, either discard or commit to repairing the property for resell. After assessing a total of 5 properties, your initial assessments will be sent to your project manager for review. Your project manager will calculate the expected ARV (after repaired value) based on the comps and repairs specified, and will send you a report on your assessments.
 
