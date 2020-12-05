@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <GridPane alignment="CENTER" prefHeight="505.0" prefWidth="88.0" style="-fx-background-color: #42998c; -fx-border-color: #42998c;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="cb0" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #42998c;" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <CheckBox fx:id="cb1" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <CheckBox fx:id="cb2" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <CheckBox fx:id="cb3" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <CheckBox fx:id="cb4" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <CheckBox fx:id="cb5" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <CheckBox fx:id="cb6" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <CheckBox fx:id="cb7" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="29.0" prefWidth="120.0" text="Repair?" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="cb8" alignment="CENTER" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <CheckBox fx:id="cb9" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+   </right>
+   <left>
+      <VBox prefHeight="536.0" prefWidth="232.0" style="-fx-background-color: #42998c;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="232.0" style="-fx-background-color: #42998c; -fx-background-radius: 20'; -fx-border-color: #42998c;" text="House Description" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="232.0" text="Location - Greeley, CO" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Light" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="81.0" prefHeight="31.0" prefWidth="232.0" text="Sq. Ft - 1440" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Light" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="112.0" prefHeight="31.0" prefWidth="232.0" text="Price - 165,000" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Light" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="143.0" prefHeight="31.0" prefWidth="232.0" text="ARV - 260, 000" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Light" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <GridPane prefHeight="83.0" prefWidth="1040.0" style="-fx-background-color: #53c2b1;" BorderPane.alignment="CENTER_RIGHT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="164.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="164.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="165.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="next" alignment="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="150.0" style="-fx-background-color: #42998c;" text="Next Property" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font></Button>
+            <Button fx:id="prev" alignment="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="152.0" style="-fx-background-color: #42998c;" text="Prev Property" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="152.0" style="-fx-background-color: #42998c;" text="Approve" textFill="WHITE" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="154.0" style="-fx-background-color: #42998c;" text="Discard" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font></Button>
+            <Circle fill="WHITE" radius="18.0" stroke="#42998c" strokeType="INSIDE" strokeWidth="4.0" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Circle>
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <GridPane prefHeight="88.0" prefWidth="1011.0" style="-fx-background-color: #53c2b1;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="310.0" style="-fx-background-insets: 0; -fx-background-color: #42998c; -fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: white; -fx-border-radius: 20;" text="House Flipper" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Roboto Light" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane prefHeight="568.0" prefWidth="713.0" style="-fx-background-color: #53c2b1;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="146.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="130.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="rd9" alignment="CENTER" layoutX="10.0" layoutY="64.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="New windows" textFill="WHITE" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd7" alignment="CENTER" layoutX="10.0" layoutY="476.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Hardwood floors throughout" textFill="WHITE" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd8" alignment="CENTER" layoutX="10.0" layoutY="529.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="Foundation repairs" textFill="WHITE" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd5" alignment="CENTER" layoutX="10.0" layoutY="390.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Wall removal to open up kitchen" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd6" alignment="CENTER" layoutX="10.0" layoutY="437.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="Pave driveway" textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd3" alignment="CENTER" layoutX="10.0" layoutY="484.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Kitchen cabinets" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd4" alignment="CENTER" layoutX="10.0" layoutY="343.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="New oven/dish washer" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd1" alignment="CENTER" layoutX="10.0" layoutY="202.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Shower tile" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd2" alignment="CENTER" layoutX="10.0" layoutY="249.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="650.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="Garage door" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed0" alignment="CENTER" layoutX="10.0" layoutY="154.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="124.0" prefWidth="211.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="25 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="106.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Est. Dur." textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="414.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="629.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="Repair Description" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed1" alignment="CENTER" layoutX="10.0" layoutY="106.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="10 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed2" alignment="CENTER" layoutX="10.0" layoutY="154.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="226.0" prefWidth="364.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="2 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed4" alignment="CENTER" layoutX="10.0" layoutY="154.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="1 hr" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed6" alignment="CENTER" layoutX="10.0" layoutY="249.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="10 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed8" alignment="CENTER" layoutX="10.0" layoutY="343.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="748.0" style="-fx-background-insets: 0; -fx-background-color: #49a699;" text="N/A" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="484.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="5 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed7" alignment="CENTER" layoutX="10.0" layoutY="390.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="30 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed5" alignment="CENTER" layoutX="10.0" layoutY="296.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="40 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ed3" alignment="CENTER" layoutX="10.0" layoutY="296.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="713.0" style="-fx-background-insets: 0; -fx-background-color: #42998c;" text="6 hrs" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rd0" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="700.0" style="-fx-background-color: #49a699;" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="216.0" prefWidth="289.0" style="-fx-background-color: #42998c;" text="Mat. Price" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Roboto Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp0" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="159.0" prefWidth="331.0" style="-fx-background-color: #49a699;" text="7000" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp1" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="218.0" prefWidth="448.0" style="-fx-background-color: #42998c;" text="2000" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp2" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="187.0" prefWidth="389.0" style="-fx-background-color: #49a699;" text="1300" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp3" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="213.0" prefWidth="490.0" style="-fx-background-color: #42998c;" text="2000" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp4" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="204.0" prefWidth="425.0" style="-fx-background-color: #49a699;" text="1500" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp5" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="183.0" prefWidth="414.0" style="-fx-background-color: #42998c;" text="3500" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp6" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="156.0" prefWidth="471.0" style="-fx-background-color: #49a699;" text="5000" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp7" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="128.0" prefWidth="370.0" style="-fx-background-color: #42998c;" text="7000" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp8" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="326.0" style="-fx-background-color: #49a699;" text="N/A" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="mp9" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="86.0" prefWidth="252.0" style="-fx-background-color: #42998c;" text="1500" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
