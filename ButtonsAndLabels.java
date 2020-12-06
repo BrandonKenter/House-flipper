@@ -8,67 +8,67 @@ import javafx.scene.shape.Circle;
 
 public class ButtonsAndLabels {
     @FXML
-    public Label rd0;
+    public Label rd00;
     @FXML
-    public Label rd1;
+    public Label rd01;
     @FXML
-    public Label rd2;
+    public Label rd02;
     @FXML
-    public Label rd3;
+    public Label rd03;
     @FXML
-    public Label rd4;
+    public Label rd04;
     @FXML
-    public Label rd5;
+    public Label rd05;
     @FXML
-    public Label rd6;
+    public Label rd06;
     @FXML
-    public Label rd7;
+    public Label rd07;
     @FXML
-    public Label rd8;
+    public Label rd08;
     @FXML
-    public Label rd9;
+    public Label rd09;
 
     @FXML
-    public Label mp0;
+    public Label mp00;
     @FXML
-    public Label mp1;
+    public Label mp01;
     @FXML
-    public Label mp2;
+    public Label mp02;
     @FXML
-    public Label mp3;
+    public Label mp03;
     @FXML
-    public Label mp4;
+    public Label mp04;
     @FXML
-    public Label mp5;
+    public Label mp05;
     @FXML
-    public Label mp6;
+    public Label mp06;
     @FXML
-    public Label mp7;
+    public Label mp07;
     @FXML
-    public Label mp8;
+    public Label mp08;
     @FXML
-    public Label mp9;
+    public Label mp09;
 
     @FXML
-    public Label ed0;
+    public Label ed00;
     @FXML
-    public Label ed1;
+    public Label ed01;
     @FXML
-    public Label ed2;
+    public Label ed02;
     @FXML
-    public Label ed3;
+    public Label ed03;
     @FXML
-    public Label ed4;
+    public Label ed04;
     @FXML
-    public Label ed5;
+    public Label ed05;
     @FXML
-    public Label ed6;
+    public Label ed06;
     @FXML
-    public Label ed7;
+    public Label ed07;
     @FXML
-    public Label ed8;
+    public Label ed08;
     @FXML
-    public Label ed9;
+    public Label ed09;
 
     @FXML
     public CheckBox cb0;
@@ -100,106 +100,21 @@ public class ButtonsAndLabels {
 
 
     @FXML
-    public Button approve0;
+    public Button approve;
     @FXML
-    public Button discard0;
+    public Button discard;
     @FXML
-    public Circle circleStatus0;
+    public Circle circleStatus;
     @FXML
-    public Button prev0;
+    public Button prev;
     @FXML
-    public Button next0;
+    public Button next;
     @FXML
-    public Label propertyLocation0;
+    public Label propertyLocation;
     @FXML
-    public Label propertySqFt0;
+    public Label propertySqFt;
     @FXML
-    public Label propertyPrice0;
+    public Label propertyPrice;
     @FXML
-    public Label propertyParagraph0;
-
-
-
-    @FXML
-    public Button approve1;
-    @FXML
-    public Button discard1;
-    @FXML
-    public Circle circleStatus1;
-    @FXML
-    public Button prev1;
-    @FXML
-    public Button next1;
-    @FXML
-    public Label propertyLocation1;
-    @FXML
-    public Label propertySqFt1;
-    @FXML
-    public Label propertyPrice1;
-    @FXML
-    public Label propertyParagraph1;
-
-
-
-    @FXML
-    public Button approve2;
-    @FXML
-    public Button discard2;
-    @FXML
-    public Circle circleStatus2;
-    @FXML
-    public Button prev2;
-    @FXML
-    public Button next2;
-    @FXML
-    public Label propertyLocation2;
-    @FXML
-    public Label propertySqFt2;
-    @FXML
-    public Label propertyPrice2;
-    @FXML
-    public Label propertyParagraph2;
-
-
-
-    @FXML
-    public Button approve3;
-    @FXML
-    public Button discard3;
-    @FXML
-    public Circle circleStatus3;
-    @FXML
-    public Button prev3;
-    @FXML
-    public Button next3;
-    @FXML
-    public Label propertyLocation3;
-    @FXML
-    public Label propertySqFt3;
-    @FXML
-    public Label propertyPrice3;
-    @FXML
-    public Label propertyParagraph3;
-
-
-
-    @FXML
-    public Button approve4;
-    @FXML
-    public Button discard4;
-    @FXML
-    public Circle circleStatus4;
-    @FXML
-    public Button prev4;
-    @FXML
-    public Button next4;
-    @FXML
-    public Label propertyLocation4;
-    @FXML
-    public Label propertySqFt4;
-    @FXML
-    public Label propertyPrice4;
-    @FXML
-    public Label propertyParagraph4;
-
+    public Label propertyParagraph;
 }
