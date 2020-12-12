@@ -9,6 +9,7 @@ One of my biggest interests outside of coding is real estate and house flipping.
 - Possibly connect to a DB to store multiple report results
 - Clean up redundant code
 - Fix CSS warnings
+- More properties
 
 # Getting Started
 Working version not available yet
