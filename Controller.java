@@ -99,63 +99,7 @@ public class Controller extends ButtonsAndLabels {
         window.setScene(property1Scene);
         window.show();
     }
-
-    public void prevButtonClicked0() {
-        // First property, do nothing since can't go to previous property
-    }
-
-    public void prevButtonClicked1(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("property0.fxml"));
-        Scene property1Scene = new Scene(root);
-
-        // Get the stage info
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(property1Scene);
-        window.show();
-
-        // Reload cells
-        initializeCells(root, property0);
-    }
-
-    public void prevButtonClicked2(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("property1.fxml"));
-        Scene property1Scene = new Scene(root);
-
-        // Get the stage info
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(property1Scene);
-        window.show();
-
-        // Reload cells
-        initializeCells(root, property1);
-    }
-
-    public void prevButtonClicked3(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("property2.fxml"));
-        Scene property1Scene = new Scene(root);
-
-        // Get the stage info
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(property1Scene);
-        window.show();
-
-        // Reload cells
-        initializeCells(root, property2);
-    }
-
-    public void prevButtonClicked4(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("property3.fxml"));
-        Scene property1Scene = new Scene(root);
-
-        // Get the stage info
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(property1Scene);
-        window.show();
-
-        // Reload cells
-        initializeCells(root, property3);
-    }
-
+    
 
     public void endButtonClicked() {
         Stage stage = (Stage) end.getScene().getWindow();
