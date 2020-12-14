@@ -12,7 +12,6 @@ import java.io.IOException;
 
 
 public class Controller extends ButtonsAndLabels {
-
     Property property0;
     Property property1;
     Property property2;
@@ -60,7 +59,6 @@ public class Controller extends ButtonsAndLabels {
         property2 = new Property(2);
         initializeCells(root, property2);
     }
-
 
     public void nextButtonClicked2(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("property3.fxml"));
