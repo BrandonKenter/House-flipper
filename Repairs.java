@@ -38,6 +38,7 @@ public class Repairs {
             repairTypes.put(repairEntry, true);
         }
     }
+
     private List<String> getRecordFromLine(String line) {
         List<String> values = new ArrayList<>();
 
