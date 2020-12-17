@@ -10,13 +10,12 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-
 public class Controller extends ButtonsAndLabels {
-    Property property0;
-    Property property1;
-    Property property2;
-    Property property3;
-    Property property4;
+    Property property0 = new Property(0);
+    Property property1 = new Property(1);
+    Property property2 = new Property(2);
+    Property property3 = new Property(3);
+    Property property4 = new Property(4);
 
     public void contButtonClicked(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("property0.fxml"));
@@ -28,7 +27,6 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        property0 = new Property(0);
         initializeCells(root, property0);
     }
 
@@ -46,8 +44,11 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        property1 = new Property(1);
         initializeCells(root, property1);
+
+        // TODO Save check button status
+        saveCheckButtonStatus();
+
     }
 
     public void nextButtonClicked1(ActionEvent event) throws IOException {
@@ -64,10 +65,11 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        property2 = new Property(2);
         initializeCells(root, property2);
-    }
 
+        // TODO Save check button status
+        saveCheckButtonStatus();
+    }
 
     public void nextButtonClicked2(ActionEvent event) throws IOException {
         if (property2.approved == null) {
@@ -83,8 +85,10 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        property3 = new Property(3);
         initializeCells(root, property3);
+
+        // TODO Save check button status
+        saveCheckButtonStatus();
     }
 
     public void nextButtonClicked3(ActionEvent event) throws IOException {
@@ -101,8 +105,10 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        property4 = new Property(4);
         initializeCells(root, property4);
+
+        // TODO Save check button status
+        saveCheckButtonStatus();
     }
 
     public void nextButtonClicked4(ActionEvent event) throws IOException {
@@ -119,6 +125,9 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         setReportCells(root);
+
+        // TODO Save check button status
+        saveCheckButtonStatus();
     }
 
     public void endButtonClicked() {
@@ -166,14 +175,16 @@ public class Controller extends ButtonsAndLabels {
         property4.approved = false;
     }
 
-    public void setReportCells(Parent root) {
-        propertyLocation = (Label) root.lookup("#propertyLocation");
-        propertySqFt = (Label) root.lookup("#propertySqFt");
-        propertyPrice = (Label) root.lookup("#propertyPrice");
-        propertyParagraph = (Label) root.lookup("#propertyParagraph");
+    public void saveCheckButtonStatus() {
+        // TODO SAVE CHECK BUTTON STATUS
     }
 
-
+    public void setReportCells(Parent root) {
+//        propertyLocation = (Label) root.lookup("#propertyLocation");
+//        propertySqFt = (Label) root.lookup("#propertySqFt");
+//        propertyPrice = (Label) root.lookup("#propertyPrice");
+//        propertyParagraph = (Label) root.lookup("#propertyParagraph");
+    }
 
     /**
      * Initializes the cells of the page that it is sent.
@@ -257,7 +268,5 @@ public class Controller extends ButtonsAndLabels {
         if (ed08!=null) ed08.setText(property.estimatedDuration8);
         if (ed09!=null) ed09.setText(property.estimatedDuration9);
 
-        cb0 = (CheckBox) root.lookup("#cb0");
-        if (cb0.isSelected()) { property.checkButton0 = true; }
     }
 }
