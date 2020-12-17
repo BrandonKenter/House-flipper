@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <bottom>
+        <GridPane prefHeight="83.0" prefWidth="1040.0" style="-fx-background-color: #53c2b1;" BorderPane.alignment="CENTER_RIGHT">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="164.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="164.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="155.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="165.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button id="green" fx:id="end" alignment="CENTER" layoutX="723.0" layoutY="26.0" mnemonicParsing="false" onAction="#endButtonClicked" prefHeight="51.0" prefWidth="134.0" stylesheets="@FlatBee.css" text="END" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+    </bottom>
+    <top>
+        <GridPane prefHeight="88.0" prefWidth="897.0" style="-fx-background-color: #53c2b1;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="310.0" style="-fx-background-insets: 0; -fx-background-color: #42998c; -fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: white; -fx-border-radius: 20;" text="House Flipper" textAlignment="CENTER" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="Roboto Light" size="40.0" />
+                    </font>
+                    <effect>
+                        <Glow level="0.54" />
+                    </effect>
+                    <textFill>
+                        <LinearGradient endX="0.4476190476190476" endY="1.0" startX="0.5000000000000001" startY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.12999512255191803" green="0.28947368264198303" blue="0.16986475884914398" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" prefHeight="582.0" prefWidth="1041.0" style="-fx-background-color: #42998c;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.0" minWidth="10.0" prefWidth="141.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0" minWidth="10.0" prefWidth="140.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="132.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="98.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="113.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="150.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints maxHeight="337.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="337.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="387.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="387.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="387.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="387.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="387.0" minHeight="0.0" prefHeight="140.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+         <children>
+              <VBox prefHeight="108.0" prefWidth="344.0" style="-fx-background-color: #42998c;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <children>
+                      <Label alignment="CENTER" prefHeight="0.0" prefWidth="246.0" textFill="WHITE" />
+                  </children>
+              </VBox>
+            <Label alignment="CENTER" prefHeight="111.0" prefWidth="400.0" text="Property #" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="130.0" prefWidth="150.0" text="Purchase Price" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="264.0" prefWidth="644.0" text="Materials Price" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="115.0" prefWidth="345.0" text="Property 1" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="113.0" prefWidth="155.0" text="Property 2" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="164.0" text="Property 3" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="293.0" text="Property 4" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="7.0" prefWidth="229.0" text="Property 5" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="66.0" prefWidth="463.0" text="Labor Price" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="145.0" text="Return on Investment %" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="16.0" prefWidth="218.0" text="Total Price" textFill="WHITE" GridPane.columnIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="168.0" text="Est. Sale Price" textFill="WHITE" GridPane.columnIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="184.0" text="Net Profit" textFill="WHITE" GridPane.columnIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label prefHeight="181.0" prefWidth="364.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="170.0" prefWidth="244.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="154.0" prefWidth="247.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="103.0" prefWidth="186.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label prefHeight="126.0" prefWidth="175.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label prefHeight="149.0" prefWidth="311.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label prefHeight="159.0" prefWidth="315.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Label prefHeight="160.0" prefWidth="272.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="182.0" prefWidth="274.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="173.0" prefWidth="185.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label prefHeight="151.0" prefWidth="168.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label prefHeight="152.0" prefWidth="137.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label prefHeight="148.0" prefWidth="248.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label prefHeight="143.0" prefWidth="279.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Label prefHeight="147.0" prefWidth="188.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="133.0" prefWidth="202.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label prefHeight="126.0" prefWidth="165.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label prefHeight="172.0" prefWidth="162.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label prefHeight="152.0" prefWidth="148.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label prefHeight="136.0" prefWidth="149.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Label prefHeight="223.0" prefWidth="263.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Label prefHeight="173.0" prefWidth="245.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="176.0" prefWidth="239.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="179.0" prefWidth="168.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label prefHeight="197.0" prefWidth="205.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label prefHeight="182.0" prefWidth="180.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label prefHeight="177.0" prefWidth="193.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Label prefHeight="184.0" prefWidth="199.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Label prefHeight="153.0" prefWidth="209.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label prefHeight="182.0" prefWidth="217.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label prefHeight="144.0" prefWidth="143.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label prefHeight="146.0" prefWidth="162.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label prefHeight="169.0" prefWidth="175.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label prefHeight="94.0" prefWidth="163.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Label prefHeight="166.0" prefWidth="237.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+         </children>
+        </GridPane>
+    </center>
+</BorderPane>

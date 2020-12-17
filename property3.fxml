@@ -115,11 +115,6 @@
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin></Circle>
-                <Button id="green" fx:id="prev3" alignment="CENTER" mnemonicParsing="false" onAction="#prevButtonClicked3" prefHeight="52.0" prefWidth="135.0" stylesheets="@FlatBee.css" text="PREVIOUS" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER">
-                    <font>
-                        <Font size="20.0" />
-                    </font>
-                </Button>
                 <Button id="green" fx:id="next3" alignment="CENTER" layoutX="723.0" layoutY="26.0" mnemonicParsing="false" onAction="#nextButtonClicked3" prefHeight="51.0" prefWidth="134.0" stylesheets="@FlatBee.css" text="NEXT" GridPane.columnIndex="4" GridPane.halignment="CENTER">
                     <font>
                         <Font size="20.0" />
