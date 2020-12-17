@@ -13,6 +13,8 @@ public class Main extends Application {
         primaryStage.setTitle("House Flipper");
         primaryStage.setScene(new Scene(root, 1033, 739));
         primaryStage.show();
+
+        Repairs repairs = new Repairs();
     }
 
     public static void main(String[] args) {
