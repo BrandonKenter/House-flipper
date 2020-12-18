@@ -47,7 +47,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
-        if (property0.approved == null) {
+        if (property0.propertyDetails.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -73,7 +73,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked1(ActionEvent event) throws IOException {
-        if (property1.approved == null) {
+        if (property1.propertyDetails.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -98,7 +98,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked2(ActionEvent event) throws IOException {
-        if (property2.approved == null) {
+        if (property2.propertyDetails.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -123,7 +123,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked3(ActionEvent event) throws IOException {
-        if (property3.approved == null) {
+        if (property3.propertyDetails.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -148,7 +148,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked4(ActionEvent event) throws IOException {
-        if (property4.approved == null) {
+        if (property4.propertyDetails.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -184,43 +184,43 @@ public class Controller extends ButtonsAndLabels {
     }
 
     public void approveButtonClicked0() {
-        property0.approved = true;
+        property0.propertyDetails.approved = true;
     }
 
     public void approveButtonClicked1() {
-        property1.approved = true;
+        property1.propertyDetails.approved = true;
     }
 
     public void approveButtonClicked2() {
-        property2.approved = true;
+        property2.propertyDetails.approved = true;
     }
 
     public void approveButtonClicked3() {
-        property3.approved = true;
+        property3.propertyDetails.approved = true;
     }
 
     public void approveButtonClicked4() {
-        property4.approved = true;
+        property4.propertyDetails.approved = true;
     }
 
     public void discardButtonClicked0() {
-        property0.approved = false;
+        property0.propertyDetails.approved = false;
     }
 
     public void discardButtonClicked1() {
-        property1.approved = false;
+        property1.propertyDetails.approved = false;
     }
 
     public void discardButtonClicked2() {
-        property2.approved = false;
+        property2.propertyDetails.approved = false;
     }
 
     public void discardButtonClicked3() {
-        property3.approved = false;
+        property3.propertyDetails.approved = false;
     }
 
     public void discardButtonClicked4() {
-        property4.approved = false;
+        property4.propertyDetails.approved = false;
     }
 
 
@@ -244,16 +244,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property0.checkButton0 = true; }
-            if (cb1.isSelected()) { property0.checkButton1 = true; }
-            if (cb2.isSelected()) { property0.checkButton2 = true; }
-            if (cb3.isSelected()) { property0.checkButton3 = true; }
-            if (cb4.isSelected()) { property0.checkButton4 = true; }
-            if (cb5.isSelected()) { property0.checkButton5 = true; }
-            if (cb6.isSelected()) { property0.checkButton6 = true; }
-            if (cb7.isSelected()) { property0.checkButton7 = true; }
-            if (cb8.isSelected()) { property0.checkButton8 = true; }
-            if (cb9.isSelected()) { property0.checkButton9 = true; }
+            if (cb0.isSelected()) { property0.propertyDetails.propertyRepairs[0].checkButton = true; }
+            if (cb1.isSelected()) { property0.propertyDetails.propertyRepairs[1].checkButton = true; }
+            if (cb2.isSelected()) { property0.propertyDetails.propertyRepairs[2].checkButton = true; }
+            if (cb3.isSelected()) { property0.propertyDetails.propertyRepairs[3].checkButton = true; }
+            if (cb4.isSelected()) { property0.propertyDetails.propertyRepairs[4].checkButton = true; }
+            if (cb5.isSelected()) { property0.propertyDetails.propertyRepairs[5].checkButton = true; }
+            if (cb6.isSelected()) { property0.propertyDetails.propertyRepairs[6].checkButton = true; }
+            if (cb7.isSelected()) { property0.propertyDetails.propertyRepairs[7].checkButton = true; }
+            if (cb8.isSelected()) { property0.propertyDetails.propertyRepairs[8].checkButton = true; }
+            if (cb9.isSelected()) { property0.propertyDetails.propertyRepairs[9].checkButton = true; }
         }
         if (propertyNum == 1) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -267,16 +267,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property1.checkButton0 = true; }
-            if (cb1.isSelected()) { property1.checkButton1 = true; }
-            if (cb2.isSelected()) { property1.checkButton2 = true; }
-            if (cb3.isSelected()) { property1.checkButton3 = true; }
-            if (cb4.isSelected()) { property1.checkButton4 = true; }
-            if (cb5.isSelected()) { property1.checkButton5 = true; }
-            if (cb6.isSelected()) { property1.checkButton6 = true; }
-            if (cb7.isSelected()) { property1.checkButton7 = true; }
-            if (cb8.isSelected()) { property1.checkButton8 = true; }
-            if (cb9.isSelected()) { property1.checkButton9 = true; }
+            if (cb0.isSelected()) { property1.propertyDetails.propertyRepairs[0].checkButton = true; }
+            if (cb1.isSelected()) { property1.propertyDetails.propertyRepairs[1].checkButton = true; }
+            if (cb2.isSelected()) { property1.propertyDetails.propertyRepairs[2].checkButton = true; }
+            if (cb3.isSelected()) { property1.propertyDetails.propertyRepairs[3].checkButton = true; }
+            if (cb4.isSelected()) { property1.propertyDetails.propertyRepairs[4].checkButton = true; }
+            if (cb5.isSelected()) { property1.propertyDetails.propertyRepairs[5].checkButton = true; }
+            if (cb6.isSelected()) { property1.propertyDetails.propertyRepairs[6].checkButton = true; }
+            if (cb7.isSelected()) { property1.propertyDetails.propertyRepairs[7].checkButton = true; }
+            if (cb8.isSelected()) { property1.propertyDetails.propertyRepairs[8].checkButton = true; }
+            if (cb9.isSelected()) { property1.propertyDetails.propertyRepairs[9].checkButton = true; }
         }
         if (propertyNum == 2) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -290,16 +290,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property2.checkButton0 = true; }
-            if (cb1.isSelected()) { property2.checkButton1 = true; }
-            if (cb2.isSelected()) { property2.checkButton2 = true; }
-            if (cb3.isSelected()) { property2.checkButton3 = true; }
-            if (cb4.isSelected()) { property2.checkButton4 = true; }
-            if (cb5.isSelected()) { property2.checkButton5 = true; }
-            if (cb6.isSelected()) { property2.checkButton6 = true; }
-            if (cb7.isSelected()) { property2.checkButton7 = true; }
-            if (cb8.isSelected()) { property2.checkButton8 = true; }
-            if (cb9.isSelected()) { property2.checkButton9 = true; }
+            if (cb0.isSelected()) { property2.propertyDetails.propertyRepairs[0].checkButton = true; }
+            if (cb1.isSelected()) { property2.propertyDetails.propertyRepairs[1].checkButton = true; }
+            if (cb2.isSelected()) { property2.propertyDetails.propertyRepairs[2].checkButton = true; }
+            if (cb3.isSelected()) { property2.propertyDetails.propertyRepairs[3].checkButton = true; }
+            if (cb4.isSelected()) { property2.propertyDetails.propertyRepairs[4].checkButton = true; }
+            if (cb5.isSelected()) { property2.propertyDetails.propertyRepairs[5].checkButton = true; }
+            if (cb6.isSelected()) { property2.propertyDetails.propertyRepairs[6].checkButton = true; }
+            if (cb7.isSelected()) { property2.propertyDetails.propertyRepairs[7].checkButton = true; }
+            if (cb8.isSelected()) { property2.propertyDetails.propertyRepairs[8].checkButton = true; }
+            if (cb9.isSelected()) { property2.propertyDetails.propertyRepairs[9].checkButton = true; }
         }
         if (propertyNum == 3) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -313,16 +313,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property3.checkButton0 = true; }
-            if (cb1.isSelected()) { property3.checkButton1 = true; }
-            if (cb2.isSelected()) { property3.checkButton2 = true; }
-            if (cb3.isSelected()) { property3.checkButton3 = true; }
-            if (cb4.isSelected()) { property3.checkButton4 = true; }
-            if (cb5.isSelected()) { property3.checkButton5 = true; }
-            if (cb6.isSelected()) { property3.checkButton6 = true; }
-            if (cb7.isSelected()) { property3.checkButton7 = true; }
-            if (cb8.isSelected()) { property3.checkButton8 = true; }
-            if (cb9.isSelected()) { property3.checkButton9 = true; }
+            if (cb0.isSelected()) { property3.propertyDetails.propertyRepairs[0].checkButton = true; }
+            if (cb1.isSelected()) { property3.propertyDetails.propertyRepairs[1].checkButton = true; }
+            if (cb2.isSelected()) { property3.propertyDetails.propertyRepairs[2].checkButton = true; }
+            if (cb3.isSelected()) { property3.propertyDetails.propertyRepairs[3].checkButton = true; }
+            if (cb4.isSelected()) { property3.propertyDetails.propertyRepairs[4].checkButton = true; }
+            if (cb5.isSelected()) { property3.propertyDetails.propertyRepairs[5].checkButton = true; }
+            if (cb6.isSelected()) { property3.propertyDetails.propertyRepairs[6].checkButton = true; }
+            if (cb7.isSelected()) { property3.propertyDetails.propertyRepairs[7].checkButton = true; }
+            if (cb8.isSelected()) { property3.propertyDetails.propertyRepairs[8].checkButton = true; }
+            if (cb9.isSelected()) { property3.propertyDetails.propertyRepairs[9].checkButton = true; }
         }
         if (propertyNum == 4) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -336,16 +336,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property4.checkButton0 = true; }
-            if (cb1.isSelected()) { property4.checkButton1 = true; }
-            if (cb2.isSelected()) { property4.checkButton2 = true; }
-            if (cb3.isSelected()) { property4.checkButton3 = true; }
-            if (cb4.isSelected()) { property4.checkButton4 = true; }
-            if (cb5.isSelected()) { property4.checkButton5 = true; }
-            if (cb6.isSelected()) { property4.checkButton6 = true; }
-            if (cb7.isSelected()) { property4.checkButton7 = true; }
-            if (cb8.isSelected()) { property4.checkButton8 = true; }
-            if (cb9.isSelected()) { property4.checkButton9 = true; }
+            if (cb0.isSelected()) { property4.propertyDetails.propertyRepairs[0].checkButton = true; }
+            if (cb1.isSelected()) { property4.propertyDetails.propertyRepairs[1].checkButton = true; }
+            if (cb2.isSelected()) { property4.propertyDetails.propertyRepairs[2].checkButton = true; }
+            if (cb3.isSelected()) { property4.propertyDetails.propertyRepairs[3].checkButton = true; }
+            if (cb4.isSelected()) { property4.propertyDetails.propertyRepairs[4].checkButton = true; }
+            if (cb5.isSelected()) { property4.propertyDetails.propertyRepairs[5].checkButton = true; }
+            if (cb6.isSelected()) { property4.propertyDetails.propertyRepairs[6].checkButton = true; }
+            if (cb7.isSelected()) { property4.propertyDetails.propertyRepairs[7].checkButton = true; }
+            if (cb8.isSelected()) { property4.propertyDetails.propertyRepairs[8].checkButton = true; }
+            if (cb9.isSelected()) { property4.propertyDetails.propertyRepairs[9].checkButton = true; }
         }
     }
 
@@ -379,8 +379,8 @@ public class Controller extends ButtonsAndLabels {
         int totalSpent;
         int totalROI;
 
-        propertySpent0 = Integer.parseInt(property0.propertyPrice.replace(",", ""));
-        if (property0.checkButton0 == true) { propertySpent0 +=   }
+        propertySpent0 = Integer.parseInt(property0.propertyDetails.propertyPrice.replace(",", ""));
+        if (property0.propertyDetails.propertyRepairs[0].checkButton == true) { propertySpent0 +=  0 } // TODO 
 
 
     }
