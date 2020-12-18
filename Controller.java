@@ -10,15 +10,26 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+/**
+ *
+ *
+ */
 public class Controller extends ButtonsAndLabels {
+
     Property property0 = new Property(0);
     Property property1 = new Property(1);
     Property property2 = new Property(2);
     Property property3 = new Property(3);
     Property property4 = new Property(4);
 
+    /**
+     *
+     *
+     * @param event
+     * @throws IOException
+     */
     public void contButtonClicked(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("property0.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property0.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -30,12 +41,17 @@ public class Controller extends ButtonsAndLabels {
         initializeCells(root, property0);
     }
 
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
         if (property0.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("property1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property1.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -47,16 +63,21 @@ public class Controller extends ButtonsAndLabels {
         initializeCells(root, property1);
 
         // TODO Save check button status
-        saveCheckButtonStatus();
+        saveCheckButtonStatus(root,0);
 
     }
 
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     public void nextButtonClicked1(ActionEvent event) throws IOException {
         if (property1.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("property2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property2.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -68,15 +89,20 @@ public class Controller extends ButtonsAndLabels {
         initializeCells(root, property2);
 
         // TODO Save check button status
-        saveCheckButtonStatus();
+        saveCheckButtonStatus(root,1);
     }
 
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     public void nextButtonClicked2(ActionEvent event) throws IOException {
         if (property2.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("property3.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property3.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -88,15 +114,20 @@ public class Controller extends ButtonsAndLabels {
         initializeCells(root, property3);
 
         // TODO Save check button status
-        saveCheckButtonStatus();
+        saveCheckButtonStatus(root,2);
     }
 
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     public void nextButtonClicked3(ActionEvent event) throws IOException {
         if (property3.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("property4.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property4.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -108,15 +139,31 @@ public class Controller extends ButtonsAndLabels {
         initializeCells(root, property4);
 
         // TODO Save check button status
-        saveCheckButtonStatus();
+        saveCheckButtonStatus(root, 3);
     }
 
+    /**
+     *
+     * @param event
+     * @throws IOException
+     */
     public void nextButtonClicked4(ActionEvent event) throws IOException {
         if (property4.approved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("report.fxml"));
+        /**
+         * Open Loading Screen
+         */
+        // TODO Save check button status
+        Parent root = FXMLLoader.load(getClass().getResource("sample/property4.fxml"));
+        saveCheckButtonStatus(root, 4);
+
+
+        /**
+         * Open Report Screen
+         */
+        root = FXMLLoader.load(getClass().getResource("sample/report.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -126,10 +173,11 @@ public class Controller extends ButtonsAndLabels {
 
         setReportCells(root);
 
-        // TODO Save check button status
-        saveCheckButtonStatus();
     }
 
+    /**
+     *
+     */
     public void endButtonClicked() {
         Stage stage = (Stage) end.getScene().getWindow();
         stage.close();
@@ -175,15 +223,166 @@ public class Controller extends ButtonsAndLabels {
         property4.approved = false;
     }
 
-    public void saveCheckButtonStatus() {
+
+    /**
+     * Sets the checkButton property for each button.
+     *
+     * @param root
+     * @param propertyNum
+     */
+    public void saveCheckButtonStatus(Parent root, int propertyNum) {
         // TODO SAVE CHECK BUTTON STATUS
+        if (propertyNum == 0) {
+            cb0 = (CheckBox) root.lookup("#cb0");
+            cb1 = (CheckBox) root.lookup("#cb1");
+            cb2 = (CheckBox) root.lookup("#cb2");
+            cb3 = (CheckBox) root.lookup("#cb3");
+            cb4 = (CheckBox) root.lookup("#cb4");
+            cb5 = (CheckBox) root.lookup("#cb5");
+            cb6 = (CheckBox) root.lookup("#cb6");
+            cb7 = (CheckBox) root.lookup("#cb7");
+            cb8 = (CheckBox) root.lookup("#cb8");
+            cb9 = (CheckBox) root.lookup("#cb9");
+
+            if (cb0.isSelected()) { property0.checkButton0 = true; }
+            if (cb1.isSelected()) { property0.checkButton1 = true; }
+            if (cb2.isSelected()) { property0.checkButton2 = true; }
+            if (cb3.isSelected()) { property0.checkButton3 = true; }
+            if (cb4.isSelected()) { property0.checkButton4 = true; }
+            if (cb5.isSelected()) { property0.checkButton5 = true; }
+            if (cb6.isSelected()) { property0.checkButton6 = true; }
+            if (cb7.isSelected()) { property0.checkButton7 = true; }
+            if (cb8.isSelected()) { property0.checkButton8 = true; }
+            if (cb9.isSelected()) { property0.checkButton9 = true; }
+        }
+        if (propertyNum == 1) {
+            cb0 = (CheckBox) root.lookup("#cb0");
+            cb1 = (CheckBox) root.lookup("#cb1");
+            cb2 = (CheckBox) root.lookup("#cb2");
+            cb3 = (CheckBox) root.lookup("#cb3");
+            cb4 = (CheckBox) root.lookup("#cb4");
+            cb5 = (CheckBox) root.lookup("#cb5");
+            cb6 = (CheckBox) root.lookup("#cb6");
+            cb7 = (CheckBox) root.lookup("#cb7");
+            cb8 = (CheckBox) root.lookup("#cb8");
+            cb9 = (CheckBox) root.lookup("#cb9");
+
+            if (cb0.isSelected()) { property1.checkButton0 = true; }
+            if (cb1.isSelected()) { property1.checkButton1 = true; }
+            if (cb2.isSelected()) { property1.checkButton2 = true; }
+            if (cb3.isSelected()) { property1.checkButton3 = true; }
+            if (cb4.isSelected()) { property1.checkButton4 = true; }
+            if (cb5.isSelected()) { property1.checkButton5 = true; }
+            if (cb6.isSelected()) { property1.checkButton6 = true; }
+            if (cb7.isSelected()) { property1.checkButton7 = true; }
+            if (cb8.isSelected()) { property1.checkButton8 = true; }
+            if (cb9.isSelected()) { property1.checkButton9 = true; }
+        }
+        if (propertyNum == 2) {
+            cb0 = (CheckBox) root.lookup("#cb0");
+            cb1 = (CheckBox) root.lookup("#cb1");
+            cb2 = (CheckBox) root.lookup("#cb2");
+            cb3 = (CheckBox) root.lookup("#cb3");
+            cb4 = (CheckBox) root.lookup("#cb4");
+            cb5 = (CheckBox) root.lookup("#cb5");
+            cb6 = (CheckBox) root.lookup("#cb6");
+            cb7 = (CheckBox) root.lookup("#cb7");
+            cb8 = (CheckBox) root.lookup("#cb8");
+            cb9 = (CheckBox) root.lookup("#cb9");
+
+            if (cb0.isSelected()) { property2.checkButton0 = true; }
+            if (cb1.isSelected()) { property2.checkButton1 = true; }
+            if (cb2.isSelected()) { property2.checkButton2 = true; }
+            if (cb3.isSelected()) { property2.checkButton3 = true; }
+            if (cb4.isSelected()) { property2.checkButton4 = true; }
+            if (cb5.isSelected()) { property2.checkButton5 = true; }
+            if (cb6.isSelected()) { property2.checkButton6 = true; }
+            if (cb7.isSelected()) { property2.checkButton7 = true; }
+            if (cb8.isSelected()) { property2.checkButton8 = true; }
+            if (cb9.isSelected()) { property2.checkButton9 = true; }
+        }
+        if (propertyNum == 3) {
+            cb0 = (CheckBox) root.lookup("#cb0");
+            cb1 = (CheckBox) root.lookup("#cb1");
+            cb2 = (CheckBox) root.lookup("#cb2");
+            cb3 = (CheckBox) root.lookup("#cb3");
+            cb4 = (CheckBox) root.lookup("#cb4");
+            cb5 = (CheckBox) root.lookup("#cb5");
+            cb6 = (CheckBox) root.lookup("#cb6");
+            cb7 = (CheckBox) root.lookup("#cb7");
+            cb8 = (CheckBox) root.lookup("#cb8");
+            cb9 = (CheckBox) root.lookup("#cb9");
+
+            if (cb0.isSelected()) { property3.checkButton0 = true; }
+            if (cb1.isSelected()) { property3.checkButton1 = true; }
+            if (cb2.isSelected()) { property3.checkButton2 = true; }
+            if (cb3.isSelected()) { property3.checkButton3 = true; }
+            if (cb4.isSelected()) { property3.checkButton4 = true; }
+            if (cb5.isSelected()) { property3.checkButton5 = true; }
+            if (cb6.isSelected()) { property3.checkButton6 = true; }
+            if (cb7.isSelected()) { property3.checkButton7 = true; }
+            if (cb8.isSelected()) { property3.checkButton8 = true; }
+            if (cb9.isSelected()) { property3.checkButton9 = true; }
+        }
+        if (propertyNum == 4) {
+            cb0 = (CheckBox) root.lookup("#cb0");
+            cb1 = (CheckBox) root.lookup("#cb1");
+            cb2 = (CheckBox) root.lookup("#cb2");
+            cb3 = (CheckBox) root.lookup("#cb3");
+            cb4 = (CheckBox) root.lookup("#cb4");
+            cb5 = (CheckBox) root.lookup("#cb5");
+            cb6 = (CheckBox) root.lookup("#cb6");
+            cb7 = (CheckBox) root.lookup("#cb7");
+            cb8 = (CheckBox) root.lookup("#cb8");
+            cb9 = (CheckBox) root.lookup("#cb9");
+
+            if (cb0.isSelected()) { property4.checkButton0 = true; }
+            if (cb1.isSelected()) { property4.checkButton1 = true; }
+            if (cb2.isSelected()) { property4.checkButton2 = true; }
+            if (cb3.isSelected()) { property4.checkButton3 = true; }
+            if (cb4.isSelected()) { property4.checkButton4 = true; }
+            if (cb5.isSelected()) { property4.checkButton5 = true; }
+            if (cb6.isSelected()) { property4.checkButton6 = true; }
+            if (cb7.isSelected()) { property4.checkButton7 = true; }
+            if (cb8.isSelected()) { property4.checkButton8 = true; }
+            if (cb9.isSelected()) { property4.checkButton9 = true; }
+        }
     }
 
+    /**
+     *
+     * @param root
+     */
     public void setReportCells(Parent root) {
+        calculateReportCells();
 //        propertyLocation = (Label) root.lookup("#propertyLocation");
 //        propertySqFt = (Label) root.lookup("#propertySqFt");
 //        propertyPrice = (Label) root.lookup("#propertyPrice");
 //        propertyParagraph = (Label) root.lookup("#propertyParagraph");
+    }
+
+    /**
+     * Helper method for setReportCells() to calculate the values that are to be inserted into
+     * the labels at these cells.
+     */
+    private void calculateReportCells() {
+        int propertySpent0;
+        int propertySpent1;
+        int propertySpent2;
+        int propertySpent3;
+        int propertySpent4;
+        int netProfit0;
+        int netProfit1;
+        int netProfit2;
+        int netProfit3;
+        int netProfit4;
+        int totalSpent;
+        int totalROI;
+
+        propertySpent0 = Integer.parseInt(property0.propertyPrice.replace(",", ""));
+        if (property0.checkButton0 == true) { propertySpent0 +=   }
+
+
     }
 
     /**
@@ -267,6 +466,5 @@ public class Controller extends ButtonsAndLabels {
         if (ed07!=null) ed07.setText(property.estimatedDuration7);
         if (ed08!=null) ed08.setText(property.estimatedDuration8);
         if (ed09!=null) ed09.setText(property.estimatedDuration9);
-
     }
 }
