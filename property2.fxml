@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <right>
         <GridPane alignment="CENTER" prefHeight="505.0" prefWidth="88.0" style="-fx-background-color: #42998c; -fx-border-color: #42998c;" BorderPane.alignment="CENTER">
             <columnConstraints>
@@ -103,8 +103,8 @@
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="164.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="164.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="155.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="299.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="239.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="165.0" />
             </columnConstraints>
             <rowConstraints>
@@ -130,6 +130,7 @@
                         <Font size="20.0" />
                     </font>
                 </Button>
+            <Label fx:id="statusWarning" alignment="CENTER" contentDisplay="CENTER" prefHeight="177.0" prefWidth="404.0" textFill="WHITE" GridPane.columnIndex="3" />
             </children>
         </GridPane>
     </bottom>
