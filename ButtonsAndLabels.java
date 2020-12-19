@@ -6,7 +6,19 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Circle;
 
+/**
+ * Controls for the application.
+ */
 public class ButtonsAndLabels {
+    /**
+     * First page.
+     */
+    @FXML
+    public Button cont;
+
+    /**
+     * Property pages.
+     */
     @FXML
     public Label rd00;
     @FXML
@@ -91,14 +103,6 @@ public class ButtonsAndLabels {
     @FXML
     public CheckBox cb9;
 
-
-    @FXML
-    public Button cont;
-    @FXML
-    public Button end;
-
-
-
     @FXML
     public Button approve;
     @FXML
@@ -117,4 +121,82 @@ public class ButtonsAndLabels {
     public Label propertyPrice;
     @FXML
     public Label propertyParagraph;
+
+
+    /**
+     * Report page
+     */
+    @FXML
+    public Label purchasePrice0;
+    @FXML
+    public Label purchasePrice1;
+    @FXML
+    public Label purchasePrice2;
+    @FXML
+    public Label purchasePrice3;
+    @FXML
+    public Label purchasePrice4;
+
+    @FXML
+    public Label materialsPrice0;
+    @FXML
+    public Label materialsPrice1;
+    @FXML
+    public Label materialsPrice2;
+    @FXML
+    public Label materialsPrice3;
+    @FXML
+    public Label materialsPrice4;
+
+    @FXML
+    public Label laborPrice0;
+    @FXML
+    public Label laborPrice1;
+    @FXML
+    public Label laborPrice2;
+    @FXML
+    public Label laborPrice3;
+    @FXML
+    public Label laborPrice4;
+
+    @FXML
+    public Label spent0;
+    @FXML
+    public Label spent1;
+    @FXML
+    public Label spent2;
+    @FXML
+    public Label spent3;
+    @FXML
+    public Label spent4;
+
+    @FXML
+    public Label estSalePrice0;
+    @FXML
+    public Label estSalePrice1;
+    @FXML
+    public Label estSalePrice2;
+    @FXML
+    public Label estSalePrice3;
+    @FXML
+    public Label estSalePrice4;
+
+    @FXML
+    public Label netProfit0;
+    @FXML
+    public Label netProfit1;
+    @FXML
+    public Label netProfit2;
+    @FXML
+    public Label netProfit3;
+    @FXML
+    public Label netProfit4;
+
+    @FXML
+    public Label totalSpent;
+    @FXML
+    public Label totalProfit;
+
+    @FXML
+    public Button end;
 }
