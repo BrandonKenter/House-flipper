@@ -104,6 +104,30 @@ public class ButtonsAndLabels {
     public CheckBox cb9;
 
     @FXML
+    public Circle circleStatus0;
+    @FXML
+    public Circle circleStatus1;
+    @FXML
+    public Circle circleStatus2;
+    @FXML
+    public Circle circleStatus3;
+    @FXML
+    public Circle circleStatus4;
+
+    @FXML
+    public Button next0;
+    @FXML
+    public Button next1;
+    @FXML
+    public Button next2;
+    @FXML
+    public Button next3;
+    @FXML
+    public Button next4;
+
+    @FXML
+    public Label statusWarning0;
+    @FXML
     public Button approve;
     @FXML
     public Button discard;
