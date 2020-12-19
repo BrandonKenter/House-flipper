@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -16,11 +17,11 @@ import java.io.IOException;
  */
 public class Controller extends ButtonsAndLabels {
 
-    Property property0 = new Property(0);
-    Property property1 = new Property(1);
-    Property property2 = new Property(2);
-    Property property3 = new Property(3);
-    Property property4 = new Property(4);
+    Property property0 = new Property();
+    Property property1 = new Property();
+    Property property2 = new Property();
+    Property property3 = new Property();
+    Property property4 = new Property();
 
     /**
      *
@@ -29,7 +30,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void contButtonClicked(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property0.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -47,11 +48,9 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
-        if (property0.propertyDetails.propertyApproved == null) {
-            // TODO: If clicked when approve/discard not set, prompt to set it
-        }
+        // TODO: If clicked when approve/discard not set, prompt to set it
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property1.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -77,7 +76,7 @@ public class Controller extends ButtonsAndLabels {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property2.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -102,7 +101,7 @@ public class Controller extends ButtonsAndLabels {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property3.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property3.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -127,7 +126,7 @@ public class Controller extends ButtonsAndLabels {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property4.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property4.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -156,14 +155,14 @@ public class Controller extends ButtonsAndLabels {
          * Open Loading Screen
          */
         // TODO Save check button status
-        Parent root = FXMLLoader.load(getClass().getResource("sample/property4.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property4.fxml"));
         saveCheckButtonStatus(root, 4);
 
 
         /**
          * Open Report Screen
          */
-        root = FXMLLoader.load(getClass().getResource("sample/report.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/report.fxml"));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -183,43 +182,62 @@ public class Controller extends ButtonsAndLabels {
         stage.close();
     }
 
-    public void approveButtonClicked0() {
+    // TODO add disabled property functionality when clickign between approve/discard
+    public void approveButtonClicked0(ActionEvent event) throws IOException {
+        // TODO
+
+        System.out.println("CLICKED!");
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+
+        circleStatus0 = (Circle) root.lookup("#circleStatus0");
+        circleStatus0.setStyle("-fx-fill: red; ");
+
+        next0.setDisable(false);
         property0.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked1() {
+        next1.setDisable(false);
         property1.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked2() {
+        next2.setDisable(false);
         property2.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked3() {
+        next3.setDisable(false);
         property3.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked4() {
+        next4.setDisable(false);
         property4.propertyDetails.propertyApproved = true;
     }
 
     public void discardButtonClicked0() {
+        next0.setDisable(false);
         property0.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked1() {
+        next1.setDisable(false);
         property1.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked2() {
+        next2.setDisable(false);
         property2.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked3() {
+        next3.setDisable(false);
         property3.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked4() {
+        next4.setDisable(false);
         property4.propertyDetails.propertyApproved = false;
     }
 
@@ -526,16 +544,17 @@ public class Controller extends ButtonsAndLabels {
         mp08 = (Label) root.lookup("#mp08");
         mp09 = (Label) root.lookup("#mp09");
 
-        if (mp00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
-        if (mp01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].repairMaterialPrice);
-        if (mp02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].repairMaterialPrice);
-        if (mp03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].repairMaterialPrice);
-        if (mp04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].repairMaterialPrice);
-        if (mp05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].repairMaterialPrice);
-        if (mp06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].repairMaterialPrice);
-        if (mp07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].repairMaterialPrice);
-        if (mp08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].repairMaterialPrice);
-        if (mp09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].repairMaterialPrice);
+        System.out.println(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
+        if (mp00!=null) mp00.setText(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
+        if (mp01!=null) mp01.setText(property.propertyDetails.propertyRepairs[1].repairMaterialPrice);
+        if (mp02!=null) mp02.setText(property.propertyDetails.propertyRepairs[2].repairMaterialPrice);
+        if (mp03!=null) mp03.setText(property.propertyDetails.propertyRepairs[3].repairMaterialPrice);
+        if (mp04!=null) mp04.setText(property.propertyDetails.propertyRepairs[4].repairMaterialPrice);
+        if (mp05!=null) mp05.setText(property.propertyDetails.propertyRepairs[5].repairMaterialPrice);
+        if (mp06!=null) mp06.setText(property.propertyDetails.propertyRepairs[6].repairMaterialPrice);
+        if (mp07!=null) mp07.setText(property.propertyDetails.propertyRepairs[7].repairMaterialPrice);
+        if (mp08!=null) mp08.setText(property.propertyDetails.propertyRepairs[8].repairMaterialPrice);
+        if (mp09!=null) mp09.setText(property.propertyDetails.propertyRepairs[9].repairMaterialPrice);
 
         ed00 = (Label) root.lookup("#ed00");
         ed01 = (Label) root.lookup("#ed01");
