@@ -47,7 +47,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
-        if (property0.propertyDetails.approved == null) {
+        if (property0.propertyDetails.propertyApproved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -73,7 +73,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked1(ActionEvent event) throws IOException {
-        if (property1.propertyDetails.approved == null) {
+        if (property1.propertyDetails.propertyApproved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -98,7 +98,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked2(ActionEvent event) throws IOException {
-        if (property2.propertyDetails.approved == null) {
+        if (property2.propertyDetails.propertyApproved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -123,7 +123,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked3(ActionEvent event) throws IOException {
-        if (property3.propertyDetails.approved == null) {
+        if (property3.propertyDetails.propertyApproved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -148,7 +148,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked4(ActionEvent event) throws IOException {
-        if (property4.propertyDetails.approved == null) {
+        if (property4.propertyDetails.propertyApproved == null) {
             // TODO: If clicked when approve/discard not set, prompt to set it
         }
 
@@ -184,43 +184,43 @@ public class Controller extends ButtonsAndLabels {
     }
 
     public void approveButtonClicked0() {
-        property0.propertyDetails.approved = true;
+        property0.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked1() {
-        property1.propertyDetails.approved = true;
+        property1.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked2() {
-        property2.propertyDetails.approved = true;
+        property2.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked3() {
-        property3.propertyDetails.approved = true;
+        property3.propertyDetails.propertyApproved = true;
     }
 
     public void approveButtonClicked4() {
-        property4.propertyDetails.approved = true;
+        property4.propertyDetails.propertyApproved = true;
     }
 
     public void discardButtonClicked0() {
-        property0.propertyDetails.approved = false;
+        property0.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked1() {
-        property1.propertyDetails.approved = false;
+        property1.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked2() {
-        property2.propertyDetails.approved = false;
+        property2.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked3() {
-        property3.propertyDetails.approved = false;
+        property3.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked4() {
-        property4.propertyDetails.approved = false;
+        property4.propertyDetails.propertyApproved = false;
     }
 
 
@@ -244,16 +244,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property0.propertyDetails.propertyRepairs[0].checkButton = true; }
-            if (cb1.isSelected()) { property0.propertyDetails.propertyRepairs[1].checkButton = true; }
-            if (cb2.isSelected()) { property0.propertyDetails.propertyRepairs[2].checkButton = true; }
-            if (cb3.isSelected()) { property0.propertyDetails.propertyRepairs[3].checkButton = true; }
-            if (cb4.isSelected()) { property0.propertyDetails.propertyRepairs[4].checkButton = true; }
-            if (cb5.isSelected()) { property0.propertyDetails.propertyRepairs[5].checkButton = true; }
-            if (cb6.isSelected()) { property0.propertyDetails.propertyRepairs[6].checkButton = true; }
-            if (cb7.isSelected()) { property0.propertyDetails.propertyRepairs[7].checkButton = true; }
-            if (cb8.isSelected()) { property0.propertyDetails.propertyRepairs[8].checkButton = true; }
-            if (cb9.isSelected()) { property0.propertyDetails.propertyRepairs[9].checkButton = true; }
+            if (cb0.isSelected()) { property0.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
+            if (cb1.isSelected()) { property0.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
+            if (cb2.isSelected()) { property0.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
+            if (cb3.isSelected()) { property0.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
+            if (cb4.isSelected()) { property0.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
+            if (cb5.isSelected()) { property0.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
+            if (cb6.isSelected()) { property0.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
+            if (cb7.isSelected()) { property0.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
+            if (cb8.isSelected()) { property0.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
+            if (cb9.isSelected()) { property0.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
         }
         if (propertyNum == 1) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -267,16 +267,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property1.propertyDetails.propertyRepairs[0].checkButton = true; }
-            if (cb1.isSelected()) { property1.propertyDetails.propertyRepairs[1].checkButton = true; }
-            if (cb2.isSelected()) { property1.propertyDetails.propertyRepairs[2].checkButton = true; }
-            if (cb3.isSelected()) { property1.propertyDetails.propertyRepairs[3].checkButton = true; }
-            if (cb4.isSelected()) { property1.propertyDetails.propertyRepairs[4].checkButton = true; }
-            if (cb5.isSelected()) { property1.propertyDetails.propertyRepairs[5].checkButton = true; }
-            if (cb6.isSelected()) { property1.propertyDetails.propertyRepairs[6].checkButton = true; }
-            if (cb7.isSelected()) { property1.propertyDetails.propertyRepairs[7].checkButton = true; }
-            if (cb8.isSelected()) { property1.propertyDetails.propertyRepairs[8].checkButton = true; }
-            if (cb9.isSelected()) { property1.propertyDetails.propertyRepairs[9].checkButton = true; }
+            if (cb0.isSelected()) { property1.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
+            if (cb1.isSelected()) { property1.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
+            if (cb2.isSelected()) { property1.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
+            if (cb3.isSelected()) { property1.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
+            if (cb4.isSelected()) { property1.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
+            if (cb5.isSelected()) { property1.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
+            if (cb6.isSelected()) { property1.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
+            if (cb7.isSelected()) { property1.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
+            if (cb8.isSelected()) { property1.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
+            if (cb9.isSelected()) { property1.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
         }
         if (propertyNum == 2) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -290,16 +290,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property2.propertyDetails.propertyRepairs[0].checkButton = true; }
-            if (cb1.isSelected()) { property2.propertyDetails.propertyRepairs[1].checkButton = true; }
-            if (cb2.isSelected()) { property2.propertyDetails.propertyRepairs[2].checkButton = true; }
-            if (cb3.isSelected()) { property2.propertyDetails.propertyRepairs[3].checkButton = true; }
-            if (cb4.isSelected()) { property2.propertyDetails.propertyRepairs[4].checkButton = true; }
-            if (cb5.isSelected()) { property2.propertyDetails.propertyRepairs[5].checkButton = true; }
-            if (cb6.isSelected()) { property2.propertyDetails.propertyRepairs[6].checkButton = true; }
-            if (cb7.isSelected()) { property2.propertyDetails.propertyRepairs[7].checkButton = true; }
-            if (cb8.isSelected()) { property2.propertyDetails.propertyRepairs[8].checkButton = true; }
-            if (cb9.isSelected()) { property2.propertyDetails.propertyRepairs[9].checkButton = true; }
+            if (cb0.isSelected()) { property2.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
+            if (cb1.isSelected()) { property2.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
+            if (cb2.isSelected()) { property2.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
+            if (cb3.isSelected()) { property2.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
+            if (cb4.isSelected()) { property2.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
+            if (cb5.isSelected()) { property2.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
+            if (cb6.isSelected()) { property2.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
+            if (cb7.isSelected()) { property2.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
+            if (cb8.isSelected()) { property2.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
+            if (cb9.isSelected()) { property2.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
         }
         if (propertyNum == 3) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -313,16 +313,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property3.propertyDetails.propertyRepairs[0].checkButton = true; }
-            if (cb1.isSelected()) { property3.propertyDetails.propertyRepairs[1].checkButton = true; }
-            if (cb2.isSelected()) { property3.propertyDetails.propertyRepairs[2].checkButton = true; }
-            if (cb3.isSelected()) { property3.propertyDetails.propertyRepairs[3].checkButton = true; }
-            if (cb4.isSelected()) { property3.propertyDetails.propertyRepairs[4].checkButton = true; }
-            if (cb5.isSelected()) { property3.propertyDetails.propertyRepairs[5].checkButton = true; }
-            if (cb6.isSelected()) { property3.propertyDetails.propertyRepairs[6].checkButton = true; }
-            if (cb7.isSelected()) { property3.propertyDetails.propertyRepairs[7].checkButton = true; }
-            if (cb8.isSelected()) { property3.propertyDetails.propertyRepairs[8].checkButton = true; }
-            if (cb9.isSelected()) { property3.propertyDetails.propertyRepairs[9].checkButton = true; }
+            if (cb0.isSelected()) { property3.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
+            if (cb1.isSelected()) { property3.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
+            if (cb2.isSelected()) { property3.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
+            if (cb3.isSelected()) { property3.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
+            if (cb4.isSelected()) { property3.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
+            if (cb5.isSelected()) { property3.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
+            if (cb6.isSelected()) { property3.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
+            if (cb7.isSelected()) { property3.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
+            if (cb8.isSelected()) { property3.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
+            if (cb9.isSelected()) { property3.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
         }
         if (propertyNum == 4) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -336,16 +336,16 @@ public class Controller extends ButtonsAndLabels {
             cb8 = (CheckBox) root.lookup("#cb8");
             cb9 = (CheckBox) root.lookup("#cb9");
 
-            if (cb0.isSelected()) { property4.propertyDetails.propertyRepairs[0].checkButton = true; }
-            if (cb1.isSelected()) { property4.propertyDetails.propertyRepairs[1].checkButton = true; }
-            if (cb2.isSelected()) { property4.propertyDetails.propertyRepairs[2].checkButton = true; }
-            if (cb3.isSelected()) { property4.propertyDetails.propertyRepairs[3].checkButton = true; }
-            if (cb4.isSelected()) { property4.propertyDetails.propertyRepairs[4].checkButton = true; }
-            if (cb5.isSelected()) { property4.propertyDetails.propertyRepairs[5].checkButton = true; }
-            if (cb6.isSelected()) { property4.propertyDetails.propertyRepairs[6].checkButton = true; }
-            if (cb7.isSelected()) { property4.propertyDetails.propertyRepairs[7].checkButton = true; }
-            if (cb8.isSelected()) { property4.propertyDetails.propertyRepairs[8].checkButton = true; }
-            if (cb9.isSelected()) { property4.propertyDetails.propertyRepairs[9].checkButton = true; }
+            if (cb0.isSelected()) { property4.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
+            if (cb1.isSelected()) { property4.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
+            if (cb2.isSelected()) { property4.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
+            if (cb3.isSelected()) { property4.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
+            if (cb4.isSelected()) { property4.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
+            if (cb5.isSelected()) { property4.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
+            if (cb6.isSelected()) { property4.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
+            if (cb7.isSelected()) { property4.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
+            if (cb8.isSelected()) { property4.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
+            if (cb9.isSelected()) { property4.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
         }
     }
 
@@ -373,23 +373,23 @@ public class Controller extends ButtonsAndLabels {
         int totalNetProfitValue = 0;
 
         // Get total amount spent on each property.
-        if (property0.propertyDetails.approved) {
+        if (property0.propertyDetails.propertyApproved) {
             propertySpent0 = property0.propertyDetails.calculateAmountSpentTotal(property0);
             propertyNetProfit0 = propertySpent0 += property0.propertyDetails.calculateValueAddedTotal(property0) - propertySpent0;
         }
-        if (property1.propertyDetails.approved) {
+        if (property1.propertyDetails.propertyApproved) {
             propertySpent1 = property1.propertyDetails.calculateAmountSpentTotal(property1);
             propertyNetProfit1 = propertySpent1 += property1.propertyDetails.calculateValueAddedTotal(property1) - propertySpent1;
         }
-        if (property2.propertyDetails.approved) {
+        if (property2.propertyDetails.propertyApproved) {
             propertySpent2 = property2.propertyDetails.calculateAmountSpentTotal(property2);
             propertyNetProfit2 = propertySpent2 += property2.propertyDetails.calculateValueAddedTotal(property2) - propertySpent2;
         }
-        if (property3.propertyDetails.approved) {
+        if (property3.propertyDetails.propertyApproved) {
             propertySpent3 = property3.propertyDetails.calculateAmountSpentTotal(property3);
             propertyNetProfit3 = propertySpent3 += property3.propertyDetails.calculateValueAddedTotal(property3) - propertySpent3;
         }
-        if (property4.propertyDetails.approved) {
+        if (property4.propertyDetails.propertyApproved) {
             propertySpent4 = property4.propertyDetails.calculateAmountSpentTotal(property4);
             propertyNetProfit4 = propertySpent4 += property4.propertyDetails.calculateValueAddedTotal(property4) - propertySpent4;
         }
@@ -470,7 +470,6 @@ public class Controller extends ButtonsAndLabels {
         if (netProfit3!=null) netProfit3.setText(String.valueOf(property3.propertyDetails.calculateValueAddedTotal(property3) - property3.propertyDetails.calculateAmountSpentTotal(property3)));
         if (netProfit4!=null) netProfit4.setText(String.valueOf(property4.propertyDetails.calculateValueAddedTotal(property4) - property4.propertyDetails.calculateAmountSpentTotal(property4)));
 
-
         // Set bottom of page summary values
         totalSpent = (Label) root.lookup("#totalSpent");
         totalSpent.setText(String.valueOf(totalSpentValue));
@@ -505,16 +504,16 @@ public class Controller extends ButtonsAndLabels {
         rd08 = (Label) root.lookup("#rd08");
         rd09 = (Label) root.lookup("#rd09");
 
-        if (rd00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].description);
-        if (rd01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].description);
-        if (rd02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].description);
-        if (rd03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].description);
-        if (rd04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].description);
-        if (rd05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].description);
-        if (rd06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].description);
-        if (rd07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].description);
-        if (rd08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].description);
-        if (rd09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].description);
+        if (rd00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].repairDescription);
+        if (rd01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].repairDescription);
+        if (rd02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].repairDescription);
+        if (rd03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].repairDescription);
+        if (rd04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].repairDescription);
+        if (rd05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].repairDescription);
+        if (rd06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].repairDescription);
+        if (rd07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].repairDescription);
+        if (rd08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].repairDescription);
+        if (rd09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].repairDescription);
 
         mp00 = (Label) root.lookup("#mp00");
         mp01 = (Label) root.lookup("#mp01");
@@ -527,16 +526,16 @@ public class Controller extends ButtonsAndLabels {
         mp08 = (Label) root.lookup("#mp08");
         mp09 = (Label) root.lookup("#mp09");
 
-        if (mp00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].materialPrice);
-        if (mp01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].materialPrice);
-        if (mp02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].materialPrice);
-        if (mp03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].materialPrice);
-        if (mp04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].materialPrice);
-        if (mp05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].materialPrice);
-        if (mp06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].materialPrice);
-        if (mp07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].materialPrice);
-        if (mp08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].materialPrice);
-        if (mp09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].materialPrice);
+        if (mp00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
+        if (mp01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].repairMaterialPrice);
+        if (mp02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].repairMaterialPrice);
+        if (mp03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].repairMaterialPrice);
+        if (mp04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].repairMaterialPrice);
+        if (mp05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].repairMaterialPrice);
+        if (mp06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].repairMaterialPrice);
+        if (mp07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].repairMaterialPrice);
+        if (mp08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].repairMaterialPrice);
+        if (mp09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].repairMaterialPrice);
 
         ed00 = (Label) root.lookup("#ed00");
         ed01 = (Label) root.lookup("#ed01");
@@ -549,15 +548,15 @@ public class Controller extends ButtonsAndLabels {
         ed08 = (Label) root.lookup("#ed08");
         ed09 = (Label) root.lookup("#ed09");
 
-        if (ed00!=null) ed00.setText(property.propertyDetails.propertyRepairs[0].estimatedDuration);
-        if (ed01!=null) ed01.setText(property.propertyDetails.propertyRepairs[1].estimatedDuration);
-        if (ed02!=null) ed02.setText(property.propertyDetails.propertyRepairs[2].estimatedDuration);
-        if (ed03!=null) ed03.setText(property.propertyDetails.propertyRepairs[3].estimatedDuration);
-        if (ed04!=null) ed04.setText(property.propertyDetails.propertyRepairs[4].estimatedDuration);
-        if (ed05!=null) ed05.setText(property.propertyDetails.propertyRepairs[5].estimatedDuration);
-        if (ed06!=null) ed06.setText(property.propertyDetails.propertyRepairs[6].estimatedDuration);
-        if (ed07!=null) ed07.setText(property.propertyDetails.propertyRepairs[7].estimatedDuration);
-        if (ed08!=null) ed08.setText(property.propertyDetails.propertyRepairs[8].estimatedDuration);
-        if (ed09!=null) ed09.setText(property.propertyDetails.propertyRepairs[9].estimatedDuration);
+        if (ed00!=null) ed00.setText(property.propertyDetails.propertyRepairs[0].repairEstimatedDuration);
+        if (ed01!=null) ed01.setText(property.propertyDetails.propertyRepairs[1].repairEstimatedDuration);
+        if (ed02!=null) ed02.setText(property.propertyDetails.propertyRepairs[2].repairEstimatedDuration);
+        if (ed03!=null) ed03.setText(property.propertyDetails.propertyRepairs[3].repairEstimatedDuration);
+        if (ed04!=null) ed04.setText(property.propertyDetails.propertyRepairs[4].repairEstimatedDuration);
+        if (ed05!=null) ed05.setText(property.propertyDetails.propertyRepairs[5].repairEstimatedDuration);
+        if (ed06!=null) ed06.setText(property.propertyDetails.propertyRepairs[6].repairEstimatedDuration);
+        if (ed07!=null) ed07.setText(property.propertyDetails.propertyRepairs[7].repairEstimatedDuration);
+        if (ed08!=null) ed08.setText(property.propertyDetails.propertyRepairs[8].repairEstimatedDuration);
+        if (ed09!=null) ed09.setText(property.propertyDetails.propertyRepairs[9].repairEstimatedDuration);
     }
 }
