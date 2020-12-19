@@ -2,7 +2,6 @@ package sample;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import java.util.Scanner;
  */
 public class Repairs {
 
-    public static ArrayList<RepairType> repairTypes = new ArrayList<>();
+    public static ArrayList<RepairType> repairTypes;
 
     Repairs() {
         repairTypes = new ArrayList<>();
@@ -26,28 +25,35 @@ public class Repairs {
     public void loadRepairTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("sample/repairList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/sample/repairList.csv"));) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
         }
         catch (Exception e) {
-            System.out.println("Failed to load types.");
+            System.out.println("Failed to load repairTypes.");
         }
 
         for (int i = 0; i < records.size(); i++) {
             RepairType repairEntry = new RepairType();
 
             for (int j = 0; j < records.get(i).size(); j++) {
-                if (j == 0) { repairEntry.description = records.get(i).get(j); }
-                if (j == 1) { repairEntry.materialPrice = records.get(i).get(j); }
-                if (j == 2) { repairEntry.estimatedDuration = records.get(i).get(j); }
-                if (j == 3) { repairEntry.valueAdded = Integer.parseInt(records.get(i).get(j)); }
+                if (j == 0) { repairEntry.repairDescription = records.get(i).get(j); }
+                if (j == 1) { repairEntry.repairMaterialPrice = records.get(i).get(j); }
+                if (j == 2) { repairEntry.repairEstimatedDuration = records.get(i).get(j); }
+                if (j == 3) { repairEntry.repairValueAddedPercent = records.get(i).get(j); }
             }
 
+            // Calculate the labor price for this repair
+            repairEntry.repairLaborPrice = Integer.parseInt(repairEntry.repairEstimatedDuration) * 19;
+
             // Calculate the total repair price for this repair
-            repairEntry.repairPriceTotal = Integer.parseInt(repairEntry.materialPrice) +
-                    (Integer.parseInt(repairEntry.estimatedDuration) * 19);
+            repairEntry.repairPriceTotal = Integer.parseInt(repairEntry.repairMaterialPrice) +
+                    repairEntry.repairLaborPrice;
+
+            // Calculate the value added for this repair
+            repairEntry.repairValueAddedTotal = repairEntry.repairPriceTotal *
+                    Double.parseDouble(repairEntry.repairValueAddedPercent);
 
             // Add to list
             repairTypes.add(repairEntry);
