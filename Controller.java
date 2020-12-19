@@ -230,7 +230,7 @@ public class Controller extends ButtonsAndLabels {
      * @param root
      * @param propertyNum
      */
-    public void saveCheckButtonStatus(Parent root, int propertyNum) {
+    private void saveCheckButtonStatus(Parent root, int propertyNum) {
         // TODO SAVE CHECK BUTTON STATUS
         if (propertyNum == 0) {
             cb0 = (CheckBox) root.lookup("#cb0");
@@ -353,36 +353,129 @@ public class Controller extends ButtonsAndLabels {
      *
      * @param root
      */
-    public void setReportCells(Parent root) {
-        calculateReportCells();
-//        propertyLocation = (Label) root.lookup("#propertyLocation");
-//        propertySqFt = (Label) root.lookup("#propertySqFt");
-//        propertyPrice = (Label) root.lookup("#propertyPrice");
-//        propertyParagraph = (Label) root.lookup("#propertyParagraph");
-    }
+    private void setReportCells(Parent root) {
+        // Spent totals for each property
+        int propertySpent0 = 0;
+        int propertySpent1 = 0;
+        int propertySpent2 = 0;
+        int propertySpent3 = 0;
+        int propertySpent4 = 0;
 
-    /**
-     * Helper method for setReportCells() to calculate the values that are to be inserted into
-     * the labels at these cells.
-     */
-    private void calculateReportCells() {
-        int propertySpent0;
-        int propertySpent1;
-        int propertySpent2;
-        int propertySpent3;
-        int propertySpent4;
-        int netProfit0;
-        int netProfit1;
-        int netProfit2;
-        int netProfit3;
-        int netProfit4;
-        int totalSpent;
-        int totalROI;
+        // Net profit for each property
+        int propertyNetProfit0 = 0;
+        int propertyNetProfit1 = 0;
+        int propertyNetProfit2 = 0;
+        int propertyNetProfit3 = 0;
+        int propertyNetProfit4 = 0;
 
-        propertySpent0 = Integer.parseInt(property0.propertyDetails.propertyPrice.replace(",", ""));
-        if (property0.propertyDetails.propertyRepairs[0].checkButton == true) { propertySpent0 +=  0 } // TODO 
+        // Totals for all properties
+        int totalSpentValue = 0;
+        int totalNetProfitValue = 0;
+
+        // Get total amount spent on each property.
+        if (property0.propertyDetails.approved) {
+            propertySpent0 = property0.propertyDetails.calculateAmountSpentTotal(property0);
+            propertyNetProfit0 = propertySpent0 += property0.propertyDetails.calculateValueAddedTotal(property0) - propertySpent0;
+        }
+        if (property1.propertyDetails.approved) {
+            propertySpent1 = property1.propertyDetails.calculateAmountSpentTotal(property1);
+            propertyNetProfit1 = propertySpent1 += property1.propertyDetails.calculateValueAddedTotal(property1) - propertySpent1;
+        }
+        if (property2.propertyDetails.approved) {
+            propertySpent2 = property2.propertyDetails.calculateAmountSpentTotal(property2);
+            propertyNetProfit2 = propertySpent2 += property2.propertyDetails.calculateValueAddedTotal(property2) - propertySpent2;
+        }
+        if (property3.propertyDetails.approved) {
+            propertySpent3 = property3.propertyDetails.calculateAmountSpentTotal(property3);
+            propertyNetProfit3 = propertySpent3 += property3.propertyDetails.calculateValueAddedTotal(property3) - propertySpent3;
+        }
+        if (property4.propertyDetails.approved) {
+            propertySpent4 = property4.propertyDetails.calculateAmountSpentTotal(property4);
+            propertyNetProfit4 = propertySpent4 += property4.propertyDetails.calculateValueAddedTotal(property4) - propertySpent4;
+        }
+
+        // Calculate totals for bottom summary
+        totalSpentValue = propertySpent0 + propertySpent1 + propertySpent2 + propertySpent3 + propertySpent4;
+        totalNetProfitValue = propertyNetProfit0 + propertyNetProfit1 + propertyNetProfit2 + propertyNetProfit3 + propertyNetProfit4;
+
+        // Set Purchase Price column
+        purchasePrice0 = (Label) root.lookup("#purchasePrice0");
+        purchasePrice1 = (Label) root.lookup("#purchasePrice1");
+        purchasePrice2 = (Label) root.lookup("#purchasePrice2");
+        purchasePrice3 = (Label) root.lookup("#purchasePrice3");
+        purchasePrice4 = (Label) root.lookup("#purchasePrice4");
+        if (purchasePrice0!=null) purchasePrice0.setText(property0.propertyDetails.propertyPrice);
+        if (purchasePrice1!=null) purchasePrice1.setText(property1.propertyDetails.propertyPrice);
+        if (purchasePrice2!=null) purchasePrice2.setText(property2.propertyDetails.propertyPrice);
+        if (purchasePrice3!=null) purchasePrice3.setText(property3.propertyDetails.propertyPrice);
+        if (purchasePrice4!=null) purchasePrice4.setText(property4.propertyDetails.propertyPrice);
+
+        // Set Materials Price column
+        materialsPrice0 = (Label) root.lookup("#materialsPrice0");
+        materialsPrice1 = (Label) root.lookup("#materialsPrice1");
+        materialsPrice2 = (Label) root.lookup("#materialsPrice2");
+        materialsPrice3 = (Label) root.lookup("#materialsPrice3");
+        materialsPrice4 = (Label) root.lookup("#materialsPrice4");
+        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf(property0.propertyDetails.calculateMaterialsPriceTotal(property0)));
+        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf(property1.propertyDetails.calculateMaterialsPriceTotal(property1)));
+        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf(property2.propertyDetails.calculateMaterialsPriceTotal(property2)));
+        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf(property3.propertyDetails.calculateMaterialsPriceTotal(property3)));
+        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf(property4.propertyDetails.calculateMaterialsPriceTotal(property4)));
+
+        // Set Labor Price column
+        laborPrice0 = (Label) root.lookup("#laborPrice0");
+        laborPrice1 = (Label) root.lookup("#laborPrice1");
+        laborPrice2 = (Label) root.lookup("#laborPrice2");
+        laborPrice3 = (Label) root.lookup("#laborPrice3");
+        laborPrice4 = (Label) root.lookup("#laborPrice4");
+        if (laborPrice0!=null) laborPrice0.setText(String.valueOf(property0.propertyDetails.calculateLaborPriceTotal(property0)));
+        if (laborPrice1!=null) laborPrice1.setText(String.valueOf(property1.propertyDetails.calculateLaborPriceTotal(property1)));
+        if (laborPrice2!=null) laborPrice2.setText(String.valueOf(property2.propertyDetails.calculateLaborPriceTotal(property2)));
+        if (laborPrice3!=null) laborPrice3.setText(String.valueOf(property3.propertyDetails.calculateLaborPriceTotal(property3)));
+        if (laborPrice4!=null) laborPrice4.setText(String.valueOf(property4.propertyDetails.calculateLaborPriceTotal(property4)));
+
+        // Set spent column
+        spent0 = (Label) root.lookup("#spent0");
+        spent1 = (Label) root.lookup("#spent1");
+        spent2 = (Label) root.lookup("#spent2");
+        spent3 = (Label) root.lookup("#spent3");
+        spent4 = (Label) root.lookup("#spent4");
+        if (spent0!=null) spent0.setText(String.valueOf(property0.propertyDetails.calculateAmountSpentTotal(property0)));
+        if (spent1!=null) spent1.setText(String.valueOf(property1.propertyDetails.calculateAmountSpentTotal(property1)));
+        if (spent2!=null) spent2.setText(String.valueOf(property2.propertyDetails.calculateAmountSpentTotal(property2)));
+        if (spent3!=null) spent3.setText(String.valueOf(property3.propertyDetails.calculateAmountSpentTotal(property3)));
+        if (spent4!=null) spent4.setText(String.valueOf(property4.propertyDetails.calculateAmountSpentTotal(property4)));
+
+        // Set Est. Sale Price column
+        estSalePrice0 = (Label) root.lookup("#estSalePrice0");
+        estSalePrice1 = (Label) root.lookup("#estSalePrice1");
+        estSalePrice2 = (Label) root.lookup("#estSalePrice2");
+        estSalePrice3 = (Label) root.lookup("#estSalePrice3");
+        estSalePrice4 = (Label) root.lookup("#estSalePrice4");
+        if (estSalePrice0!=null) estSalePrice0.setText(String.valueOf(property0.propertyDetails.calculateValueAddedTotal(property0)));
+        if (estSalePrice1!=null) estSalePrice1.setText(String.valueOf(property1.propertyDetails.calculateValueAddedTotal(property1)));
+        if (estSalePrice2!=null) estSalePrice2.setText(String.valueOf(property2.propertyDetails.calculateValueAddedTotal(property2)));
+        if (estSalePrice3!=null) estSalePrice3.setText(String.valueOf(property3.propertyDetails.calculateValueAddedTotal(property3)));
+        if (estSalePrice4!=null) estSalePrice4.setText(String.valueOf(property4.propertyDetails.calculateValueAddedTotal(property4)));
+
+        // Set Net Profit column
+        netProfit0 = (Label) root.lookup("#netProfit0");
+        netProfit1 = (Label) root.lookup("#netProfit1");
+        netProfit2 = (Label) root.lookup("#netProfit2");
+        netProfit3 = (Label) root.lookup("#netProfit3");
+        netProfit4 = (Label) root.lookup("#netProfit4");
+        if (netProfit0!=null) netProfit0.setText(String.valueOf(property0.propertyDetails.calculateValueAddedTotal(property0) - property0.propertyDetails.calculateAmountSpentTotal(property0)));
+        if (netProfit1!=null) netProfit1.setText(String.valueOf(property1.propertyDetails.calculateValueAddedTotal(property1) - property1.propertyDetails.calculateAmountSpentTotal(property1)));
+        if (netProfit2!=null) netProfit2.setText(String.valueOf(property2.propertyDetails.calculateValueAddedTotal(property2) - property2.propertyDetails.calculateAmountSpentTotal(property2)));
+        if (netProfit3!=null) netProfit3.setText(String.valueOf(property3.propertyDetails.calculateValueAddedTotal(property3) - property3.propertyDetails.calculateAmountSpentTotal(property3)));
+        if (netProfit4!=null) netProfit4.setText(String.valueOf(property4.propertyDetails.calculateValueAddedTotal(property4) - property4.propertyDetails.calculateAmountSpentTotal(property4)));
 
 
+        // Set bottom of page summary values
+        totalSpent = (Label) root.lookup("#totalSpent");
+        totalSpent.setText(String.valueOf(totalSpentValue));
+        totalProfit = (Label) root.lookup("#totalProfit");
+        totalProfit.setText(String.valueOf(totalNetProfitValue));
     }
 
     /**
@@ -390,16 +483,16 @@ public class Controller extends ButtonsAndLabels {
      *
      * @param root
      */
-    public void initializeCells(Parent root, Property property) {
+    private void initializeCells(Parent root, Property property) {
         propertyLocation = (Label) root.lookup("#propertyLocation");
         propertySqFt = (Label) root.lookup("#propertySqFt");
         propertyPrice = (Label) root.lookup("#propertyPrice");
         propertyParagraph = (Label) root.lookup("#propertyParagraph");
 
-        if (propertyLocation!=null) propertyLocation.setText(property.propertyLocation);
-        if (propertySqFt!=null) propertySqFt.setText(property.propertySqFt);
-        if (propertyPrice!=null) propertyPrice.setText(property.propertyPrice);
-        if (propertyParagraph!=null) propertyParagraph.setText(property.propertyParagraph);
+        if (propertyLocation!=null) propertyLocation.setText(property.propertyDetails.propertyLocation);
+        if (propertySqFt!=null) propertySqFt.setText(property.propertyDetails.propertySqFt);
+        if (propertyPrice!=null) propertyPrice.setText(property.propertyDetails.propertyPrice);
+        if (propertyParagraph!=null) propertyParagraph.setText(property.propertyDetails.propertyDescription);
 
         rd00 = (Label) root.lookup("#rd00");
         rd01 = (Label) root.lookup("#rd01");
@@ -412,16 +505,16 @@ public class Controller extends ButtonsAndLabels {
         rd08 = (Label) root.lookup("#rd08");
         rd09 = (Label) root.lookup("#rd09");
 
-        if (rd00!=null) rd00.setText(property.repairDescription0);
-        if (rd01!=null) rd01.setText(property.repairDescription1);
-        if (rd02!=null) rd02.setText(property.repairDescription2);
-        if (rd03!=null) rd03.setText(property.repairDescription3);
-        if (rd04!=null) rd04.setText(property.repairDescription4);
-        if (rd05!=null) rd05.setText(property.repairDescription5);
-        if (rd06!=null) rd06.setText(property.repairDescription6);
-        if (rd07!=null) rd07.setText(property.repairDescription7);
-        if (rd08!=null) rd08.setText(property.repairDescription8);
-        if (rd09!=null) rd09.setText(property.repairDescription9);
+        if (rd00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].description);
+        if (rd01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].description);
+        if (rd02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].description);
+        if (rd03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].description);
+        if (rd04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].description);
+        if (rd05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].description);
+        if (rd06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].description);
+        if (rd07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].description);
+        if (rd08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].description);
+        if (rd09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].description);
 
         mp00 = (Label) root.lookup("#mp00");
         mp01 = (Label) root.lookup("#mp01");
@@ -434,16 +527,16 @@ public class Controller extends ButtonsAndLabels {
         mp08 = (Label) root.lookup("#mp08");
         mp09 = (Label) root.lookup("#mp09");
 
-        if (mp00!=null) mp00.setText(property.materialPrice0);
-        if (mp01!=null) mp01.setText(property.materialPrice1);
-        if (mp02!=null) mp02.setText(property.materialPrice2);
-        if (mp03!=null) mp03.setText(property.materialPrice3);
-        if (mp04!=null) mp04.setText(property.materialPrice4);
-        if (mp05!=null) mp05.setText(property.materialPrice5);
-        if (mp06!=null) mp06.setText(property.materialPrice6);
-        if (mp07!=null) mp07.setText(property.materialPrice7);
-        if (mp08!=null) mp08.setText(property.materialPrice8);
-        if (mp09!=null) mp09.setText(property.materialPrice9);
+        if (mp00!=null) rd00.setText(property.propertyDetails.propertyRepairs[0].materialPrice);
+        if (mp01!=null) rd01.setText(property.propertyDetails.propertyRepairs[1].materialPrice);
+        if (mp02!=null) rd02.setText(property.propertyDetails.propertyRepairs[2].materialPrice);
+        if (mp03!=null) rd03.setText(property.propertyDetails.propertyRepairs[3].materialPrice);
+        if (mp04!=null) rd04.setText(property.propertyDetails.propertyRepairs[4].materialPrice);
+        if (mp05!=null) rd05.setText(property.propertyDetails.propertyRepairs[5].materialPrice);
+        if (mp06!=null) rd06.setText(property.propertyDetails.propertyRepairs[6].materialPrice);
+        if (mp07!=null) rd07.setText(property.propertyDetails.propertyRepairs[7].materialPrice);
+        if (mp08!=null) rd08.setText(property.propertyDetails.propertyRepairs[8].materialPrice);
+        if (mp09!=null) rd09.setText(property.propertyDetails.propertyRepairs[9].materialPrice);
 
         ed00 = (Label) root.lookup("#ed00");
         ed01 = (Label) root.lookup("#ed01");
@@ -456,15 +549,15 @@ public class Controller extends ButtonsAndLabels {
         ed08 = (Label) root.lookup("#ed08");
         ed09 = (Label) root.lookup("#ed09");
 
-        if (ed00!=null) ed00.setText(property.estimatedDuration0);
-        if (ed01!=null) ed01.setText(property.estimatedDuration1);
-        if (ed02!=null) ed02.setText(property.estimatedDuration2);
-        if (ed03!=null) ed03.setText(property.estimatedDuration3);
-        if (ed04!=null) ed04.setText(property.estimatedDuration4);
-        if (ed05!=null) ed05.setText(property.estimatedDuration5);
-        if (ed06!=null) ed06.setText(property.estimatedDuration6);
-        if (ed07!=null) ed07.setText(property.estimatedDuration7);
-        if (ed08!=null) ed08.setText(property.estimatedDuration8);
-        if (ed09!=null) ed09.setText(property.estimatedDuration9);
+        if (ed00!=null) ed00.setText(property.propertyDetails.propertyRepairs[0].estimatedDuration);
+        if (ed01!=null) ed01.setText(property.propertyDetails.propertyRepairs[1].estimatedDuration);
+        if (ed02!=null) ed02.setText(property.propertyDetails.propertyRepairs[2].estimatedDuration);
+        if (ed03!=null) ed03.setText(property.propertyDetails.propertyRepairs[3].estimatedDuration);
+        if (ed04!=null) ed04.setText(property.propertyDetails.propertyRepairs[4].estimatedDuration);
+        if (ed05!=null) ed05.setText(property.propertyDetails.propertyRepairs[5].estimatedDuration);
+        if (ed06!=null) ed06.setText(property.propertyDetails.propertyRepairs[6].estimatedDuration);
+        if (ed07!=null) ed07.setText(property.propertyDetails.propertyRepairs[7].estimatedDuration);
+        if (ed08!=null) ed08.setText(property.propertyDetails.propertyRepairs[8].estimatedDuration);
+        if (ed09!=null) ed09.setText(property.propertyDetails.propertyRepairs[9].estimatedDuration);
     }
 }
