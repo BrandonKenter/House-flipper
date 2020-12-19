@@ -10,10 +10,9 @@ public class PropertyType {
     String propertyDescription; // Paragraph describing the property
     String propertyMaxValue; // The maximum the property can sell for based on comps
     Boolean propertyApproved = null;
-    RepairType[] propertyRepairs = new RepairType[9];
+    RepairType[] propertyRepairs = new RepairType[10];
 
     PropertyType() {}
-
 
     /**
      * Calculates the total materials price for all the repairs of a property.
