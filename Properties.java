@@ -11,7 +11,7 @@ import java.util.Scanner;
  * and its available repairs random.
  */
 public class Properties {
-    public static ArrayList<PropertyType> propertyTypes = new ArrayList<>();
+    public static ArrayList<PropertyType> propertyTypes;
 
     Properties() {
         propertyTypes = new ArrayList<>();
@@ -25,13 +25,13 @@ public class Properties {
     public void loadPropertyTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("sample/propertyList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/sample/propertyList.csv"));) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
         }
         catch (Exception e) {
-            System.out.println("Failed to load types.");
+            System.out.println("Failed to load property types.");
         }
 
         for (int i = 0; i < records.size(); i++) {
