@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.javafx.css.CalculatedValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,19 +10,16 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+
+import java.awt.*;
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  *
  *
  */
 public class Controller extends ButtonsAndLabels {
-
-    Property property0 = new Property();
-    Property property1 = new Property();
-    Property property2 = new Property();
-    Property property3 = new Property();
-    Property property4 = new Property();
 
     /**
      *
@@ -30,6 +28,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void contButtonClicked(ActionEvent event) throws IOException {
+
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
         Scene property1Scene = new Scene(root);
 
@@ -39,7 +38,7 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        initializeCells(root, property0);
+        initializeCells(root, ReportCalculations.property0);
     }
 
     /**
@@ -48,8 +47,6 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
-        // TODO: If clicked when approve/discard not set, prompt to set it
-
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property1.fxml"));
         Scene property1Scene = new Scene(root);
 
@@ -59,11 +56,9 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        initializeCells(root, property1);
+        initializeCells(root, ReportCalculations.property1);
 
-        // TODO Save check button status
-        saveCheckButtonStatus(root,0);
-
+        ReportCalculations.propertyNum += 1;
     }
 
     /**
@@ -72,10 +67,6 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked1(ActionEvent event) throws IOException {
-        if (property1.propertyDetails.propertyApproved == null) {
-            // TODO: If clicked when approve/discard not set, prompt to set it
-        }
-
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property2.fxml"));
         Scene property1Scene = new Scene(root);
 
@@ -85,10 +76,9 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        initializeCells(root, property2);
+        initializeCells(root, ReportCalculations.property2);
 
-        // TODO Save check button status
-        saveCheckButtonStatus(root,1);
+        ReportCalculations.propertyNum += 1;
     }
 
     /**
@@ -97,10 +87,6 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked2(ActionEvent event) throws IOException {
-        if (property2.propertyDetails.propertyApproved == null) {
-            // TODO: If clicked when approve/discard not set, prompt to set it
-        }
-
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property3.fxml"));
         Scene property1Scene = new Scene(root);
 
@@ -110,10 +96,9 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        initializeCells(root, property3);
+        initializeCells(root, ReportCalculations.property3);
 
-        // TODO Save check button status
-        saveCheckButtonStatus(root,2);
+        ReportCalculations.propertyNum += 1;
     }
 
     /**
@@ -122,11 +107,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked3(ActionEvent event) throws IOException {
-        if (property3.propertyDetails.propertyApproved == null) {
-            // TODO: If clicked when approve/discard not set, prompt to set it
-        }
-
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property4.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -135,10 +116,9 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         // Initialize cells
-        initializeCells(root, property4);
+        initializeCells(root, ReportCalculations.property4);
 
-        // TODO Save check button status
-        saveCheckButtonStatus(root, 3);
+        ReportCalculations.propertyNum += 1;
     }
 
     /**
@@ -147,22 +127,7 @@ public class Controller extends ButtonsAndLabels {
      * @throws IOException
      */
     public void nextButtonClicked4(ActionEvent event) throws IOException {
-        if (property4.propertyDetails.propertyApproved == null) {
-            // TODO: If clicked when approve/discard not set, prompt to set it
-        }
-
-        /**
-         * Open Loading Screen
-         */
-        // TODO Save check button status
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property4.fxml"));
-        saveCheckButtonStatus(root, 4);
-
-
-        /**
-         * Open Report Screen
-         */
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/report.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/report.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -171,200 +136,581 @@ public class Controller extends ButtonsAndLabels {
         window.show();
 
         setReportCells(root);
-
     }
 
+    public void checkBoxClicked0(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb0 = (CheckBox) root.lookup("#cb0");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[0].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[0].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[0].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb0 = (CheckBox) root.lookup("#cb0");
+            if (!ReportCalculations.property1.propertyDetails.propertyRepairs[0].repairCheckButton) {
+                ReportCalculations.property1.propertyDetails.propertyRepairs[0].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property1.propertyDetails.propertyRepairs[0].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb0 = (CheckBox) root.lookup("#cb0");
+            if (!ReportCalculations.property2.propertyDetails.propertyRepairs[0].repairCheckButton) {
+                ReportCalculations.property2.propertyDetails.propertyRepairs[0].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property2.propertyDetails.propertyRepairs[0].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb0 = (CheckBox) root.lookup("#cb0");
+            if (!ReportCalculations.property3.propertyDetails.propertyRepairs[0].repairCheckButton) {
+                ReportCalculations.property3.propertyDetails.propertyRepairs[0].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property3.propertyDetails.propertyRepairs[0].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb0 = (CheckBox) root.lookup("#cb0");
+            if (!ReportCalculations.property4.propertyDetails.propertyRepairs[0].repairCheckButton) {
+                ReportCalculations.property4.propertyDetails.propertyRepairs[0].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property4.propertyDetails.propertyRepairs[0].repairCheckButton = false;
+            }
+        }
+    }
+
+    public void checkBoxClicked1(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property1.fxml"));
+            cb1 = (CheckBox) root.lookup("#cb1");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[1].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[1].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[1].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property2.fxml"));
+            cb1 = (CheckBox) root.lookup("#cb1");
+            if (!ReportCalculations.property1.propertyDetails.propertyRepairs[1].repairCheckButton) {
+                ReportCalculations.property1.propertyDetails.propertyRepairs[1].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property1.propertyDetails.propertyRepairs[1].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property3.fxml"));
+            cb1 = (CheckBox) root.lookup("#cb1");
+            if (!ReportCalculations.property2.propertyDetails.propertyRepairs[1].repairCheckButton) {
+                ReportCalculations.property2.propertyDetails.propertyRepairs[1].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property2.propertyDetails.propertyRepairs[1].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property4.fxml"));
+            cb1 = (CheckBox) root.lookup("#cb1");
+            if (!ReportCalculations.property3.propertyDetails.propertyRepairs[1].repairCheckButton) {
+                ReportCalculations.property3.propertyDetails.propertyRepairs[1].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property3.propertyDetails.propertyRepairs[1].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property5.fxml"));
+            cb1 = (CheckBox) root.lookup("#cb1");
+            if (!ReportCalculations.property4.propertyDetails.propertyRepairs[1].repairCheckButton) {
+                ReportCalculations.property4.propertyDetails.propertyRepairs[1].repairCheckButton = true;
+            }
+            else {
+                ReportCalculations.property4.propertyDetails.propertyRepairs[1].repairCheckButton = false;
+            }
+        }
+    }
+
+    public void checkBoxClicked2(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb2 = (CheckBox) root.lookup("#cb2");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb2 = (CheckBox) root.lookup("#cb2");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb2 = (CheckBox) root.lookup("#cb2");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb2 = (CheckBox) root.lookup("#cb2");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb2 = (CheckBox) root.lookup("#cb2");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = false;
+            }
+        }
+    }
+
+        public void checkBoxClicked3(ActionEvent event) throws IOException {
+            if (ReportCalculations.propertyNum == 0) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb3 = (CheckBox) root.lookup("#cb3");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 1) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb3 = (CheckBox) root.lookup("#cb3");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 2) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb3 = (CheckBox) root.lookup("#cb3");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 3) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb3 = (CheckBox) root.lookup("#cb3");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 4) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb3 = (CheckBox) root.lookup("#cb3");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = false;
+                }
+            }
+        }
+
+
+    public void checkBoxClicked4(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb4 = (CheckBox) root.lookup("#cb4");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb4 = (CheckBox) root.lookup("#cb4");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb4 = (CheckBox) root.lookup("#cb4");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb4 = (CheckBox) root.lookup("#cb4");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb4 = (CheckBox) root.lookup("#cb4");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = false;
+            }
+        }
+    }
+        public void checkBoxClicked5(ActionEvent event) throws IOException {
+            if (ReportCalculations.propertyNum == 0) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb5 = (CheckBox) root.lookup("#cb5");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 1) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb5 = (CheckBox) root.lookup("#cb5");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 2) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb5 = (CheckBox) root.lookup("#cb5");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 3) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb5 = (CheckBox) root.lookup("#cb5");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 4) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb5 = (CheckBox) root.lookup("#cb5");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = false;
+                }
+            }
+        }
+    public void checkBoxClicked6(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb6 = (CheckBox) root.lookup("#cb6");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb6 = (CheckBox) root.lookup("#cb6");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb6 = (CheckBox) root.lookup("#cb6");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb6 = (CheckBox) root.lookup("#cb6");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb6 = (CheckBox) root.lookup("#cb6");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = false;
+            }
+        }
+    }
+        public void checkBoxClicked7(ActionEvent event) throws IOException {
+            if (ReportCalculations.propertyNum == 0) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb7 = (CheckBox) root.lookup("#cb7");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 1) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb7 = (CheckBox) root.lookup("#cb7");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 2) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb7 = (CheckBox) root.lookup("#cb7");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 3) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb7 = (CheckBox) root.lookup("#cb7");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = false;
+                }
+            }
+            if (ReportCalculations.propertyNum == 4) {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+                cb7 = (CheckBox) root.lookup("#cb7");
+                if (!ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton) {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = true;
+                } else {
+                    ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = false;
+                }
+            }
+        }
+    public void checkBoxClicked8(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb8 = (CheckBox) root.lookup("#cb8");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb8 = (CheckBox) root.lookup("#cb8");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb8 = (CheckBox) root.lookup("#cb8");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb8 = (CheckBox) root.lookup("#cb8");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb8 = (CheckBox) root.lookup("#cb8");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = false;
+            }
+        }
+    }
+    public void checkBoxClicked9(ActionEvent event) throws IOException {
+        if (ReportCalculations.propertyNum == 0) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb9 = (CheckBox) root.lookup("#cb9");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb9 = (CheckBox) root.lookup("#cb9");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 2) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb9 = (CheckBox) root.lookup("#cb9");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 3) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb9 = (CheckBox) root.lookup("#cb9");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = false;
+            }
+        }
+        if (ReportCalculations.propertyNum == 4) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
+            cb9 = (CheckBox) root.lookup("#cb9");
+            if (!ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton) {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = true;
+            } else {
+                ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = false;
+            }
+        }
+    }
+
+
     /**
-     *
+     * Closes the application.
      */
     public void endButtonClicked() {
         Stage stage = (Stage) end.getScene().getWindow();
         stage.close();
     }
 
-    // TODO add disabled property functionality when clickign between approve/discard
     public void approveButtonClicked0(ActionEvent event) throws IOException {
-        // TODO
-
-        System.out.println("CLICKED!");
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/property0.fxml"));
-
-        circleStatus0 = (Circle) root.lookup("#circleStatus0");
-        circleStatus0.setStyle("-fx-fill: red; ");
-
+        ReportCalculations.property0.propertyDetails.propertyApproved = true;
+        circleStatus0.setStyle("-fx-fill: #58FF36");
+        approve0.setDisable(true);
         next0.setDisable(false);
-        property0.propertyDetails.propertyApproved = true;
+        discard0.setDisable(false);
     }
 
     public void approveButtonClicked1() {
+        ReportCalculations.property1.propertyDetails.propertyApproved = true;
+        circleStatus1.setStyle("-fx-fill: #58FF36");
+        approve1.setDisable(true);
         next1.setDisable(false);
-        property1.propertyDetails.propertyApproved = true;
+        discard1.setDisable(false);
     }
 
     public void approveButtonClicked2() {
+        ReportCalculations.property2.propertyDetails.propertyApproved = true;
+        circleStatus2.setStyle("-fx-fill: #58FF36");
+        approve2.setDisable(true);
         next2.setDisable(false);
-        property2.propertyDetails.propertyApproved = true;
+        discard2.setDisable(false);
     }
 
     public void approveButtonClicked3() {
+        ReportCalculations.property3.propertyDetails.propertyApproved = true;
+        circleStatus3.setStyle("-fx-fill: #58FF36");
+        approve3.setDisable(true);
         next3.setDisable(false);
-        property3.propertyDetails.propertyApproved = true;
+        discard3.setDisable(false);
     }
 
     public void approveButtonClicked4() {
+        ReportCalculations.property4.propertyDetails.propertyApproved = true;
+        circleStatus4.setStyle("-fx-fill: #58FF36");
+        approve4.setDisable(true);
         next4.setDisable(false);
-        property4.propertyDetails.propertyApproved = true;
+        discard4.setDisable(false);
     }
 
     public void discardButtonClicked0() {
+        circleStatus0.setStyle("-fx-fill: #FF0000");
+        discard0.setDisable(true);
         next0.setDisable(false);
-        property0.propertyDetails.propertyApproved = false;
+        approve0.setDisable(false);
+        ReportCalculations.property0.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked1() {
+        circleStatus1.setStyle("-fx-fill: #FF0000");
+        discard1.setDisable(true);
         next1.setDisable(false);
-        property1.propertyDetails.propertyApproved = false;
+        approve1.setDisable(false);
+        ReportCalculations.property1.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked2() {
+        circleStatus2.setStyle("-fx-fill: #FF0000");
+        discard2.setDisable(true);
         next2.setDisable(false);
-        property2.propertyDetails.propertyApproved = false;
+        approve2.setDisable(false);
+        ReportCalculations.property2.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked3() {
+        circleStatus3.setStyle("-fx-fill: #FF0000");
+        discard3.setDisable(true);
         next3.setDisable(false);
-        property3.propertyDetails.propertyApproved = false;
+        approve3.setDisable(false);
+        ReportCalculations.property3.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked4() {
+        circleStatus4.setStyle("-fx-fill: #FF0000");
+        discard4.setDisable(true);
         next4.setDisable(false);
-        property4.propertyDetails.propertyApproved = false;
-    }
-
-
-    /**
-     * Sets the checkButton property for each button.
-     *
-     * @param root
-     * @param propertyNum
-     */
-    private void saveCheckButtonStatus(Parent root, int propertyNum) {
-        // TODO SAVE CHECK BUTTON STATUS
-        if (propertyNum == 0) {
-            cb0 = (CheckBox) root.lookup("#cb0");
-            cb1 = (CheckBox) root.lookup("#cb1");
-            cb2 = (CheckBox) root.lookup("#cb2");
-            cb3 = (CheckBox) root.lookup("#cb3");
-            cb4 = (CheckBox) root.lookup("#cb4");
-            cb5 = (CheckBox) root.lookup("#cb5");
-            cb6 = (CheckBox) root.lookup("#cb6");
-            cb7 = (CheckBox) root.lookup("#cb7");
-            cb8 = (CheckBox) root.lookup("#cb8");
-            cb9 = (CheckBox) root.lookup("#cb9");
-
-            if (cb0.isSelected()) { property0.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
-            if (cb1.isSelected()) { property0.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
-            if (cb2.isSelected()) { property0.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
-            if (cb3.isSelected()) { property0.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
-            if (cb4.isSelected()) { property0.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
-            if (cb5.isSelected()) { property0.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
-            if (cb6.isSelected()) { property0.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
-            if (cb7.isSelected()) { property0.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
-            if (cb8.isSelected()) { property0.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
-            if (cb9.isSelected()) { property0.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
-        }
-        if (propertyNum == 1) {
-            cb0 = (CheckBox) root.lookup("#cb0");
-            cb1 = (CheckBox) root.lookup("#cb1");
-            cb2 = (CheckBox) root.lookup("#cb2");
-            cb3 = (CheckBox) root.lookup("#cb3");
-            cb4 = (CheckBox) root.lookup("#cb4");
-            cb5 = (CheckBox) root.lookup("#cb5");
-            cb6 = (CheckBox) root.lookup("#cb6");
-            cb7 = (CheckBox) root.lookup("#cb7");
-            cb8 = (CheckBox) root.lookup("#cb8");
-            cb9 = (CheckBox) root.lookup("#cb9");
-
-            if (cb0.isSelected()) { property1.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
-            if (cb1.isSelected()) { property1.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
-            if (cb2.isSelected()) { property1.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
-            if (cb3.isSelected()) { property1.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
-            if (cb4.isSelected()) { property1.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
-            if (cb5.isSelected()) { property1.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
-            if (cb6.isSelected()) { property1.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
-            if (cb7.isSelected()) { property1.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
-            if (cb8.isSelected()) { property1.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
-            if (cb9.isSelected()) { property1.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
-        }
-        if (propertyNum == 2) {
-            cb0 = (CheckBox) root.lookup("#cb0");
-            cb1 = (CheckBox) root.lookup("#cb1");
-            cb2 = (CheckBox) root.lookup("#cb2");
-            cb3 = (CheckBox) root.lookup("#cb3");
-            cb4 = (CheckBox) root.lookup("#cb4");
-            cb5 = (CheckBox) root.lookup("#cb5");
-            cb6 = (CheckBox) root.lookup("#cb6");
-            cb7 = (CheckBox) root.lookup("#cb7");
-            cb8 = (CheckBox) root.lookup("#cb8");
-            cb9 = (CheckBox) root.lookup("#cb9");
-
-            if (cb0.isSelected()) { property2.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
-            if (cb1.isSelected()) { property2.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
-            if (cb2.isSelected()) { property2.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
-            if (cb3.isSelected()) { property2.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
-            if (cb4.isSelected()) { property2.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
-            if (cb5.isSelected()) { property2.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
-            if (cb6.isSelected()) { property2.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
-            if (cb7.isSelected()) { property2.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
-            if (cb8.isSelected()) { property2.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
-            if (cb9.isSelected()) { property2.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
-        }
-        if (propertyNum == 3) {
-            cb0 = (CheckBox) root.lookup("#cb0");
-            cb1 = (CheckBox) root.lookup("#cb1");
-            cb2 = (CheckBox) root.lookup("#cb2");
-            cb3 = (CheckBox) root.lookup("#cb3");
-            cb4 = (CheckBox) root.lookup("#cb4");
-            cb5 = (CheckBox) root.lookup("#cb5");
-            cb6 = (CheckBox) root.lookup("#cb6");
-            cb7 = (CheckBox) root.lookup("#cb7");
-            cb8 = (CheckBox) root.lookup("#cb8");
-            cb9 = (CheckBox) root.lookup("#cb9");
-
-            if (cb0.isSelected()) { property3.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
-            if (cb1.isSelected()) { property3.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
-            if (cb2.isSelected()) { property3.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
-            if (cb3.isSelected()) { property3.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
-            if (cb4.isSelected()) { property3.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
-            if (cb5.isSelected()) { property3.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
-            if (cb6.isSelected()) { property3.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
-            if (cb7.isSelected()) { property3.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
-            if (cb8.isSelected()) { property3.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
-            if (cb9.isSelected()) { property3.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
-        }
-        if (propertyNum == 4) {
-            cb0 = (CheckBox) root.lookup("#cb0");
-            cb1 = (CheckBox) root.lookup("#cb1");
-            cb2 = (CheckBox) root.lookup("#cb2");
-            cb3 = (CheckBox) root.lookup("#cb3");
-            cb4 = (CheckBox) root.lookup("#cb4");
-            cb5 = (CheckBox) root.lookup("#cb5");
-            cb6 = (CheckBox) root.lookup("#cb6");
-            cb7 = (CheckBox) root.lookup("#cb7");
-            cb8 = (CheckBox) root.lookup("#cb8");
-            cb9 = (CheckBox) root.lookup("#cb9");
-
-            if (cb0.isSelected()) { property4.propertyDetails.propertyRepairs[0].repairCheckButton = true; }
-            if (cb1.isSelected()) { property4.propertyDetails.propertyRepairs[1].repairCheckButton = true; }
-            if (cb2.isSelected()) { property4.propertyDetails.propertyRepairs[2].repairCheckButton = true; }
-            if (cb3.isSelected()) { property4.propertyDetails.propertyRepairs[3].repairCheckButton = true; }
-            if (cb4.isSelected()) { property4.propertyDetails.propertyRepairs[4].repairCheckButton = true; }
-            if (cb5.isSelected()) { property4.propertyDetails.propertyRepairs[5].repairCheckButton = true; }
-            if (cb6.isSelected()) { property4.propertyDetails.propertyRepairs[6].repairCheckButton = true; }
-            if (cb7.isSelected()) { property4.propertyDetails.propertyRepairs[7].repairCheckButton = true; }
-            if (cb8.isSelected()) { property4.propertyDetails.propertyRepairs[8].repairCheckButton = true; }
-            if (cb9.isSelected()) { property4.propertyDetails.propertyRepairs[9].repairCheckButton = true; }
-        }
+        approve4.setDisable(false);
+        ReportCalculations.property4.propertyDetails.propertyApproved = false;
     }
 
     /**
@@ -390,26 +736,27 @@ public class Controller extends ButtonsAndLabels {
         int totalSpentValue = 0;
         int totalNetProfitValue = 0;
 
+
         // Get total amount spent on each property.
-        if (property0.propertyDetails.propertyApproved) {
-            propertySpent0 = property0.propertyDetails.calculateAmountSpentTotal(property0);
-            propertyNetProfit0 = propertySpent0 += property0.propertyDetails.calculateValueAddedTotal(property0) - propertySpent0;
+        if (ReportCalculations.property0.propertyDetails.propertyApproved != null && ReportCalculations.property0.propertyDetails.propertyApproved == true) {
+            propertySpent0 = ReportCalculations.property0.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property0);
+            propertyNetProfit0 = propertySpent0 += ReportCalculations.property0.propertyDetails.calculateValueAddedTotal(ReportCalculations.property0) - propertySpent0;
         }
-        if (property1.propertyDetails.propertyApproved) {
-            propertySpent1 = property1.propertyDetails.calculateAmountSpentTotal(property1);
-            propertyNetProfit1 = propertySpent1 += property1.propertyDetails.calculateValueAddedTotal(property1) - propertySpent1;
+        if (ReportCalculations.property1.propertyDetails.propertyApproved != null && ReportCalculations.property1.propertyDetails.propertyApproved == true) {
+            propertySpent1 = ReportCalculations.property1.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property1);
+            propertyNetProfit1 = propertySpent1 += ReportCalculations.property1.propertyDetails.calculateValueAddedTotal(ReportCalculations.property1) - propertySpent1;
         }
-        if (property2.propertyDetails.propertyApproved) {
-            propertySpent2 = property2.propertyDetails.calculateAmountSpentTotal(property2);
-            propertyNetProfit2 = propertySpent2 += property2.propertyDetails.calculateValueAddedTotal(property2) - propertySpent2;
+        if (ReportCalculations.property2.propertyDetails.propertyApproved != null && ReportCalculations.property2.propertyDetails.propertyApproved == true) {
+            propertySpent2 = ReportCalculations.property2.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property2);
+            propertyNetProfit2 = propertySpent2 += ReportCalculations.property2.propertyDetails.calculateValueAddedTotal(ReportCalculations.property2) - propertySpent2;
         }
-        if (property3.propertyDetails.propertyApproved) {
-            propertySpent3 = property3.propertyDetails.calculateAmountSpentTotal(property3);
-            propertyNetProfit3 = propertySpent3 += property3.propertyDetails.calculateValueAddedTotal(property3) - propertySpent3;
+        if (ReportCalculations.property3.propertyDetails.propertyApproved != null && ReportCalculations.property3.propertyDetails.propertyApproved == true) {
+            propertySpent3 = ReportCalculations.property3.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property3);
+            propertyNetProfit3 = propertySpent3 += ReportCalculations.property3.propertyDetails.calculateValueAddedTotal(ReportCalculations.property3) - propertySpent3;
         }
-        if (property4.propertyDetails.propertyApproved) {
-            propertySpent4 = property4.propertyDetails.calculateAmountSpentTotal(property4);
-            propertyNetProfit4 = propertySpent4 += property4.propertyDetails.calculateValueAddedTotal(property4) - propertySpent4;
+        if (ReportCalculations.property4.propertyDetails.propertyApproved != null && ReportCalculations.property4.propertyDetails.propertyApproved == true) {
+            propertySpent4 = ReportCalculations.property4.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property4);
+            propertyNetProfit4 = propertySpent4 += ReportCalculations.property4.propertyDetails.calculateValueAddedTotal(ReportCalculations.property4) - propertySpent4;
         }
 
         // Calculate totals for bottom summary
@@ -422,11 +769,11 @@ public class Controller extends ButtonsAndLabels {
         purchasePrice2 = (Label) root.lookup("#purchasePrice2");
         purchasePrice3 = (Label) root.lookup("#purchasePrice3");
         purchasePrice4 = (Label) root.lookup("#purchasePrice4");
-        if (purchasePrice0!=null) purchasePrice0.setText(property0.propertyDetails.propertyPrice);
-        if (purchasePrice1!=null) purchasePrice1.setText(property1.propertyDetails.propertyPrice);
-        if (purchasePrice2!=null) purchasePrice2.setText(property2.propertyDetails.propertyPrice);
-        if (purchasePrice3!=null) purchasePrice3.setText(property3.propertyDetails.propertyPrice);
-        if (purchasePrice4!=null) purchasePrice4.setText(property4.propertyDetails.propertyPrice);
+        if (purchasePrice0!=null) purchasePrice0.setText(ReportCalculations.property0.propertyDetails.propertyPrice);
+        if (purchasePrice1!=null) purchasePrice1.setText(ReportCalculations.property1.propertyDetails.propertyPrice);
+        if (purchasePrice2!=null) purchasePrice2.setText(ReportCalculations.property2.propertyDetails.propertyPrice);
+        if (purchasePrice3!=null) purchasePrice3.setText(ReportCalculations.property3.propertyDetails.propertyPrice);
+        if (purchasePrice4!=null) purchasePrice4.setText(ReportCalculations.property4.propertyDetails.propertyPrice);
 
         // Set Materials Price column
         materialsPrice0 = (Label) root.lookup("#materialsPrice0");
@@ -434,11 +781,11 @@ public class Controller extends ButtonsAndLabels {
         materialsPrice2 = (Label) root.lookup("#materialsPrice2");
         materialsPrice3 = (Label) root.lookup("#materialsPrice3");
         materialsPrice4 = (Label) root.lookup("#materialsPrice4");
-        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf(property0.propertyDetails.calculateMaterialsPriceTotal(property0)));
-        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf(property1.propertyDetails.calculateMaterialsPriceTotal(property1)));
-        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf(property2.propertyDetails.calculateMaterialsPriceTotal(property2)));
-        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf(property3.propertyDetails.calculateMaterialsPriceTotal(property3)));
-        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf(property4.propertyDetails.calculateMaterialsPriceTotal(property4)));
+        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf(ReportCalculations.property0.propertyDetails.calculateMaterialsPriceTotal(ReportCalculations.property0)));
+        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf(ReportCalculations.property1.propertyDetails.calculateMaterialsPriceTotal(ReportCalculations.property1)));
+        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf(ReportCalculations.property2.propertyDetails.calculateMaterialsPriceTotal(ReportCalculations.property2)));
+        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf(ReportCalculations.property3.propertyDetails.calculateMaterialsPriceTotal(ReportCalculations.property3)));
+        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf(ReportCalculations.property4.propertyDetails.calculateMaterialsPriceTotal(ReportCalculations.property4)));
 
         // Set Labor Price column
         laborPrice0 = (Label) root.lookup("#laborPrice0");
@@ -446,11 +793,11 @@ public class Controller extends ButtonsAndLabels {
         laborPrice2 = (Label) root.lookup("#laborPrice2");
         laborPrice3 = (Label) root.lookup("#laborPrice3");
         laborPrice4 = (Label) root.lookup("#laborPrice4");
-        if (laborPrice0!=null) laborPrice0.setText(String.valueOf(property0.propertyDetails.calculateLaborPriceTotal(property0)));
-        if (laborPrice1!=null) laborPrice1.setText(String.valueOf(property1.propertyDetails.calculateLaborPriceTotal(property1)));
-        if (laborPrice2!=null) laborPrice2.setText(String.valueOf(property2.propertyDetails.calculateLaborPriceTotal(property2)));
-        if (laborPrice3!=null) laborPrice3.setText(String.valueOf(property3.propertyDetails.calculateLaborPriceTotal(property3)));
-        if (laborPrice4!=null) laborPrice4.setText(String.valueOf(property4.propertyDetails.calculateLaborPriceTotal(property4)));
+        if (laborPrice0!=null) laborPrice0.setText(String.valueOf(ReportCalculations.property0.propertyDetails.calculateLaborPriceTotal(ReportCalculations.property0)));
+        if (laborPrice1!=null) laborPrice1.setText(String.valueOf(ReportCalculations.property1.propertyDetails.calculateLaborPriceTotal(ReportCalculations.property1)));
+        if (laborPrice2!=null) laborPrice2.setText(String.valueOf(ReportCalculations.property2.propertyDetails.calculateLaborPriceTotal(ReportCalculations.property2)));
+        if (laborPrice3!=null) laborPrice3.setText(String.valueOf(ReportCalculations.property3.propertyDetails.calculateLaborPriceTotal(ReportCalculations.property3)));
+        if (laborPrice4!=null) laborPrice4.setText(String.valueOf(ReportCalculations.property4.propertyDetails.calculateLaborPriceTotal(ReportCalculations.property4)));
 
         // Set spent column
         spent0 = (Label) root.lookup("#spent0");
@@ -458,11 +805,11 @@ public class Controller extends ButtonsAndLabels {
         spent2 = (Label) root.lookup("#spent2");
         spent3 = (Label) root.lookup("#spent3");
         spent4 = (Label) root.lookup("#spent4");
-        if (spent0!=null) spent0.setText(String.valueOf(property0.propertyDetails.calculateAmountSpentTotal(property0)));
-        if (spent1!=null) spent1.setText(String.valueOf(property1.propertyDetails.calculateAmountSpentTotal(property1)));
-        if (spent2!=null) spent2.setText(String.valueOf(property2.propertyDetails.calculateAmountSpentTotal(property2)));
-        if (spent3!=null) spent3.setText(String.valueOf(property3.propertyDetails.calculateAmountSpentTotal(property3)));
-        if (spent4!=null) spent4.setText(String.valueOf(property4.propertyDetails.calculateAmountSpentTotal(property4)));
+        if (spent0!=null) spent0.setText(String.valueOf(ReportCalculations.property0.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property0)));
+        if (spent1!=null) spent1.setText(String.valueOf(ReportCalculations.property1.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property1)));
+        if (spent2!=null) spent2.setText(String.valueOf(ReportCalculations.property2.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property2)));
+        if (spent3!=null) spent3.setText(String.valueOf(ReportCalculations.property3.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property3)));
+        if (spent4!=null) spent4.setText(String.valueOf(ReportCalculations.property4.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property4)));
 
         // Set Est. Sale Price column
         estSalePrice0 = (Label) root.lookup("#estSalePrice0");
@@ -470,11 +817,11 @@ public class Controller extends ButtonsAndLabels {
         estSalePrice2 = (Label) root.lookup("#estSalePrice2");
         estSalePrice3 = (Label) root.lookup("#estSalePrice3");
         estSalePrice4 = (Label) root.lookup("#estSalePrice4");
-        if (estSalePrice0!=null) estSalePrice0.setText(String.valueOf(property0.propertyDetails.calculateValueAddedTotal(property0)));
-        if (estSalePrice1!=null) estSalePrice1.setText(String.valueOf(property1.propertyDetails.calculateValueAddedTotal(property1)));
-        if (estSalePrice2!=null) estSalePrice2.setText(String.valueOf(property2.propertyDetails.calculateValueAddedTotal(property2)));
-        if (estSalePrice3!=null) estSalePrice3.setText(String.valueOf(property3.propertyDetails.calculateValueAddedTotal(property3)));
-        if (estSalePrice4!=null) estSalePrice4.setText(String.valueOf(property4.propertyDetails.calculateValueAddedTotal(property4)));
+        if (estSalePrice0!=null) estSalePrice0.setText(String.valueOf(ReportCalculations.property0.propertyDetails.calculateValueAddedTotal(ReportCalculations.property0)));
+        if (estSalePrice1!=null) estSalePrice1.setText(String.valueOf(ReportCalculations.property1.propertyDetails.calculateValueAddedTotal(ReportCalculations.property1)));
+        if (estSalePrice2!=null) estSalePrice2.setText(String.valueOf(ReportCalculations.property2.propertyDetails.calculateValueAddedTotal(ReportCalculations.property2)));
+        if (estSalePrice3!=null) estSalePrice3.setText(String.valueOf(ReportCalculations.property3.propertyDetails.calculateValueAddedTotal(ReportCalculations.property3)));
+        if (estSalePrice4!=null) estSalePrice4.setText(String.valueOf(ReportCalculations.property4.propertyDetails.calculateValueAddedTotal(ReportCalculations.property4)));
 
         // Set Net Profit column
         netProfit0 = (Label) root.lookup("#netProfit0");
@@ -482,17 +829,20 @@ public class Controller extends ButtonsAndLabels {
         netProfit2 = (Label) root.lookup("#netProfit2");
         netProfit3 = (Label) root.lookup("#netProfit3");
         netProfit4 = (Label) root.lookup("#netProfit4");
-        if (netProfit0!=null) netProfit0.setText(String.valueOf(property0.propertyDetails.calculateValueAddedTotal(property0) - property0.propertyDetails.calculateAmountSpentTotal(property0)));
-        if (netProfit1!=null) netProfit1.setText(String.valueOf(property1.propertyDetails.calculateValueAddedTotal(property1) - property1.propertyDetails.calculateAmountSpentTotal(property1)));
-        if (netProfit2!=null) netProfit2.setText(String.valueOf(property2.propertyDetails.calculateValueAddedTotal(property2) - property2.propertyDetails.calculateAmountSpentTotal(property2)));
-        if (netProfit3!=null) netProfit3.setText(String.valueOf(property3.propertyDetails.calculateValueAddedTotal(property3) - property3.propertyDetails.calculateAmountSpentTotal(property3)));
-        if (netProfit4!=null) netProfit4.setText(String.valueOf(property4.propertyDetails.calculateValueAddedTotal(property4) - property4.propertyDetails.calculateAmountSpentTotal(property4)));
+        if (netProfit0!=null) netProfit0.setText(String.valueOf(ReportCalculations.property0.propertyDetails.calculateValueAddedTotal(ReportCalculations.property0) - ReportCalculations.property0.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property0)));
+        if (netProfit1!=null) netProfit1.setText(String.valueOf(ReportCalculations.property1.propertyDetails.calculateValueAddedTotal(ReportCalculations.property1) - ReportCalculations.property1.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property1)));
+        if (netProfit2!=null) netProfit2.setText(String.valueOf(ReportCalculations.property2.propertyDetails.calculateValueAddedTotal(ReportCalculations.property2) - ReportCalculations.property2.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property2)));
+        if (netProfit3!=null) netProfit3.setText(String.valueOf(ReportCalculations.property3.propertyDetails.calculateValueAddedTotal(ReportCalculations.property3) - ReportCalculations.property3.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property3)));
+        if (netProfit4!=null) netProfit4.setText(String.valueOf(ReportCalculations.property4.propertyDetails.calculateValueAddedTotal(ReportCalculations.property4) - ReportCalculations.property4.propertyDetails.calculateAmountSpentTotal(ReportCalculations.property4)));
 
         // Set bottom of page summary values
         totalSpent = (Label) root.lookup("#totalSpent");
-        totalSpent.setText(String.valueOf(totalSpentValue));
+        String wow = Integer.toString(totalSpentValue);
+        totalSpent.setText(wow);
+
         totalProfit = (Label) root.lookup("#totalProfit");
-        totalProfit.setText(String.valueOf(totalNetProfitValue));
+        String wow1 = Integer.toString(totalNetProfitValue);
+        totalProfit.setText(wow1);
     }
 
     /**
@@ -544,7 +894,6 @@ public class Controller extends ButtonsAndLabels {
         mp08 = (Label) root.lookup("#mp08");
         mp09 = (Label) root.lookup("#mp09");
 
-        System.out.println(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
         if (mp00!=null) mp00.setText(property.propertyDetails.propertyRepairs[0].repairMaterialPrice);
         if (mp01!=null) mp01.setText(property.propertyDetails.propertyRepairs[1].repairMaterialPrice);
         if (mp02!=null) mp02.setText(property.propertyDetails.propertyRepairs[2].repairMaterialPrice);
