@@ -1,26 +1,5 @@
-propertyLocation =  "Madison, WI";
-propertySqFt =      "1400";
-propertyPrice =     "$155,000";
-propertyParagraph =
-
-
-propertyLocation = "Green Bay, WI";
-propertySqFt =      "2200";
-propertyPrice =     "$189,000";
-propertyParagraph =
-
-
-this.propertyLocation = "La Crosse, WI";
-this.propertySqFt = "950";
-this.propertyPrice = "$88,000";
-this.propertyParagraph =
-
-
-propertyLocation = "Milwaukee, WI";
-propertySqFt = "1900";
-propertyPrice = "$188,000";
-propertyParagraph = "TEST TEST TEST TEST TEST TEST TEST TE
-   "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST" +
-   "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST" +
-   "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST";
-
+Madison WI,1400,155000,This is a house,255000
+Green Bay WI,2000,189000,This is a house,255000
+La Crosse WI,950,88000,This is a house,255000
+Milwaukee WI,1900,188000,This is a house,255000
+La Crosse WI,950,88000,This is a house,255000

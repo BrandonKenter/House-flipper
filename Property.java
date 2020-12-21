@@ -16,6 +16,7 @@ public class Property {
         if (initialized == 0) {
             Properties properties = new Properties();
             Repairs repairs = new Repairs();
+            initialized += 1;
         }
 
         Random random = new Random();

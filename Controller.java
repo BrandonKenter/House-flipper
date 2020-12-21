@@ -16,12 +16,12 @@ import java.util.Objects;
  *
  *
  */
-public class Controller extends ButtonsAndLabels {
+public class Controller extends Controls {
 
 
     public void contButtonClicked(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -35,7 +35,7 @@ public class Controller extends ButtonsAndLabels {
 
 
     public void nextButtonClicked0(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
 
         Scene property1Scene = new Scene(root);
 
@@ -51,7 +51,7 @@ public class Controller extends ButtonsAndLabels {
     }
 
     public void nextButtonClicked1(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -66,7 +66,7 @@ public class Controller extends ButtonsAndLabels {
     }
 
     public void nextButtonClicked2(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -81,7 +81,7 @@ public class Controller extends ButtonsAndLabels {
     }
 
     public void nextButtonClicked3(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -97,7 +97,7 @@ public class Controller extends ButtonsAndLabels {
 
 
     public void nextButtonClicked4(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/report.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/ReportScreen.fxml")));
         Scene property1Scene = new Scene(root);
 
         // Get the stage info
@@ -110,270 +110,270 @@ public class Controller extends ButtonsAndLabels {
 
     public void checkBoxClicked0(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
             ReportCalculations.property0.propertyDetails.propertyRepairs[0].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
             ReportCalculations.property1.propertyDetails.propertyRepairs[0].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
             ReportCalculations.property2.propertyDetails.propertyRepairs[0].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
             ReportCalculations.property3.propertyDetails.propertyRepairs[0].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
             ReportCalculations.property4.propertyDetails.propertyRepairs[0].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
     }
     public void checkBoxClicked1(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
             ReportCalculations.property0.propertyDetails.propertyRepairs[1].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
             ReportCalculations.property1.propertyDetails.propertyRepairs[1].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
             ReportCalculations.property2.propertyDetails.propertyRepairs[1].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
             ReportCalculations.property3.propertyDetails.propertyRepairs[1].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
             ReportCalculations.property4.propertyDetails.propertyRepairs[1].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
     }
     public void checkBoxClicked2(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
             ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
             ReportCalculations.property1.propertyDetails.propertyRepairs[2].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
             ReportCalculations.property2.propertyDetails.propertyRepairs[2].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
             ReportCalculations.property3.propertyDetails.propertyRepairs[2].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
             ReportCalculations.property4.propertyDetails.propertyRepairs[2].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
     }
     public void checkBoxClicked3(ActionEvent event) throws IOException {
             if (ReportCalculations.propertyNum == 0) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
                 ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 1) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
                 ReportCalculations.property1.propertyDetails.propertyRepairs[3].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 2) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
                 ReportCalculations.property2.propertyDetails.propertyRepairs[3].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 3) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
                 ReportCalculations.property3.propertyDetails.propertyRepairs[3].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 4) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
                 ReportCalculations.property4.propertyDetails.propertyRepairs[3].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
         }
     public void checkBoxClicked4(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
             ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
             ReportCalculations.property1.propertyDetails.propertyRepairs[4].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
             ReportCalculations.property2.propertyDetails.propertyRepairs[4].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
             ReportCalculations.property3.propertyDetails.propertyRepairs[4].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
             ReportCalculations.property4.propertyDetails.propertyRepairs[4].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
     }
     public void checkBoxClicked5(ActionEvent event) throws IOException {
             if (ReportCalculations.propertyNum == 0) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
                 ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 1) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
                 ReportCalculations.property1.propertyDetails.propertyRepairs[5].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 2) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
                 ReportCalculations.property2.propertyDetails.propertyRepairs[5].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 3) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
                 ReportCalculations.property3.propertyDetails.propertyRepairs[5].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 4) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
                 ReportCalculations.property4.propertyDetails.propertyRepairs[5].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
         }
     public void checkBoxClicked6(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
             ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
             ReportCalculations.property1.propertyDetails.propertyRepairs[6].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
             ReportCalculations.property2.propertyDetails.propertyRepairs[6].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
             ReportCalculations.property3.propertyDetails.propertyRepairs[6].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
             ReportCalculations.property4.propertyDetails.propertyRepairs[6].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
     }
     public void checkBoxClicked7(ActionEvent event) throws IOException {
             if (ReportCalculations.propertyNum == 0) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
                 ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 1) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
                 ReportCalculations.property1.propertyDetails.propertyRepairs[7].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 2) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
                 ReportCalculations.property2.propertyDetails.propertyRepairs[7].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 3) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
                 ReportCalculations.property3.propertyDetails.propertyRepairs[7].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
             if (ReportCalculations.propertyNum == 4) {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
                 ReportCalculations.property4.propertyDetails.propertyRepairs[7].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
         }
     public void checkBoxClicked8(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
             ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
             ReportCalculations.property1.propertyDetails.propertyRepairs[8].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
             ReportCalculations.property2.propertyDetails.propertyRepairs[8].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
             ReportCalculations.property3.propertyDetails.propertyRepairs[8].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
             ReportCalculations.property4.propertyDetails.propertyRepairs[8].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
     }
     public void checkBoxClicked9(ActionEvent event) throws IOException {
         if (ReportCalculations.propertyNum == 0) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property0.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen0.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
             ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton = !ReportCalculations.property0.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 1) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen1.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
             ReportCalculations.property1.propertyDetails.propertyRepairs[9].repairCheckButton = !ReportCalculations.property1.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 2) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property2.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen2.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
             ReportCalculations.property2.propertyDetails.propertyRepairs[9].repairCheckButton = !ReportCalculations.property2.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 3) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property3.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen3.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
             ReportCalculations.property3.propertyDetails.propertyRepairs[9].repairCheckButton = !ReportCalculations.property3.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
         if (ReportCalculations.propertyNum == 4) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/property4.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/Screens/PropertyScreen4.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
             ReportCalculations.property4.propertyDetails.propertyRepairs[9].repairCheckButton = !ReportCalculations.property4.propertyDetails.propertyRepairs[9].repairCheckButton;
         }

@@ -10,7 +10,6 @@ import java.util.Scanner;
  * and its available repairs random.
  */
 public class Repairs {
-
     public static ArrayList<RepairType> repairTypes;
 
     Repairs() {
@@ -78,3 +77,4 @@ public class Repairs {
         return values;
     }
 }
+

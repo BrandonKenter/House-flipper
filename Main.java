@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Screens/StartingScreen.fxml"));
         primaryStage.setTitle("House Flipper");
-        primaryStage.setScene(new Scene(root, 1033, 739));
+        primaryStage.setScene(new Scene(root, 1080, 720));
         primaryStage.show();
     }
 
@@ -23,9 +23,7 @@ public class Main extends Application {
      * @param args
      */
     public static void main(String[] args) {
-        // initalize page content
-        // load in csv file with strings
-        // random strings
         launch(args);
     }
 }
+

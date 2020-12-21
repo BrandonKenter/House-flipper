@@ -9,7 +9,7 @@ public class RepairType {
     String repairEstimatedDuration; // Estimated duration of the repair
     String repairValueAddedPercent; // Percentage of added value to a property after this repair
     int repairPriceTotal; // The total price calculated using materials and labor
-    int repairValueAddedTotal; // The value added to the property with this repair
+    double repairValueAddedTotal; // The value added to the property with this repair
     int repairLaborPrice; // The total price of labor to perform the repair
     Boolean repairCheckButton = false; // Check button clicked status
 
