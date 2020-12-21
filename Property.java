@@ -9,6 +9,7 @@ public class Property {
     public PropertyDetails propertyDetails;
     private int initialized = 0;
 
+
     /**
      * Initialize a property's details and its list of repairs.
      */

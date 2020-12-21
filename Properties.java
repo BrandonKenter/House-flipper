@@ -11,13 +11,7 @@ import java.util.Scanner;
  */
 public class Properties {
     public static ArrayList<PropertyDetails> propertyList;
-    public static Property property0 = new Property();
-    public static Property property1 = new Property();
-    public static Property property2 = new Property();
-    public static Property property3 = new Property();
-    public static Property property4 = new Property();
 
-    public static int propertyNum = 0;
 
     Properties() {
         propertyList = new ArrayList<>();
@@ -31,7 +25,7 @@ public class Properties {
     public void loadPropertyTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("src/sample/propertyList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/flipper//propertyinfo/propertyList.csv"));) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }

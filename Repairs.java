@@ -24,7 +24,7 @@ public class Repairs {
     public void loadRepairTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("src/sample/repairList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/flipper/propertyinfo/repairList.csv"));) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }

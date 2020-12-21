@@ -30,7 +30,7 @@ public class Controller extends Controls {
         window.show();
 
         // Initialize cells
-        initializeCells(root, Properties.property0);
+        initializeCells(root, PropertyNames.property0);
     }
 
 
@@ -45,9 +45,9 @@ public class Controller extends Controls {
         window.show();
 
         // Initialize cells
-        initializeCells(root, Properties.property1);
+        initializeCells(root, PropertyNames.property1);
 
-        Properties.propertyNum += 1;
+        PropertyNames.propertyNum += 1;
     }
 
     public void nextButtonClicked1(ActionEvent event) throws IOException {
@@ -60,9 +60,9 @@ public class Controller extends Controls {
         window.show();
 
         // Initialize cells
-        initializeCells(root, Properties.property2);
+        initializeCells(root, PropertyNames.property2);
 
-        Properties.propertyNum += 1;
+        PropertyNames.propertyNum += 1;
     }
 
     public void nextButtonClicked2(ActionEvent event) throws IOException {
@@ -75,9 +75,9 @@ public class Controller extends Controls {
         window.show();
 
         // Initialize cells
-        initializeCells(root, Properties.property3);
+        initializeCells(root, PropertyNames.property3);
 
-        Properties.propertyNum += 1;
+        PropertyNames.propertyNum += 1;
     }
 
     public void nextButtonClicked3(ActionEvent event) throws IOException {
@@ -90,9 +90,9 @@ public class Controller extends Controls {
         window.show();
 
         // Initialize cells
-        initializeCells(root, Properties.property4);
+        initializeCells(root, PropertyNames.property4);
 
-        Properties.propertyNum += 1;
+        PropertyNames.propertyNum += 1;
     }
 
 
@@ -109,273 +109,273 @@ public class Controller extends Controls {
     }
 
     public void checkBoxClicked0(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
-            Properties.property0.propertyDetails.propertyRepairs[0].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[0].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[0].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
-            Properties.property1.propertyDetails.propertyRepairs[0].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[0].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[0].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
-            Properties.property2.propertyDetails.propertyRepairs[0].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[0].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[0].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
-            Properties.property3.propertyDetails.propertyRepairs[0].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[0].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[0].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb0 = (CheckBox) root.lookup("#cb0");
-            Properties.property4.propertyDetails.propertyRepairs[0].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[0].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[0].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[0].repairCheckButton;
         }
     }
     public void checkBoxClicked1(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
-            Properties.property0.propertyDetails.propertyRepairs[1].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[1].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[1].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
-            Properties.property1.propertyDetails.propertyRepairs[1].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[1].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[1].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
-            Properties.property2.propertyDetails.propertyRepairs[1].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[1].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[1].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
-            Properties.property3.propertyDetails.propertyRepairs[1].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[1].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[1].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb1 = (CheckBox) root.lookup("#cb1");
-            Properties.property4.propertyDetails.propertyRepairs[1].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[1].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[1].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[1].repairCheckButton;
         }
     }
     public void checkBoxClicked2(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
-            Properties.property0.propertyDetails.propertyRepairs[2].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[2].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[2].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
-            Properties.property1.propertyDetails.propertyRepairs[2].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[2].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[2].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
-            Properties.property2.propertyDetails.propertyRepairs[2].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[2].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[2].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
-            Properties.property3.propertyDetails.propertyRepairs[2].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[2].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[2].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb2 = (CheckBox) root.lookup("#cb2");
-            Properties.property4.propertyDetails.propertyRepairs[2].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[2].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[2].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[2].repairCheckButton;
         }
     }
     public void checkBoxClicked3(ActionEvent event) throws IOException {
-            if (Properties.propertyNum == 0) {
+            if (PropertyNames.propertyNum == 0) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
-                Properties.property0.propertyDetails.propertyRepairs[3].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[3].repairCheckButton;
+                PropertyNames.property0.propertyDetails.propertyRepairs[3].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
-            if (Properties.propertyNum == 1) {
+            if (PropertyNames.propertyNum == 1) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
-                Properties.property1.propertyDetails.propertyRepairs[3].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[3].repairCheckButton;
+                PropertyNames.property1.propertyDetails.propertyRepairs[3].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
-            if (Properties.propertyNum == 2) {
+            if (PropertyNames.propertyNum == 2) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
-                Properties.property2.propertyDetails.propertyRepairs[3].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[3].repairCheckButton;
+                PropertyNames.property2.propertyDetails.propertyRepairs[3].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
-            if (Properties.propertyNum == 3) {
+            if (PropertyNames.propertyNum == 3) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
-                Properties.property3.propertyDetails.propertyRepairs[3].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[3].repairCheckButton;
+                PropertyNames.property3.propertyDetails.propertyRepairs[3].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
-            if (Properties.propertyNum == 4) {
+            if (PropertyNames.propertyNum == 4) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
                 cb3 = (CheckBox) root.lookup("#cb3");
-                Properties.property4.propertyDetails.propertyRepairs[3].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[3].repairCheckButton;
+                PropertyNames.property4.propertyDetails.propertyRepairs[3].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[3].repairCheckButton;
             }
         }
     public void checkBoxClicked4(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
-            Properties.property0.propertyDetails.propertyRepairs[4].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[4].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[4].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
-            Properties.property1.propertyDetails.propertyRepairs[4].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[4].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[4].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
-            Properties.property2.propertyDetails.propertyRepairs[4].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[4].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[4].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
-            Properties.property3.propertyDetails.propertyRepairs[4].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[4].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[4].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb4 = (CheckBox) root.lookup("#cb4");
-            Properties.property4.propertyDetails.propertyRepairs[4].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[4].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[4].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[4].repairCheckButton;
         }
     }
     public void checkBoxClicked5(ActionEvent event) throws IOException {
-            if (Properties.propertyNum == 0) {
+            if (PropertyNames.propertyNum == 0) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
-                Properties.property0.propertyDetails.propertyRepairs[5].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[5].repairCheckButton;
+                PropertyNames.property0.propertyDetails.propertyRepairs[5].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
-            if (Properties.propertyNum == 1) {
+            if (PropertyNames.propertyNum == 1) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
-                Properties.property1.propertyDetails.propertyRepairs[5].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[5].repairCheckButton;
+                PropertyNames.property1.propertyDetails.propertyRepairs[5].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
-            if (Properties.propertyNum == 2) {
+            if (PropertyNames.propertyNum == 2) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
-                Properties.property2.propertyDetails.propertyRepairs[5].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[5].repairCheckButton;
+                PropertyNames.property2.propertyDetails.propertyRepairs[5].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
-            if (Properties.propertyNum == 3) {
+            if (PropertyNames.propertyNum == 3) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
-                Properties.property3.propertyDetails.propertyRepairs[5].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[5].repairCheckButton;
+                PropertyNames.property3.propertyDetails.propertyRepairs[5].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
-            if (Properties.propertyNum == 4) {
+            if (PropertyNames.propertyNum == 4) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
                 cb5 = (CheckBox) root.lookup("#cb5");
-                Properties.property4.propertyDetails.propertyRepairs[5].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[5].repairCheckButton;
+                PropertyNames.property4.propertyDetails.propertyRepairs[5].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[5].repairCheckButton;
             }
         }
     public void checkBoxClicked6(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
-            Properties.property0.propertyDetails.propertyRepairs[6].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[6].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[6].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
-            Properties.property1.propertyDetails.propertyRepairs[6].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[6].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[6].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
-            Properties.property2.propertyDetails.propertyRepairs[6].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[6].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[6].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
-            Properties.property3.propertyDetails.propertyRepairs[6].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[6].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[6].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb6 = (CheckBox) root.lookup("#cb6");
-            Properties.property4.propertyDetails.propertyRepairs[6].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[6].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[6].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[6].repairCheckButton;
         }
     }
     public void checkBoxClicked7(ActionEvent event) throws IOException {
-            if (Properties.propertyNum == 0) {
+            if (PropertyNames.propertyNum == 0) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
-                Properties.property0.propertyDetails.propertyRepairs[7].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[7].repairCheckButton;
+                PropertyNames.property0.propertyDetails.propertyRepairs[7].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
-            if (Properties.propertyNum == 1) {
+            if (PropertyNames.propertyNum == 1) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
-                Properties.property1.propertyDetails.propertyRepairs[7].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[7].repairCheckButton;
+                PropertyNames.property1.propertyDetails.propertyRepairs[7].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
-            if (Properties.propertyNum == 2) {
+            if (PropertyNames.propertyNum == 2) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
-                Properties.property2.propertyDetails.propertyRepairs[7].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[7].repairCheckButton;
+                PropertyNames.property2.propertyDetails.propertyRepairs[7].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
-            if (Properties.propertyNum == 3) {
+            if (PropertyNames.propertyNum == 3) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
-                Properties.property3.propertyDetails.propertyRepairs[7].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[7].repairCheckButton;
+                PropertyNames.property3.propertyDetails.propertyRepairs[7].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
-            if (Properties.propertyNum == 4) {
+            if (PropertyNames.propertyNum == 4) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
                 cb7 = (CheckBox) root.lookup("#cb7");
-                Properties.property4.propertyDetails.propertyRepairs[7].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[7].repairCheckButton;
+                PropertyNames.property4.propertyDetails.propertyRepairs[7].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[7].repairCheckButton;
             }
         }
     public void checkBoxClicked8(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
-            Properties.property0.propertyDetails.propertyRepairs[8].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[8].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[8].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
-            Properties.property1.propertyDetails.propertyRepairs[8].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[8].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[8].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
-            Properties.property2.propertyDetails.propertyRepairs[8].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[8].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[8].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
-            Properties.property3.propertyDetails.propertyRepairs[8].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[8].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[8].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb8 = (CheckBox) root.lookup("#cb8");
-            Properties.property4.propertyDetails.propertyRepairs[8].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[8].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[8].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[8].repairCheckButton;
         }
     }
     public void checkBoxClicked9(ActionEvent event) throws IOException {
-        if (Properties.propertyNum == 0) {
+        if (PropertyNames.propertyNum == 0) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen0.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
-            Properties.property0.propertyDetails.propertyRepairs[9].repairCheckButton = !Properties.property0.propertyDetails.propertyRepairs[9].repairCheckButton;
+            PropertyNames.property0.propertyDetails.propertyRepairs[9].repairCheckButton = !PropertyNames.property0.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
-        if (Properties.propertyNum == 1) {
+        if (PropertyNames.propertyNum == 1) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
-            Properties.property1.propertyDetails.propertyRepairs[9].repairCheckButton = !Properties.property1.propertyDetails.propertyRepairs[9].repairCheckButton;
+            PropertyNames.property1.propertyDetails.propertyRepairs[9].repairCheckButton = !PropertyNames.property1.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
-        if (Properties.propertyNum == 2) {
+        if (PropertyNames.propertyNum == 2) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
-            Properties.property2.propertyDetails.propertyRepairs[9].repairCheckButton = !Properties.property2.propertyDetails.propertyRepairs[9].repairCheckButton;
+            PropertyNames.property2.propertyDetails.propertyRepairs[9].repairCheckButton = !PropertyNames.property2.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
-        if (Properties.propertyNum == 3) {
+        if (PropertyNames.propertyNum == 3) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
-            Properties.property3.propertyDetails.propertyRepairs[9].repairCheckButton = !Properties.property3.propertyDetails.propertyRepairs[9].repairCheckButton;
+            PropertyNames.property3.propertyDetails.propertyRepairs[9].repairCheckButton = !PropertyNames.property3.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
-        if (Properties.propertyNum == 4) {
+        if (PropertyNames.propertyNum == 4) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
             cb9 = (CheckBox) root.lookup("#cb9");
-            Properties.property4.propertyDetails.propertyRepairs[9].repairCheckButton = !Properties.property4.propertyDetails.propertyRepairs[9].repairCheckButton;
+            PropertyNames.property4.propertyDetails.propertyRepairs[9].repairCheckButton = !PropertyNames.property4.propertyDetails.propertyRepairs[9].repairCheckButton;
         }
     }
 
@@ -388,7 +388,7 @@ public class Controller extends Controls {
     }
 
     public void approveButtonClicked0(ActionEvent event) throws IOException {
-        Properties.property0.propertyDetails.propertyApproved = true;
+        PropertyNames.property0.propertyDetails.propertyApproved = true;
         circleStatus0.setStyle("-fx-fill: #58FF36");
         approve0.setDisable(true);
         next0.setDisable(false);
@@ -396,7 +396,7 @@ public class Controller extends Controls {
     }
 
     public void approveButtonClicked1() {
-        Properties.property1.propertyDetails.propertyApproved = true;
+        PropertyNames.property1.propertyDetails.propertyApproved = true;
         circleStatus1.setStyle("-fx-fill: #58FF36");
         approve1.setDisable(true);
         next1.setDisable(false);
@@ -404,7 +404,7 @@ public class Controller extends Controls {
     }
 
     public void approveButtonClicked2() {
-        Properties.property2.propertyDetails.propertyApproved = true;
+        PropertyNames.property2.propertyDetails.propertyApproved = true;
         circleStatus2.setStyle("-fx-fill: #58FF36");
         approve2.setDisable(true);
         next2.setDisable(false);
@@ -412,7 +412,7 @@ public class Controller extends Controls {
     }
 
     public void approveButtonClicked3() {
-        Properties.property3.propertyDetails.propertyApproved = true;
+        PropertyNames.property3.propertyDetails.propertyApproved = true;
         circleStatus3.setStyle("-fx-fill: #58FF36");
         approve3.setDisable(true);
         next3.setDisable(false);
@@ -420,7 +420,7 @@ public class Controller extends Controls {
     }
 
     public void approveButtonClicked4() {
-        Properties.property4.propertyDetails.propertyApproved = true;
+        PropertyNames.property4.propertyDetails.propertyApproved = true;
         circleStatus4.setStyle("-fx-fill: #58FF36");
         approve4.setDisable(true);
         next4.setDisable(false);
@@ -432,7 +432,7 @@ public class Controller extends Controls {
         discard0.setDisable(true);
         next0.setDisable(false);
         approve0.setDisable(false);
-        Properties.property0.propertyDetails.propertyApproved = false;
+        PropertyNames.property0.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked1() {
@@ -440,7 +440,7 @@ public class Controller extends Controls {
         discard1.setDisable(true);
         next1.setDisable(false);
         approve1.setDisable(false);
-        Properties.property1.propertyDetails.propertyApproved = false;
+        PropertyNames.property1.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked2() {
@@ -448,7 +448,7 @@ public class Controller extends Controls {
         discard2.setDisable(true);
         next2.setDisable(false);
         approve2.setDisable(false);
-        Properties.property2.propertyDetails.propertyApproved = false;
+        PropertyNames.property2.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked3() {
@@ -456,7 +456,7 @@ public class Controller extends Controls {
         discard3.setDisable(true);
         next3.setDisable(false);
         approve3.setDisable(false);
-        Properties.property3.propertyDetails.propertyApproved = false;
+        PropertyNames.property3.propertyDetails.propertyApproved = false;
     }
 
     public void discardButtonClicked4() {
@@ -464,7 +464,7 @@ public class Controller extends Controls {
         discard4.setDisable(true);
         next4.setDisable(false);
         approve4.setDisable(false);
-        Properties.property4.propertyDetails.propertyApproved = false;
+        PropertyNames.property4.propertyDetails.propertyApproved = false;
     }
 
 
@@ -489,25 +489,25 @@ public class Controller extends Controls {
 
 
         // Get total amount spent on each property.
-        if (Properties.property0.propertyDetails.propertyApproved != null && Properties.property0.propertyDetails.propertyApproved) {
-            propertySpent0 = Properties.property0.propertyDetails.calculateAmountSpentTotal(Properties.property0);
-            propertyNetProfit0 = propertySpent0 + (Properties.property0.propertyDetails.calculateValueAddedTotal(Properties.property0) - propertySpent0);
+        if (PropertyNames.property0.propertyDetails.propertyApproved != null && PropertyNames.property0.propertyDetails.propertyApproved) {
+            propertySpent0 = PropertyNames.property0.propertyDetails.calculateAmountSpentTotal(PropertyNames.property0);
+            propertyNetProfit0 = propertySpent0 + (PropertyNames.property0.propertyDetails.calculateValueAddedTotal(PropertyNames.property0) - propertySpent0);
         }
-        if (Properties.property1.propertyDetails.propertyApproved != null && Properties.property1.propertyDetails.propertyApproved) {
-            propertySpent1 = Properties.property1.propertyDetails.calculateAmountSpentTotal(Properties.property1);
-            propertyNetProfit1 = propertySpent1 + Properties.property1.propertyDetails.calculateValueAddedTotal(Properties.property1) - propertySpent1;
+        if (PropertyNames.property1.propertyDetails.propertyApproved != null && PropertyNames.property1.propertyDetails.propertyApproved) {
+            propertySpent1 = PropertyNames.property1.propertyDetails.calculateAmountSpentTotal(PropertyNames.property1);
+            propertyNetProfit1 = propertySpent1 + PropertyNames.property1.propertyDetails.calculateValueAddedTotal(PropertyNames.property1) - propertySpent1;
         }
-        if (Properties.property2.propertyDetails.propertyApproved != null && Properties.property2.propertyDetails.propertyApproved) {
-            propertySpent2 = Properties.property2.propertyDetails.calculateAmountSpentTotal(Properties.property2);
-            propertyNetProfit2 = propertySpent2 + Properties.property2.propertyDetails.calculateValueAddedTotal(Properties.property2) - propertySpent2;
+        if (PropertyNames.property2.propertyDetails.propertyApproved != null && PropertyNames.property2.propertyDetails.propertyApproved) {
+            propertySpent2 = PropertyNames.property2.propertyDetails.calculateAmountSpentTotal(PropertyNames.property2);
+            propertyNetProfit2 = propertySpent2 + PropertyNames.property2.propertyDetails.calculateValueAddedTotal(PropertyNames.property2) - propertySpent2;
         }
-        if (Properties.property3.propertyDetails.propertyApproved != null && Properties.property3.propertyDetails.propertyApproved) {
-            propertySpent3 = Properties.property3.propertyDetails.calculateAmountSpentTotal(Properties.property3);
-            propertyNetProfit3 = propertySpent3 + Properties.property3.propertyDetails.calculateValueAddedTotal(Properties.property3) - propertySpent3;
+        if (PropertyNames.property3.propertyDetails.propertyApproved != null && PropertyNames.property3.propertyDetails.propertyApproved) {
+            propertySpent3 = PropertyNames.property3.propertyDetails.calculateAmountSpentTotal(PropertyNames.property3);
+            propertyNetProfit3 = propertySpent3 + PropertyNames.property3.propertyDetails.calculateValueAddedTotal(PropertyNames.property3) - propertySpent3;
         }
-        if (Properties.property4.propertyDetails.propertyApproved != null && Properties.property4.propertyDetails.propertyApproved) {
-            propertySpent4 = Properties.property4.propertyDetails.calculateAmountSpentTotal(Properties.property4);
-            propertyNetProfit4 = propertySpent4 + Properties.property4.propertyDetails.calculateValueAddedTotal(Properties.property4) - propertySpent4;
+        if (PropertyNames.property4.propertyDetails.propertyApproved != null && PropertyNames.property4.propertyDetails.propertyApproved) {
+            propertySpent4 = PropertyNames.property4.propertyDetails.calculateAmountSpentTotal(PropertyNames.property4);
+            propertyNetProfit4 = propertySpent4 + PropertyNames.property4.propertyDetails.calculateValueAddedTotal(PropertyNames.property4) - propertySpent4;
         }
 
         // Calculate totals for bottom summary
@@ -520,11 +520,11 @@ public class Controller extends Controls {
         purchasePrice2 = (Label) root.lookup("#purchasePrice2");
         purchasePrice3 = (Label) root.lookup("#purchasePrice3");
         purchasePrice4 = (Label) root.lookup("#purchasePrice4");
-        if (purchasePrice0!=null) purchasePrice0.setText(Properties.property0.propertyDetails.propertyPrice);
-        if (purchasePrice1!=null) purchasePrice1.setText(Properties.property1.propertyDetails.propertyPrice);
-        if (purchasePrice2!=null) purchasePrice2.setText(Properties.property2.propertyDetails.propertyPrice);
-        if (purchasePrice3!=null) purchasePrice3.setText(Properties.property3.propertyDetails.propertyPrice);
-        if (purchasePrice4!=null) purchasePrice4.setText(Properties.property4.propertyDetails.propertyPrice);
+        if (purchasePrice0!=null) purchasePrice0.setText(PropertyNames.property0.propertyDetails.propertyPrice);
+        if (purchasePrice1!=null) purchasePrice1.setText(PropertyNames.property1.propertyDetails.propertyPrice);
+        if (purchasePrice2!=null) purchasePrice2.setText(PropertyNames.property2.propertyDetails.propertyPrice);
+        if (purchasePrice3!=null) purchasePrice3.setText(PropertyNames.property3.propertyDetails.propertyPrice);
+        if (purchasePrice4!=null) purchasePrice4.setText(PropertyNames.property4.propertyDetails.propertyPrice);
 
         // Set Materials Price column
         materialsPrice0 = (Label) root.lookup("#materialsPrice0");
@@ -532,11 +532,11 @@ public class Controller extends Controls {
         materialsPrice2 = (Label) root.lookup("#materialsPrice2");
         materialsPrice3 = (Label) root.lookup("#materialsPrice3");
         materialsPrice4 = (Label) root.lookup("#materialsPrice4");
-        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf(Properties.property0.propertyDetails.calculateMaterialsPriceTotal(Properties.property0)));
-        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf(Properties.property1.propertyDetails.calculateMaterialsPriceTotal(Properties.property1)));
-        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf(Properties.property2.propertyDetails.calculateMaterialsPriceTotal(Properties.property2)));
-        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf(Properties.property3.propertyDetails.calculateMaterialsPriceTotal(Properties.property3)));
-        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf(Properties.property4.propertyDetails.calculateMaterialsPriceTotal(Properties.property4)));
+        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf(PropertyNames.property0.propertyDetails.calculateMaterialsPriceTotal(PropertyNames.property0)));
+        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf(PropertyNames.property1.propertyDetails.calculateMaterialsPriceTotal(PropertyNames.property1)));
+        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf(PropertyNames.property2.propertyDetails.calculateMaterialsPriceTotal(PropertyNames.property2)));
+        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf(PropertyNames.property3.propertyDetails.calculateMaterialsPriceTotal(PropertyNames.property3)));
+        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf(PropertyNames.property4.propertyDetails.calculateMaterialsPriceTotal(PropertyNames.property4)));
 
         // Set Labor Price column
         laborPrice0 = (Label) root.lookup("#laborPrice0");
@@ -544,11 +544,11 @@ public class Controller extends Controls {
         laborPrice2 = (Label) root.lookup("#laborPrice2");
         laborPrice3 = (Label) root.lookup("#laborPrice3");
         laborPrice4 = (Label) root.lookup("#laborPrice4");
-        if (laborPrice0!=null) laborPrice0.setText(String.valueOf(Properties.property0.propertyDetails.calculateLaborPriceTotal(Properties.property0)));
-        if (laborPrice1!=null) laborPrice1.setText(String.valueOf(Properties.property1.propertyDetails.calculateLaborPriceTotal(Properties.property1)));
-        if (laborPrice2!=null) laborPrice2.setText(String.valueOf(Properties.property2.propertyDetails.calculateLaborPriceTotal(Properties.property2)));
-        if (laborPrice3!=null) laborPrice3.setText(String.valueOf(Properties.property3.propertyDetails.calculateLaborPriceTotal(Properties.property3)));
-        if (laborPrice4!=null) laborPrice4.setText(String.valueOf(Properties.property4.propertyDetails.calculateLaborPriceTotal(Properties.property4)));
+        if (laborPrice0!=null) laborPrice0.setText(String.valueOf(PropertyNames.property0.propertyDetails.calculateLaborPriceTotal(PropertyNames.property0)));
+        if (laborPrice1!=null) laborPrice1.setText(String.valueOf(PropertyNames.property1.propertyDetails.calculateLaborPriceTotal(PropertyNames.property1)));
+        if (laborPrice2!=null) laborPrice2.setText(String.valueOf(PropertyNames.property2.propertyDetails.calculateLaborPriceTotal(PropertyNames.property2)));
+        if (laborPrice3!=null) laborPrice3.setText(String.valueOf(PropertyNames.property3.propertyDetails.calculateLaborPriceTotal(PropertyNames.property3)));
+        if (laborPrice4!=null) laborPrice4.setText(String.valueOf(PropertyNames.property4.propertyDetails.calculateLaborPriceTotal(PropertyNames.property4)));
 
         // Set spent column
         spent0 = (Label) root.lookup("#spent0");
@@ -568,11 +568,11 @@ public class Controller extends Controls {
         estSalePrice2 = (Label) root.lookup("#estSalePrice2");
         estSalePrice3 = (Label) root.lookup("#estSalePrice3");
         estSalePrice4 = (Label) root.lookup("#estSalePrice4");
-        if (estSalePrice0!=null) estSalePrice0.setText(Integer.toString(Properties.property0.propertyDetails.calculateValueAddedTotal(Properties.property0)));
-        if (estSalePrice1!=null) estSalePrice1.setText(Integer.toString(Properties.property1.propertyDetails.calculateValueAddedTotal(Properties.property1)));
-        if (estSalePrice2!=null) estSalePrice2.setText(Integer.toString(Properties.property2.propertyDetails.calculateValueAddedTotal(Properties.property2)));
-        if (estSalePrice3!=null) estSalePrice3.setText(Integer.toString(Properties.property3.propertyDetails.calculateValueAddedTotal(Properties.property3)));
-        if (estSalePrice4!=null) estSalePrice4.setText(Integer.toString(Properties.property4.propertyDetails.calculateValueAddedTotal(Properties.property4)));
+        if (estSalePrice0!=null) estSalePrice0.setText(Integer.toString(PropertyNames.property0.propertyDetails.calculateValueAddedTotal(PropertyNames.property0)));
+        if (estSalePrice1!=null) estSalePrice1.setText(Integer.toString(PropertyNames.property1.propertyDetails.calculateValueAddedTotal(PropertyNames.property1)));
+        if (estSalePrice2!=null) estSalePrice2.setText(Integer.toString(PropertyNames.property2.propertyDetails.calculateValueAddedTotal(PropertyNames.property2)));
+        if (estSalePrice3!=null) estSalePrice3.setText(Integer.toString(PropertyNames.property3.propertyDetails.calculateValueAddedTotal(PropertyNames.property3)));
+        if (estSalePrice4!=null) estSalePrice4.setText(Integer.toString(PropertyNames.property4.propertyDetails.calculateValueAddedTotal(PropertyNames.property4)));
 
         // Set Net Profit column
         netProfit0 = (Label) root.lookup("#netProfit0");
@@ -580,11 +580,11 @@ public class Controller extends Controls {
         netProfit2 = (Label) root.lookup("#netProfit2");
         netProfit3 = (Label) root.lookup("#netProfit3");
         netProfit4 = (Label) root.lookup("#netProfit4");
-        if (netProfit0!=null) netProfit0.setText(String.valueOf(Properties.property0.propertyDetails.calculateValueAddedTotal(Properties.property0) - propertySpent0));
-        if (netProfit1!=null) netProfit1.setText(String.valueOf(Properties.property1.propertyDetails.calculateValueAddedTotal(Properties.property1) - propertySpent1));
-        if (netProfit2!=null) netProfit2.setText(String.valueOf(Properties.property2.propertyDetails.calculateValueAddedTotal(Properties.property2) - propertySpent2));
-        if (netProfit3!=null) netProfit3.setText(String.valueOf(Properties.property3.propertyDetails.calculateValueAddedTotal(Properties.property3) - propertySpent3));
-        if (netProfit4!=null) netProfit4.setText(String.valueOf(Properties.property4.propertyDetails.calculateValueAddedTotal(Properties.property4) - propertySpent4));
+        if (netProfit0!=null) netProfit0.setText(String.valueOf(PropertyNames.property0.propertyDetails.calculateValueAddedTotal(PropertyNames.property0) - propertySpent0));
+        if (netProfit1!=null) netProfit1.setText(String.valueOf(PropertyNames.property1.propertyDetails.calculateValueAddedTotal(PropertyNames.property1) - propertySpent1));
+        if (netProfit2!=null) netProfit2.setText(String.valueOf(PropertyNames.property2.propertyDetails.calculateValueAddedTotal(PropertyNames.property2) - propertySpent2));
+        if (netProfit3!=null) netProfit3.setText(String.valueOf(PropertyNames.property3.propertyDetails.calculateValueAddedTotal(PropertyNames.property3) - propertySpent3));
+        if (netProfit4!=null) netProfit4.setText(String.valueOf(PropertyNames.property4.propertyDetails.calculateValueAddedTotal(PropertyNames.property4) - propertySpent4));
 
         // Set bottom of page summary values
         totalSpent = (Label) root.lookup("#totalSpent");
