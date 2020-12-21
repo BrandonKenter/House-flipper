@@ -1,27 +1,8 @@
-#green {
-    -fx-background-color:
-        linear-gradient( #49a699, #42998c),
-        radial-gradient(center 50% -40%, radius 200%,  #49a699 45%,  #42998c 50%);
-    -fx-background-radius: 6, 5;
-    -fx-background-insets: 0, 1;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
-    -fx-text-fill: white;
-}
-
 #button {
     -fx-background-color:
     -fx-background-radius: 6, 5;
     -fx-background-insets: 0, 1;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
-    -fx-text-fill: white;
-}
-
-#blue {
--fx-background-color:
-        linear-gradient(  	#abb1d9,  	#9da7d5),
-        radial-gradient(center 50% -40%, radius 200%,  	#abb1d9 45%,   		#9da7d5 50%);
-    -fx-background-radius: 6, 5;
-    -fx-background-insets: 0, 1;
     -fx-text-fill: white;
 }
 
@@ -39,7 +20,6 @@
     -fx-background-color: white;
 }
 
-
 .button:hover {
     -fx-background-color: #999999;
     -fx-scale-y: 1.1;
@@ -51,19 +31,10 @@
     -fx-scale-x: 0.9;
 }
 
-
 #circleApprove {
 -   fx-fill:green;
 }
 
 #circleDiscard {
     -fx-fill:red;
-}
-
-#circleID{
-    -fx-fill:red;
-}
-
-#circleID:hover{
-    -fx-fill:blue;
 }
