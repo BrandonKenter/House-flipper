@@ -21,7 +21,7 @@ public class PropertyType {
         int propertyMaterialsPriceTotal = 0;
 
         for (int i = 0; i < 10; i++) {
-            if (property.propertyDetails.propertyRepairs[i].repairCheckButton == true) {
+            if (property.propertyDetails.propertyRepairs[i].repairCheckButton) {
                 propertyMaterialsPriceTotal += Integer.parseInt(property.propertyDetails.propertyRepairs[i].repairMaterialPrice);
             }
         }
@@ -35,11 +35,29 @@ public class PropertyType {
         int laborPriceTotal = 0;
 
         for (int i = 0; i < 10; i++) {
-            if (property.propertyDetails.propertyRepairs[i].repairCheckButton == true) {
+            if (property.propertyDetails.propertyRepairs[i].repairCheckButton) {
                 laborPriceTotal += property.propertyDetails.propertyRepairs[i].repairLaborPrice;
             }
         }
         return laborPriceTotal;
+    }
+
+    /**
+     * Calculates the total amount spent for all the repairs of a property.
+     *
+     * @param property
+     * @return
+     */
+    public int calculateAmountSpentTotal(Property property) {
+        int propertyAmountSpentTotal = Integer.parseInt(property.propertyDetails.propertyPrice);
+
+        for (int i = 0; i < 10; i++) {
+            if (property.propertyDetails.propertyRepairs[i].repairCheckButton) {
+                propertyAmountSpentTotal += property.propertyDetails.propertyRepairs[i].repairPriceTotal;
+            }
+        }
+
+        return propertyAmountSpentTotal;
     }
 
     /**
@@ -49,30 +67,13 @@ public class PropertyType {
      * @return
      */
     public int calculateValueAddedTotal(Property property) {
-        int propertyValueAddedTotal = Integer.parseInt(property.propertyDetails.propertyPrice.replace(",", ""));
+        int propertyValueAddedTotal = Integer.parseInt(property.propertyDetails.propertyPrice);
 
         for (int i = 0; i < 10; i++) {
-            if (property.propertyDetails.propertyRepairs[i].repairCheckButton == true) {
-                propertyValueAddedTotal += ((property.propertyDetails.propertyRepairs[i].repairPriceTotal) *=
-                        (property.propertyDetails.propertyRepairs[i].repairValueAddedTotal));
+            if (property.propertyDetails.propertyRepairs[i].repairCheckButton) {
+                propertyValueAddedTotal += property.propertyDetails.propertyRepairs[i].repairValueAddedTotal;
             }
         }
         return propertyValueAddedTotal;
-    }
-    /**
-     * Calculates the total amount spent for all the repairs of a property.
-     *
-     * @param property
-     * @return
-     */
-    public int calculateAmountSpentTotal(Property property) {
-        int propertyAmountSpentTotal = Integer.parseInt(property.propertyDetails.propertyPrice.replace(",", ""));
-
-        for (int i = 0; i < 10; i++) {
-            if (property.propertyDetails.propertyRepairs[i].repairCheckButton == true) {
-                propertyAmountSpentTotal += property.propertyDetails.propertyRepairs[i].repairPriceTotal;
-            }
-        }
-        return propertyAmountSpentTotal;
     }
 }
