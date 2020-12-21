@@ -1,13 +1,13 @@
-package sample;
-import java.util.Arrays;
+package flipper;
+
 import java.util.Random;
 
 /**
  *
  */
 public class Property {
-    PropertyType propertyDetails;
-    int initialized = 0;
+    public PropertyDetails propertyDetails;
+    private int initialized = 0;
 
     /**
      * Initialize a property's details and its list of repairs.
@@ -22,16 +22,16 @@ public class Property {
         Random random = new Random();
 
         // Retrieve random property from list and remove from list
-        int idx = random.nextInt(Properties.propertyTypes.size());
-        this.propertyDetails = Properties.propertyTypes.get(idx);
-        Properties.propertyTypes.remove(idx);
+        int idx = random.nextInt(Properties.propertyList.size());
+        this.propertyDetails = Properties.propertyList.get(idx);
+        Properties.propertyList.remove(idx);
 
         // Generate repair options for property
         for (int i = 0; i < 10; i++) {
             // Assign property values
-            idx = random.nextInt(Repairs.repairTypes.size());
-            this.propertyDetails.propertyRepairs[i] = Repairs.repairTypes.get(idx);
-            Repairs.repairTypes.remove(idx);
+            idx = random.nextInt(Repairs.repairList.size());
+            this.propertyDetails.propertyRepairs[i] = Repairs.repairList.get(idx);
+            Repairs.repairList.remove(idx);
             }
     }
 }

@@ -1,4 +1,4 @@
-package sample;
+package flipper;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,10 +10,10 @@ import java.util.Scanner;
  * and its available repairs random.
  */
 public class Repairs {
-    public static ArrayList<RepairType> repairTypes;
+    public static ArrayList<RepairDetails> repairList;
 
     Repairs() {
-        repairTypes = new ArrayList<>();
+        repairList = new ArrayList<>();
         loadRepairTypes();
     }
 
@@ -34,7 +34,7 @@ public class Repairs {
         }
 
         for (int i = 0; i < records.size(); i++) {
-            RepairType repairEntry = new RepairType();
+            RepairDetails repairEntry = new RepairDetails();
 
             for (int j = 0; j < records.get(i).size(); j++) {
                 if (j == 0) { repairEntry.repairDescription = records.get(i).get(j); }
@@ -55,7 +55,7 @@ public class Repairs {
                     Double.parseDouble(repairEntry.repairValueAddedPercent);
 
             // Add to list
-            repairTypes.add(repairEntry);
+            repairList.add(repairEntry);
         }
     }
 

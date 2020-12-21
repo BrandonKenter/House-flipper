@@ -1,4 +1,4 @@
-package sample;
+package flipper;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,10 +10,17 @@ import java.util.Scanner;
  * and its available repairs random.
  */
 public class Properties {
-    public static ArrayList<PropertyType> propertyTypes;
+    public static ArrayList<PropertyDetails> propertyList;
+    public static Property property0 = new Property();
+    public static Property property1 = new Property();
+    public static Property property2 = new Property();
+    public static Property property3 = new Property();
+    public static Property property4 = new Property();
+
+    public static int propertyNum = 0;
 
     Properties() {
-        propertyTypes = new ArrayList<>();
+        propertyList = new ArrayList<>();
         loadPropertyTypes();
     }
 
@@ -34,7 +41,7 @@ public class Properties {
         }
 
         for (int i = 0; i < records.size(); i++) {
-            PropertyType propertyEntry = new PropertyType();
+            PropertyDetails propertyEntry = new PropertyDetails();
 
             for (int j = 0; j < records.get(i).size(); j++) {
                 if (j == 0) { propertyEntry.propertyLocation = records.get(i).get(j); }
@@ -43,7 +50,7 @@ public class Properties {
                 if (j == 3) { propertyEntry.propertyDescription = records.get(i).get(j); }
                 if (j == 4) { propertyEntry.propertyMaxValue = records.get(i).get(j); }
             }
-            propertyTypes.add(propertyEntry);
+            propertyList.add(propertyEntry);
         }
     }
 
