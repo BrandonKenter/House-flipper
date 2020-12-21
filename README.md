@@ -24,4 +24,4 @@ Things to keep in mind:
 - Some items are never worth updating (seeding lawn for example)
 
 # Preview
-![alt text](https://i.gyazo.com/457c72c4ba620e8fe0a5c56f99cd26d1.png)
+![alt text]()
