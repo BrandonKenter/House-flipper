@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Properties {
     public static ArrayList<PropertyDetails> propertyList;
 
-
     Properties() {
         propertyList = new ArrayList<>();
         loadPropertyTypes();
@@ -25,7 +24,7 @@ public class Properties {
     public void loadPropertyTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("src/flipper//propertyinfo/propertyList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/flipper//propertyinfo/propertyList.csv"))) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
@@ -38,11 +37,16 @@ public class Properties {
             PropertyDetails propertyEntry = new PropertyDetails();
 
             for (int j = 0; j < records.get(i).size(); j++) {
-                if (j == 0) { propertyEntry.propertyLocation = records.get(i).get(j); }
-                if (j == 1) { propertyEntry.propertySqFt = records.get(i).get(j); }
-                if (j == 2) { propertyEntry.propertyPrice = records.get(i).get(j); }
-                if (j == 3) { propertyEntry.propertyDescription = records.get(i).get(j); }
-                if (j == 4) { propertyEntry.propertyMaxValue = records.get(i).get(j); }
+                if (j == 0) { propertyEntry.propertyLocation = records.get(i).get(j).strip(); }
+                if (j == 1) { propertyEntry.propertyPrice = records.get(i).get(j).strip(); }
+                if (j == 2) { propertyEntry.propertyComps = records.get(i).get(j).strip(); }
+                if (j == 3) { propertyEntry.propertySqFt = records.get(i).get(j).strip(); }
+                if (j == 4) { propertyEntry.propertyLotSize = records.get(i).get(j).strip(); }
+                if (j == 5) { propertyEntry.propertyBedBath = records.get(i).get(j).strip(); }
+                if (j == 6) { propertyEntry.propertyYearBuilt = records.get(i).get(j).strip(); }
+                if (j == 7) { propertyEntry.propertyOccupancyType = records.get(i).get(j).strip(); }
+                if (j == 8) { propertyEntry.propertyLastSold = records.get(i).get(j).strip(); }
+                if (j == 9) { propertyEntry.propertyTimeOnMarket = records.get(i).get(j).strip(); }
             }
             propertyList.add(propertyEntry);
         }

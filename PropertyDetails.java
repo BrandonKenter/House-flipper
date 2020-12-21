@@ -5,12 +5,17 @@ package flipper;
  */
 public class PropertyDetails {
     public String propertyLocation; // Location of the property
-    public String propertySqFt; // Square footage of the property
     public String propertyPrice; // Price of the property
-    public String propertyDescription; // Paragraph describing the property
-    public String propertyMaxValue; // The maximum the property can sell for based on comps
-    public Boolean propertyApproved = null;
-    public RepairDetails[] propertyRepairs = new RepairDetails[10];
+    public String propertyComps; // Average price of refurbished homes in 1-mile radius
+    public String propertySqFt; // Square footage of the property
+    public String propertyLotSize; // Size of the lot
+    public String propertyBedBath; // Number of beds and baths
+    public String propertyYearBuilt; // Year the property was built
+    public String propertyOccupancyType; // Type of property (Single family, multi-family)
+    public String propertyLastSold; // Days ago this property was last sold
+    public String propertyTimeOnMarket; // Days this property has been on the market
+    public Boolean propertyApproved = null; // Approved status
+    public RepairDetails[] propertyRepairs = new RepairDetails[10]; // Array of repairs for one property
 
     PropertyDetails() {}
 
@@ -49,6 +54,7 @@ public class PropertyDetails {
      * @return
      */
     public int calculateAmountSpentTotal(Property property) {
+        System.out.println(property.propertyDetails.propertyPrice);
         int propertyAmountSpentTotal = Integer.parseInt(property.propertyDetails.propertyPrice);
 
         for (int i = 0; i < 10; i++) {

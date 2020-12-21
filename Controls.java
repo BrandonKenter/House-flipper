@@ -16,9 +16,7 @@ public class Controls {
     @FXML
     public Button cont;
 
-    /**
-     * Property pages.
-     */
+    // Property pages
     @FXML
     public Label rd00;
     @FXML
@@ -39,7 +37,6 @@ public class Controls {
     public Label rd08;
     @FXML
     public Label rd09;
-
     @FXML
     public Label mp00;
     @FXML
@@ -60,7 +57,6 @@ public class Controls {
     public Label mp08;
     @FXML
     public Label mp09;
-
     @FXML
     public Label ed00;
     @FXML
@@ -81,7 +77,6 @@ public class Controls {
     public Label ed08;
     @FXML
     public Label ed09;
-
     @FXML
     public CheckBox cb0;
     @FXML
@@ -102,7 +97,6 @@ public class Controls {
     public CheckBox cb8;
     @FXML
     public CheckBox cb9;
-
     @FXML
     public Circle circleStatus0;
     @FXML
@@ -113,7 +107,6 @@ public class Controls {
     public Circle circleStatus3;
     @FXML
     public Circle circleStatus4;
-
     @FXML
     public Button next0;
     @FXML
@@ -124,7 +117,6 @@ public class Controls {
     public Button next3;
     @FXML
     public Button next4;
-
     @FXML
     public Button approve0;
     @FXML
@@ -135,7 +127,6 @@ public class Controls {
     public Button approve3;
     @FXML
     public Button approve4;
-
     @FXML
     public Button discard0;
     @FXML
@@ -146,19 +137,28 @@ public class Controls {
     public Button discard3;
     @FXML
     public Button discard4;
-
     @FXML
     public Label propertyLocation;
     @FXML
-    public Label propertySqFt;
-    @FXML
     public Label propertyPrice;
     @FXML
-    public Label propertyParagraph;
+    public Label propertyComps;
+    @FXML
+    public Label propertySqFt;
+    @FXML
+    public Label propertyLotSize;
+    @FXML
+    public Label propertyBedBath;
+    @FXML
+    public Label propertyYearBuilt;
+    @FXML
+    public Label propertyOccupancyType;
+    @FXML
+    public Label propertyLastSold;
+    @FXML
+    public Label propertyTimeOnMarket;
 
-    /**
-     * Report page.
-     */
+    // Report page
     @FXML
     public Label purchasePrice0;
     @FXML
@@ -169,7 +169,6 @@ public class Controls {
     public Label purchasePrice3;
     @FXML
     public Label purchasePrice4;
-
     @FXML
     public Label materialsPrice0;
     @FXML
@@ -180,7 +179,6 @@ public class Controls {
     public Label materialsPrice3;
     @FXML
     public Label materialsPrice4;
-
     @FXML
     public Label laborPrice0;
     @FXML
@@ -191,7 +189,6 @@ public class Controls {
     public Label laborPrice3;
     @FXML
     public Label laborPrice4;
-
     @FXML
     public Label spent0;
     @FXML
@@ -202,7 +199,6 @@ public class Controls {
     public Label spent3;
     @FXML
     public Label spent4;
-
     @FXML
     public Label estSalePrice0;
     @FXML
@@ -213,7 +209,6 @@ public class Controls {
     public Label estSalePrice3;
     @FXML
     public Label estSalePrice4;
-
     @FXML
     public Label netProfit0;
     @FXML
@@ -224,13 +219,10 @@ public class Controls {
     public Label netProfit3;
     @FXML
     public Label netProfit4;
-
     @FXML
     public Label totalSpent;
     @FXML
     public Label totalProfit;
-
     @FXML
     public Button end;
-
 }

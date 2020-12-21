@@ -24,7 +24,7 @@ public class Repairs {
     public void loadRepairTypes() {
         List<List<String>> records = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File("src/flipper/propertyinfo/repairList.csv"));) {
+        try (Scanner scanner = new Scanner(new File("src/flipper/propertyinfo/repairList.csv"))) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
@@ -37,10 +37,11 @@ public class Repairs {
             RepairDetails repairEntry = new RepairDetails();
 
             for (int j = 0; j < records.get(i).size(); j++) {
-                if (j == 0) { repairEntry.repairDescription = records.get(i).get(j); }
-                if (j == 1) { repairEntry.repairMaterialPrice = records.get(i).get(j); }
-                if (j == 2) { repairEntry.repairEstimatedDuration = records.get(i).get(j); }
-                if (j == 3) { repairEntry.repairValueAddedPercent = records.get(i).get(j); }
+                if (j == 0) { repairEntry.repairDescription = records.get(i).get(j).strip(); }
+                if (j == 1) { repairEntry.repairCondition = records.get(i).get(j).strip(); }
+                if (j == 2) { repairEntry.repairMaterialPrice = records.get(i).get(j).strip(); }
+                if (j == 3) { repairEntry.repairEstimatedDuration = records.get(i).get(j).strip(); }
+                if (j == 4) { repairEntry.repairValueAddedPercent = records.get(i).get(j).strip(); }
             }
 
             // Calculate the labor price for this repair

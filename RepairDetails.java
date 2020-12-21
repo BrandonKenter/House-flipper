@@ -5,6 +5,7 @@ package flipper;
  */
 public class RepairDetails {
     public String repairDescription; // Main description of what the repair is
+    public String repairCondition; // Condition of the item to be repaired
     public String repairMaterialPrice; // Price of all materials to do the repair
     public String repairEstimatedDuration; // Estimated duration of the repair
     public String repairValueAddedPercent; // Percentage of added value to a property after this repair

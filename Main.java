@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ * Main class to set up and initialize the primary stage.
  */
 public class Main extends Application {
     @Override
@@ -16,8 +16,6 @@ public class Main extends Application {
         primaryStage.setTitle("House Flipper");
         primaryStage.setScene(new Scene(root, 1080, 720));
         primaryStage.show();
-
-
     }
 
     /**
