@@ -2,13 +2,13 @@
 One of my biggest interests outside of coding is real estate and house flipping. Seeing the journey of a house going from dirty and outdated to new is extremely satisfying. As it is a legitimate way to make a living, the numbers matter. Understanding how much money to put into a property to make the margin for profit reasonable is not easy as you have to simultaneously balance multiple other factors such as refraining from updating too much or spotting red flags like foundation issues. House Flipper is a desktop application built in Java using JavaFX that helps simulate the process of assessing a property and the potential it has for being a profitable flip.
 
 # To Do List
-- Generate property repairs and their details randomly ✔
-- Finish report page ✔
-- Approve/discard connection to status circle ✔
-- Handle edge cases (no repairs/all discarded)
+- Generate property repairs and their details randomly
+- Finish report page
 - Allow generation of new properties after report
-- Set up DB connection to store multiple reports
-- More repairs
+- Approve/discard connection to status circle
+- Possibly connect to a DB to store multiple report results
+- Clean up redundant code
+- Fix CSS warnings
 - More properties
 
 # Getting Started
@@ -24,4 +24,4 @@ Things to keep in mind:
 - Some items are never worth updating (seeding lawn for example)
 
 # Preview
-![alt text](https://i.gyazo.com/df2001aeac4c861501a5aeb792a009d2.png)
+![alt text](https://i.gyazo.com/ebd9edd2c79069136949ecba37b4a2cd.png)
