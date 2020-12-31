@@ -29,19 +29,27 @@ public class Repairs {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
         }
-        catch (Exception e) {
-            System.out.println("Failed to load repairTypes.");
-        }
+        catch (Exception ignored) {}
 
-        for (int i = 0; i < records.size(); i++) {
+        for (List<String> record : records) {
             RepairDetails repairEntry = new RepairDetails();
 
-            for (int j = 0; j < records.get(i).size(); j++) {
-                if (j == 0) { repairEntry.repairDescription = records.get(i).get(j).strip(); }
-                if (j == 1) { repairEntry.repairCondition = records.get(i).get(j).strip(); }
-                if (j == 2) { repairEntry.repairMaterialPrice = records.get(i).get(j).strip(); }
-                if (j == 3) { repairEntry.repairEstimatedDuration = records.get(i).get(j).strip(); }
-                if (j == 4) { repairEntry.repairValueAddedPercent = records.get(i).get(j).strip(); }
+            for (int j = 0; j < record.size(); j++) {
+                if (j == 0) {
+                    repairEntry.repairDescription = record.get(j).strip();
+                }
+                if (j == 1) {
+                    repairEntry.repairCondition = record.get(j).strip();
+                }
+                if (j == 2) {
+                    repairEntry.repairMaterialPrice = record.get(j).strip();
+                }
+                if (j == 3) {
+                    repairEntry.repairEstimatedDuration = record.get(j).strip();
+                }
+                if (j == 4) {
+                    repairEntry.repairValueAddedPercent = record.get(j).strip();
+                }
             }
 
             // Calculate the labor price for this repair
@@ -63,8 +71,8 @@ public class Repairs {
     /**
      * Helper method for loadRepairTypes() to parse a csv file and return the values from the file.
      *
-     * @param line CSV file line
-     * @return arraylist of CSV file lines
+     * @param line CSV file line.
+     * @return arraylist of CSV file lines.
      */
     private List<String> getRecordFromLine(String line) {
         List<String> values = new ArrayList<>();
@@ -78,4 +86,3 @@ public class Repairs {
         return values;
     }
 }
-
