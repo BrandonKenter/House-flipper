@@ -10,9 +10,7 @@ import javafx.scene.shape.Circle;
  * Controls for the application.
  */
 public class Controls {
-    /**
-     * First page.
-     */
+    // First page
     @FXML
     public Button cont;
 
