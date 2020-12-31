@@ -5,7 +5,7 @@ One of my biggest interests outside of coding is real estate and house flipping.
 - Generate property repairs randomly ✔
 - Finish report page ✔
 - Approve/discard connection to status circle ✔
-- Handle edge cases (no repairs/all discarded)
+- Handle edge cases (no repairs/all discarded) ✔
 - Set up DB connection 
 
 # Getting Started
