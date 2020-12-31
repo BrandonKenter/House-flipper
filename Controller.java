@@ -568,7 +568,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *  Initializes the cells in the report page.
+     * Initializes the cells in the report page.
      * @param root
      */
     private void setReportCells(Parent root) {
@@ -593,23 +593,23 @@ public class Controller extends Controls {
         // Get total amount spent on each property.
         if (Property.property0.propertyDetails.propertyApproved != null && Property.property0.propertyDetails.propertyApproved) {
             propertySpent0 = Property.property0.propertyDetails.calculateAmountSpentTotal(Property.property0);
-            propertyNetProfit0 = propertySpent0 + (Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0) - propertySpent0);
+            propertyNetProfit0 = Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0) - propertySpent0;
         }
         if (Property.property1.propertyDetails.propertyApproved != null && Property.property1.propertyDetails.propertyApproved) {
             propertySpent1 = Property.property1.propertyDetails.calculateAmountSpentTotal(Property.property1);
-            propertyNetProfit1 = propertySpent1 + Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1) - propertySpent1;
+            propertyNetProfit1 = Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1) - propertySpent1;
         }
         if (Property.property2.propertyDetails.propertyApproved != null && Property.property2.propertyDetails.propertyApproved) {
             propertySpent2 = Property.property2.propertyDetails.calculateAmountSpentTotal(Property.property2);
-            propertyNetProfit2 = propertySpent2 + Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2) - propertySpent2;
+            propertyNetProfit2 = Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2) - propertySpent2;
         }
         if (Property.property3.propertyDetails.propertyApproved != null && Property.property3.propertyDetails.propertyApproved) {
             propertySpent3 = Property.property3.propertyDetails.calculateAmountSpentTotal(Property.property3);
-            propertyNetProfit3 = propertySpent3 + Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3) - propertySpent3;
+            propertyNetProfit3 = Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3) - propertySpent3;
         }
         if (Property.property4.propertyDetails.propertyApproved != null && Property.property4.propertyDetails.propertyApproved) {
             propertySpent4 = Property.property4.propertyDetails.calculateAmountSpentTotal(Property.property4);
-            propertyNetProfit4 = propertySpent4 + Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4) - propertySpent4;
+            propertyNetProfit4 = Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4) - propertySpent4;
         }
 
         // Calculate totals for bottom summary
@@ -622,11 +622,16 @@ public class Controller extends Controls {
         purchasePrice2 = (Label) root.lookup("#purchasePrice2");
         purchasePrice3 = (Label) root.lookup("#purchasePrice3");
         purchasePrice4 = (Label) root.lookup("#purchasePrice4");
-        if (purchasePrice0!=null) purchasePrice0.setText("$" + Property.property0.propertyDetails.propertyPrice);
-        if (purchasePrice1!=null) purchasePrice1.setText("$" + Property.property1.propertyDetails.propertyPrice);
-        if (purchasePrice2!=null) purchasePrice2.setText("$" + Property.property2.propertyDetails.propertyPrice);
-        if (purchasePrice3!=null) purchasePrice3.setText("$" + Property.property3.propertyDetails.propertyPrice);
-        if (purchasePrice4!=null) purchasePrice4.setText("$" + Property.property4.propertyDetails.propertyPrice);
+        if (Property.property0.propertyDetails.propertyApproved) { purchasePrice0.setText("$" + Property.property0.propertyDetails.propertyPrice); }
+        else { purchasePrice0.setText("$0"); }
+        if (Property.property1.propertyDetails.propertyApproved) { purchasePrice1.setText("$" + Property.property1.propertyDetails.propertyPrice); }
+        else { purchasePrice1.setText("$0"); }
+        if (Property.property2.propertyDetails.propertyApproved) { purchasePrice2.setText("$" + Property.property2.propertyDetails.propertyPrice); }
+        else { purchasePrice2.setText("$0"); }
+        if (Property.property3.propertyDetails.propertyApproved) { purchasePrice3.setText("$" + Property.property3.propertyDetails.propertyPrice); }
+        else { purchasePrice3.setText("$0"); }
+        if (Property.property4.propertyDetails.propertyApproved) { purchasePrice4.setText("$" + Property.property4.propertyDetails.propertyPrice); }
+        else { purchasePrice4.setText("$0"); }
 
         // Set Materials Price column
         materialsPrice0 = (Label) root.lookup("#materialsPrice0");
@@ -634,11 +639,16 @@ public class Controller extends Controls {
         materialsPrice2 = (Label) root.lookup("#materialsPrice2");
         materialsPrice3 = (Label) root.lookup("#materialsPrice3");
         materialsPrice4 = (Label) root.lookup("#materialsPrice4");
-        if (materialsPrice0!=null) materialsPrice0.setText(String.valueOf("$" + Property.property0.propertyDetails.calculateMaterialsPriceTotal(Property.property0)));
-        if (materialsPrice1!=null) materialsPrice1.setText(String.valueOf("$" + Property.property1.propertyDetails.calculateMaterialsPriceTotal(Property.property1)));
-        if (materialsPrice2!=null) materialsPrice2.setText(String.valueOf("$" + Property.property2.propertyDetails.calculateMaterialsPriceTotal(Property.property2)));
-        if (materialsPrice3!=null) materialsPrice3.setText(String.valueOf("$" + Property.property3.propertyDetails.calculateMaterialsPriceTotal(Property.property3)));
-        if (materialsPrice4!=null) materialsPrice4.setText(String.valueOf("$" + Property.property4.propertyDetails.calculateMaterialsPriceTotal(Property.property4)));
+        if (Property.property0.propertyDetails.propertyApproved) materialsPrice0.setText("$" + Property.property0.propertyDetails.calculateMaterialsPriceTotal(Property.property0));
+        else { materialsPrice0.setText("$0"); }
+        if (Property.property1.propertyDetails.propertyApproved) materialsPrice1.setText("$" + Property.property1.propertyDetails.calculateMaterialsPriceTotal(Property.property1));
+        else { materialsPrice1.setText("$0"); }
+        if (Property.property2.propertyDetails.propertyApproved) materialsPrice2.setText("$" + Property.property2.propertyDetails.calculateMaterialsPriceTotal(Property.property2));
+        else { materialsPrice2.setText("$0"); }
+        if (Property.property3.propertyDetails.propertyApproved) materialsPrice3.setText("$" + Property.property3.propertyDetails.calculateMaterialsPriceTotal(Property.property3));
+        else { materialsPrice3.setText("$0"); }
+        if (Property.property4.propertyDetails.propertyApproved) materialsPrice4.setText("$" + Property.property4.propertyDetails.calculateMaterialsPriceTotal(Property.property4));
+        else { materialsPrice4.setText("$0"); }
 
         // Set Labor Price column
         laborPrice0 = (Label) root.lookup("#laborPrice0");
@@ -646,11 +656,16 @@ public class Controller extends Controls {
         laborPrice2 = (Label) root.lookup("#laborPrice2");
         laborPrice3 = (Label) root.lookup("#laborPrice3");
         laborPrice4 = (Label) root.lookup("#laborPrice4");
-        if (laborPrice0!=null) laborPrice0.setText(String.valueOf("$" + Property.property0.propertyDetails.calculateLaborPriceTotal(Property.property0)));
-        if (laborPrice1!=null) laborPrice1.setText(String.valueOf("$" + Property.property1.propertyDetails.calculateLaborPriceTotal(Property.property1)));
-        if (laborPrice2!=null) laborPrice2.setText(String.valueOf("$" + Property.property2.propertyDetails.calculateLaborPriceTotal(Property.property2)));
-        if (laborPrice3!=null) laborPrice3.setText(String.valueOf("$" + Property.property3.propertyDetails.calculateLaborPriceTotal(Property.property3)));
-        if (laborPrice4!=null) laborPrice4.setText(String.valueOf("$" + Property.property4.propertyDetails.calculateLaborPriceTotal(Property.property4)));
+        if (Property.property0.propertyDetails.propertyApproved) laborPrice0.setText("$" + Property.property0.propertyDetails.calculateLaborPriceTotal(Property.property0));
+        else { laborPrice0.setText("$0"); }
+        if (Property.property1.propertyDetails.propertyApproved) laborPrice1.setText("$" + Property.property1.propertyDetails.calculateLaborPriceTotal(Property.property1));
+        else { laborPrice1.setText("$0"); }
+        if (Property.property2.propertyDetails.propertyApproved) laborPrice2.setText("$" + Property.property2.propertyDetails.calculateLaborPriceTotal(Property.property2));
+        else { laborPrice2.setText("$0"); }
+        if (Property.property3.propertyDetails.propertyApproved) laborPrice3.setText("$" + Property.property3.propertyDetails.calculateLaborPriceTotal(Property.property3));
+        else { laborPrice3.setText("$0"); }
+        if (Property.property4.propertyDetails.propertyApproved) laborPrice4.setText("$" + Property.property4.propertyDetails.calculateLaborPriceTotal(Property.property4));
+        else { laborPrice4.setText("$0"); }
 
         // Set spent column
         spent0 = (Label) root.lookup("#spent0");
@@ -670,11 +685,16 @@ public class Controller extends Controls {
         estSalePrice2 = (Label) root.lookup("#estSalePrice2");
         estSalePrice3 = (Label) root.lookup("#estSalePrice3");
         estSalePrice4 = (Label) root.lookup("#estSalePrice4");
-        if (estSalePrice0!=null) estSalePrice0.setText("$" + Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0));
-        if (estSalePrice1!=null) estSalePrice1.setText("$" + Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1));
-        if (estSalePrice2!=null) estSalePrice2.setText("$" + Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2));
-        if (estSalePrice3!=null) estSalePrice3.setText("$" + Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3));
-        if (estSalePrice4!=null) estSalePrice4.setText("$" + Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4));
+        if (Property.property0.propertyDetails.propertyApproved)  { estSalePrice0.setText("$" + Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0)); }
+        else { estSalePrice0.setText("$0"); }
+        if (Property.property1.propertyDetails.propertyApproved) estSalePrice1.setText("$" + Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1));
+        else { estSalePrice1.setText("$0"); }
+        if (Property.property2.propertyDetails.propertyApproved) estSalePrice2.setText("$" + Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2));
+        else { estSalePrice2.setText("$0"); }
+        if (Property.property3.propertyDetails.propertyApproved) estSalePrice3.setText("$" + Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3));
+        else { estSalePrice3.setText("$0"); }
+        if (Property.property4.propertyDetails.propertyApproved) estSalePrice4.setText("$" + Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4));
+        else { estSalePrice4.setText("$0"); }
 
         // Set Net Profit column
         netProfit0 = (Label) root.lookup("#netProfit0");
@@ -682,11 +702,16 @@ public class Controller extends Controls {
         netProfit2 = (Label) root.lookup("#netProfit2");
         netProfit3 = (Label) root.lookup("#netProfit3");
         netProfit4 = (Label) root.lookup("#netProfit4");
-        if (netProfit0!=null) netProfit0.setText("$" + (Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0) - propertySpent0));
-        if (netProfit1!=null) netProfit1.setText("$" + (Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1) - propertySpent1));
-        if (netProfit2!=null) netProfit2.setText("$" + (Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2) - propertySpent2));
-        if (netProfit3!=null) netProfit3.setText("$" + (Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3) - propertySpent3));
-        if (netProfit4!=null) netProfit4.setText("$" + (Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4) - propertySpent4));
+        if (Property.property0.propertyDetails.propertyApproved) netProfit0.setText("$" + (Property.property0.propertyDetails.calculateValueAddedTotal(Property.property0) - propertySpent0));
+        else { netProfit0.setText("$0"); }
+        if (Property.property1.propertyDetails.propertyApproved) netProfit1.setText("$" + (Property.property1.propertyDetails.calculateValueAddedTotal(Property.property1) - propertySpent1));
+        else { netProfit1.setText("$0"); }
+        if (Property.property2.propertyDetails.propertyApproved) netProfit2.setText("$" + (Property.property2.propertyDetails.calculateValueAddedTotal(Property.property2) - propertySpent2));
+        else { netProfit2.setText("$0"); }
+        if (Property.property3.propertyDetails.propertyApproved) netProfit3.setText("$" + (Property.property3.propertyDetails.calculateValueAddedTotal(Property.property3) - propertySpent3));
+        else { netProfit3.setText("$0"); }
+        if (Property.property4.propertyDetails.propertyApproved) netProfit4.setText("$" + (Property.property4.propertyDetails.calculateValueAddedTotal(Property.property4) - propertySpent4));
+        else { netProfit4.setText("$0"); }
 
         // Set bottom of page total spent
         totalSpent = (Label) root.lookup("#totalSpent");
