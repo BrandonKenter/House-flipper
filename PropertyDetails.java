@@ -21,6 +21,9 @@ public class PropertyDetails {
 
     /**
      * Calculates the total materials price for all the repairs of a property.
+     *
+     * @param property Reference to a property.
+     * @return propertyMaterialsPriceTotal The total amount spent on repair materials for a property.
      */
     public int calculateMaterialsPriceTotal(Property property) {
         int propertyMaterialsPriceTotal = 0;
@@ -35,6 +38,9 @@ public class PropertyDetails {
 
     /**
      * Calculates the total labor price for all the repairs of a property.
+     *
+     * @param property Reference to a property.
+     * @return laborPriceTotal The total price for labor of all repairs for a property.
      */
     public int calculateLaborPriceTotal(Property property) {
         int laborPriceTotal = 0;
@@ -50,11 +56,10 @@ public class PropertyDetails {
     /**
      * Calculates the total amount spent for all the repairs of a property.
      *
-     * @param property
-     * @return
+     * @param property Reference to a property.
+     * @return propertyAmountSpentTotal The total amount spent on the property.
      */
     public int calculateAmountSpentTotal(Property property) {
-        System.out.println(property.propertyDetails.propertyPrice);
         int propertyAmountSpentTotal = Integer.parseInt(property.propertyDetails.propertyPrice);
 
         for (int i = 0; i < 10; i++) {
@@ -69,8 +74,8 @@ public class PropertyDetails {
     /**
      * Calculates the total value added for all the repairs of a property.
      *
-     * @param property
-     * @return
+     * @param property Reference to a property.
+     * @return propertyValueAddedTotal The total value added to the property.
      */
     public int calculateValueAddedTotal(Property property) {
         int propertyValueAddedTotal = Integer.parseInt(property.propertyDetails.propertyPrice);
