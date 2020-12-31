@@ -29,24 +29,42 @@ public class Properties {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
         }
-        catch (Exception e) {
-            System.out.println("Failed to load property types.");
-        }
+        catch (Exception ignored) {}
 
-        for (int i = 0; i < records.size(); i++) {
+        for (List<String> record : records) {
             PropertyDetails propertyEntry = new PropertyDetails();
 
-            for (int j = 0; j < records.get(i).size(); j++) {
-                if (j == 0) { propertyEntry.propertyLocation = records.get(i).get(j).strip(); }
-                if (j == 1) { propertyEntry.propertyPrice = records.get(i).get(j).strip(); }
-                if (j == 2) { propertyEntry.propertyComps = records.get(i).get(j).strip(); }
-                if (j == 3) { propertyEntry.propertySqFt = records.get(i).get(j).strip(); }
-                if (j == 4) { propertyEntry.propertyLotSize = records.get(i).get(j).strip(); }
-                if (j == 5) { propertyEntry.propertyBedBath = records.get(i).get(j).strip(); }
-                if (j == 6) { propertyEntry.propertyYearBuilt = records.get(i).get(j).strip(); }
-                if (j == 7) { propertyEntry.propertyOccupancyType = records.get(i).get(j).strip(); }
-                if (j == 8) { propertyEntry.propertyLastSold = records.get(i).get(j).strip(); }
-                if (j == 9) { propertyEntry.propertyTimeOnMarket = records.get(i).get(j).strip(); }
+            for (int j = 0; j < record.size(); j++) {
+                if (j == 0) {
+                    propertyEntry.propertyLocation = record.get(j).strip();
+                }
+                if (j == 1) {
+                    propertyEntry.propertyPrice = record.get(j).strip();
+                }
+                if (j == 2) {
+                    propertyEntry.propertyComps = record.get(j).strip();
+                }
+                if (j == 3) {
+                    propertyEntry.propertySqFt = record.get(j).strip();
+                }
+                if (j == 4) {
+                    propertyEntry.propertyLotSize = record.get(j).strip();
+                }
+                if (j == 5) {
+                    propertyEntry.propertyBedBath = record.get(j).strip();
+                }
+                if (j == 6) {
+                    propertyEntry.propertyYearBuilt = record.get(j).strip();
+                }
+                if (j == 7) {
+                    propertyEntry.propertyOccupancyType = record.get(j).strip();
+                }
+                if (j == 8) {
+                    propertyEntry.propertyLastSold = record.get(j).strip();
+                }
+                if (j == 9) {
+                    propertyEntry.propertyTimeOnMarket = record.get(j).strip();
+                }
             }
             propertyList.add(propertyEntry);
         }
@@ -55,8 +73,8 @@ public class Properties {
     /**
      * Helper method for loadPropertyTypes() to parse a csv file and return the values from the file.
      *
-     * @param line CSV file line
-     * @return arraylist of CSV file lines
+     * @param line CSV file line.
+     * @return arraylist of CSV file lines.
      */
     private List<String> getRecordFromLine(String line) {
         List<String> values = new ArrayList<>();
