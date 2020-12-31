@@ -17,9 +17,10 @@ import java.util.Objects;
 public class Controller extends Controls {
 
     /**
+     * Handler for the continue button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void contButtonClicked(ActionEvent event) throws IOException {
 
@@ -36,9 +37,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for the next button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void nextButtonClicked0(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen1.fxml")));
@@ -56,9 +58,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for the next button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void nextButtonClicked1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen2.fxml")));
@@ -75,9 +78,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for the next button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void nextButtonClicked2(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen3.fxml")));
@@ -94,9 +98,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for the next button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void nextButtonClicked3(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/PropertyScreen4.fxml")));
@@ -113,9 +118,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for the next button.
      *
-     * @param event
-     * @throws IOException
+     * @param event Event that triggered handler.
+     * @throws IOException Thrown if screen file not found.
      */
     public void nextButtonClicked4(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("flipper/screens/ReportScreen.fxml")));
@@ -130,8 +136,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked0() throws IOException {
         if (Property.propertyNum == 0) {
@@ -162,8 +169,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked1() throws IOException {
         if (Property.propertyNum == 0) {
@@ -194,8 +202,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked2() throws IOException {
         if (Property.propertyNum == 0) {
@@ -226,8 +235,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked3() throws IOException {
             if (Property.propertyNum == 0) {
@@ -258,8 +268,9 @@ public class Controller extends Controls {
         }
 
     /**
+     * Handler for a checkbox.
      *
-      * @throws IOException
+      * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked4() throws IOException {
         if (Property.propertyNum == 0) {
@@ -290,8 +301,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked5() throws IOException {
             if (Property.propertyNum == 0) {
@@ -322,8 +334,9 @@ public class Controller extends Controls {
         }
 
     /**
+     * Handler for a checkbox.
      *
-      * @throws IOException
+      * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked6() throws IOException {
         if (Property.propertyNum == 0) {
@@ -354,8 +367,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked7() throws IOException {
             if (Property.propertyNum == 0) {
@@ -386,8 +400,9 @@ public class Controller extends Controls {
         }
 
     /**
+     * Handler for a checkbox.
      *
-      * @throws IOException
+      * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked8() throws IOException {
         if (Property.propertyNum == 0) {
@@ -418,8 +433,9 @@ public class Controller extends Controls {
     }
 
     /**
+     * Handler for a checkbox.
      *
-     * @throws IOException
+     * @throws IOException Thrown if screen file not found.
      */
     public void checkBoxClicked9() throws IOException {
         if (Property.propertyNum == 0) {
@@ -458,7 +474,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles property approval.
      */
     public void approveButtonClicked0() {
         Property.property0.propertyDetails.propertyApproved = true;
@@ -469,7 +485,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles property approval.
      */
     public void approveButtonClicked1() {
         Property.property1.propertyDetails.propertyApproved = true;
@@ -480,7 +496,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles property approval.
      */
     public void approveButtonClicked2() {
         Property.property2.propertyDetails.propertyApproved = true;
@@ -491,7 +507,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles property approval.
      */
     public void approveButtonClicked3() {
         Property.property3.propertyDetails.propertyApproved = true;
@@ -502,7 +518,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles property approval.
      */
     public void approveButtonClicked4() {
         Property.property4.propertyDetails.propertyApproved = true;
@@ -513,7 +529,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles discarding property.
      */
     public void discardButtonClicked0() {
         circleStatus0.setStyle("-fx-fill: #FF0000");
@@ -524,7 +540,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles discarding property.
      */
     public void discardButtonClicked1() {
         circleStatus1.setStyle("-fx-fill: #FF0000");
@@ -535,7 +551,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles discarding property.
      */
     public void discardButtonClicked2() {
         circleStatus2.setStyle("-fx-fill: #FF0000");
@@ -546,7 +562,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles discarding property.
      */
     public void discardButtonClicked3() {
         circleStatus3.setStyle("-fx-fill: #FF0000");
@@ -557,7 +573,7 @@ public class Controller extends Controls {
     }
 
     /**
-     *
+     * Handles discarding property.
      */
     public void discardButtonClicked4() {
         circleStatus4.setStyle("-fx-fill: #FF0000");
@@ -569,7 +585,8 @@ public class Controller extends Controls {
 
     /**
      * Initializes the cells in the report page.
-     * @param root
+     *
+     * @param root Root of the scene
      */
     private void setReportCells(Parent root) {
         // Spent totals for each property
@@ -725,9 +742,10 @@ public class Controller extends Controls {
     }
 
     /**
+     * Initializes the values of cells on the property pages.
      *
-     * @param root
-     * @param property
+     * @param root Root of the scene
+     * @param property Reference to a property.
      */
     private void initializeCells(Parent root, Property property) {
         // Set Property Description
