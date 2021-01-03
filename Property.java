@@ -38,6 +38,6 @@ public class Property {
             idx = random.nextInt(Repairs.repairList.size());
             this.propertyDetails.propertyRepairs[i] = Repairs.repairList.get(idx);
             Repairs.repairList.remove(idx);
-            }
+        }
     }
 }
