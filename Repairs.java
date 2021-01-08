@@ -66,7 +66,6 @@ public class Repairs {
             repairList.add(repairEntry);
         }
     }
-
     /**
      * Helper method for loadRepairTypes() to parse a csv file and return the values from the file.
      *
