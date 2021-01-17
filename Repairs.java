@@ -28,6 +28,7 @@ public class Repairs {
                 records.add(getRecordFromLine(scanner.nextLine()));
             }
         }
+        
         catch (Exception ignored) {}
 
         for (List<String> record : records) {
@@ -66,6 +67,7 @@ public class Repairs {
             repairList.add(repairEntry);
         }
     }
+    
     /**
      * Helper method for loadRepairTypes() to parse a csv file and return the values from the file.
      *
