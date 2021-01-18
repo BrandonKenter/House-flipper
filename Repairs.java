@@ -16,6 +16,7 @@ public class Repairs {
         repairList = new ArrayList<>();
         loadRepairTypes();
     }
+    
     /**
      * Loads CSV file lines into an arraylist. Each line is represented as a RepairType with a description, material
      * price and estimated duration.
