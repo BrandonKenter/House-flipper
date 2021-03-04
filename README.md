@@ -10,7 +10,7 @@ You're an employee of a real estate company that purchases properties to repair 
 After completing your assessment of the property and the list of items to update, either discard or commit to repairing the property for resell. After assessing a total of 5 properties, your initial assessments will be sent to your project manager for review. Your project manager will calculate the expected ARV (after repaired value) based on the comps and repairs specified, and will send you a report on your assessments.
 
 Things to keep in mind:
-- Some properties are never worth updating (severe foundation problems or any major structural damage for example)
+- Some properties are never worth flipping (severe foundation problems or any major structural damage for example)
 - Some items are never worth updating (seeding lawn for example)
 
 # Preview
